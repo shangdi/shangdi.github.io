@@ -12,7 +12,7 @@ export const siteConfig: SiteConfig = {
 	subtitle: "Secret Blog",
 
 	// 站点 URL
-	site_url: "https://secretsite.github.io/",
+	site_url: "https://shangdi.github.io/",
 
 	// 站点描述
 	description:

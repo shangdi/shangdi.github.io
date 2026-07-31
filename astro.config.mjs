@@ -65,7 +65,7 @@ const adapter = process.env.CF_WORKERS
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://secretsite.github.io",
+	site: "https://shangdi.github.io",
 
 	base: "/",
 	trailingSlash: "always",
