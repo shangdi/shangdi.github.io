@@ -40,7 +40,6 @@ export const commentConfig: CommentConfig = {
 		login: "disable",
 		// 是否启用文章访问量统计功能
 		visitorCount: true,
-		reaction: true,
 	},
 
 	// artalk评论系统配置
