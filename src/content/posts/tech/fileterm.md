@@ -1,10 +1,11 @@
 ---
 title: "A Comparison of 5 Terminal File Managers"
-date: 2025-06-18T19:09:58+07:00
+published: 2025-06-18T19:09:58+07:00
 draft: false
+image: "../images/fileterm/featured.png"
 summary: "A glimpse of terminal-based file managers and their uniquenesses."
 tags: ["file manager", "terminal", "cli", "open source", "cool", "linux"]
-categories: "file manager"
+category: "file manager"
 ---
 
 ## Introduction
@@ -22,7 +23,7 @@ Kita mulai...
 
 ### 1. SuperFile
 
-![ss1](/fileterm/ss1.png "SuperFile")
+![SuperFile](../images/fileterm/ss1.png)
 
 Berikut adalah _repository_ Github-nya:
 
@@ -38,7 +39,7 @@ Debian/Ubuntu, Archlinux, Fedora, OpenSuse, etc:
 bash -c "$(curl -sLo- https://superfile.netlify.app/install.sh)"
 ```
 
-{{< alert icon=none >}}
+:::note
 
 **NixOS:**  
 Masukkan baris berikut di file konfigurasi (`/etc/nixos/configuration.nix`):
@@ -55,7 +56,7 @@ Atau jika menggunakan `nix-shell`:
 nix-shell -p superfile
 ```
 
-{{< /alert >}}
+:::
 
 #### Checklists
 
@@ -86,11 +87,11 @@ Berikut adalah **kekurangan** SuperFile:
 
 ### 2. Clifm
 
-![ss2](/fileterm/ss2.png "Clifm")
+![Clifm](../images/fileterm/ss2.png)
 
 Berikut adalah _repository_ Github-nya:
 
-{{< github repo="leo-arch/clifm" showThumbnail=true >}}
+::github{repo="leo-arch/clifm"}
 
 #### Installation
 
@@ -110,7 +111,7 @@ Berikut adalah cara memasangnya di masing-masing distro Linux:
 > sudo make install
 > ```
 
-{{< alert icon=none >}}
+:::note
 
 **NixOS:**  
 Masukkan baris berikut di file konfigurasi (`/etc/nixos/configuration.nix`):
@@ -127,7 +128,7 @@ Atau jika menggunakan `nix-shell`:
 nix-shell -p clifm
 ```
 
-{{< /alert >}}
+:::
 
 #### Checklists
 
@@ -158,11 +159,11 @@ Berikut adalah **kekurangan** Clifm:
 
 ### 3. Yazi
 
-![ss3](/fileterm/ss3.png "Yazi")
+![Yazi](../images/fileterm/ss3.png)
 
 Berikut adalah _repository_ Github-nya:
 
-{{< github repo="sxyazi/yazi" showThumbnail=true >}}
+::github{repo="sxyazi/yazi"}
 
 #### Installation
 
@@ -175,7 +176,7 @@ Berikut adalah cara memasangnya di masing-masing distro Linux:
 
 > Untuk **Debian/Ubuntu** & **Fedora** belum ada paketnya di repository official, jadi harus meng-install-nya via Github atau via [**Snap**](https://snapcraft.io/yazi).
 
-{{< alert icon=none >}}
+:::note
 
 **NixOS:**  
 Masukkan baris berikut di file konfigurasi (`/etc/nixos/configuration.nix`):
@@ -192,7 +193,7 @@ Atau jika menggunakan `nix-shell`:
 nix-shell -p yazi
 ```
 
-{{< /alert >}}
+:::
 
 #### Checklists
 
@@ -221,26 +222,24 @@ Berikut adalah **kekurangan** Yazi:
 
 1. Belum tersedia di repositori distro Debian/Ubuntu & Fedora.
 
-{{< alert icon=none >}}
-
-**Notes:**
+:::note
 
 Ada 2 terminal _file manager_ lagi yang sebetulnya mirip **`yazi`** secara tampilan, yaitu `ranger` & `lf`. Jadi, karena mirip, saya hanya akan mencantumkan gambarnya saja di sini:
 
 |         **`ranger`**                      |         **`lf`**                    |
 | :---:                                     | :---:                               |
-| ![ranger](/fileterm/ranger.png "ranger")  | ![ranger](/fileterm/lf.png "lf")    |
+| ![ranger](../images/fileterm/ranger.png "ranger")  | ![ranger](../images/fileterm/lf.png "lf")    |
 
 
-{{< /alert >}}
+:::
 
 ### 4. NNN
 
-![ss4](/fileterm/ss4.png "NNN")
+![NNN](../images/fileterm/ss4.png)
 
 Berikut adalah _repository_ Github-nya:
 
-{{< github repo="jarun/nnn" showThumbnail=true >}}
+::github{repo="jarun/nnn"}
 
 #### Installation
 
@@ -253,7 +252,7 @@ Berikut adalah cara memasangnya di masing-masing distro Linux:
 | **Opensuse**      | **`sudo zypper install nnn`**                      |
 | **Fedora**        | **`sudo dnf install nnn`**     			               |
 
-{{< alert icon=none >}}
+:::note
 
 **NixOS:**  
 Masukkan baris berikut di file konfigurasi (`/etc/nixos/configuration.nix`):
@@ -270,7 +269,7 @@ Atau jika menggunakan `nix-shell`:
 nix-shell -p nnn
 ```
 
-{{< /alert >}}
+:::
 
 #### Checklists
 
@@ -302,11 +301,11 @@ Berikut adalah **kekurangan** NNN:
 
 ### 5. MC
 
-![ss5](/fileterm/ss5.png "Midnight Commander (MC)")
+![Midnight Commander (MC)](../images/fileterm/ss5.png)
 
 Berikut adalah _repository_ Github-nya:
 
-{{< github repo="MidnightCommander/mc" showThumbnail=true >}}
+::github{repo="MidnightCommander/mc"}
 
 #### Installation
 
@@ -321,7 +320,7 @@ Berikut adalah cara memasangnya di masing-masing distro Linux:
 > OpenSuse belum memiliki paket `mc` di repositorinya, jadi, bisa di-install via [**Snap**](https://snapcraft.io/mc-pasman).
 
 
-{{< alert icon=none >}}
+:::note
 
 **NixOS:**  
 Masukkan baris berikut di file konfigurasi (`/etc/nixos/configuration.nix`):
@@ -338,7 +337,7 @@ Atau jika menggunakan `nix-shell`:
 nix-shell -p mc
 ```
 
-{{< /alert >}}
+:::
 
 #### Checklists
 
