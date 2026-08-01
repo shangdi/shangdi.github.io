@@ -139,7 +139,7 @@ Semua file konfigurasi dapat diubah/disesuaikan di direktori `config/_default/`.
 
 Di file ini, kita perlu menyesuaikan beberapa hal, diantaranya:
 
-```toml
+```toml title="hugo.toml"
 theme = "blowfish" # UNCOMMENT THIS LINE
 baseURL = "https://your_domain.com/" # Diganti dengan domain website-nya
 ```
@@ -148,7 +148,7 @@ baseURL = "https://your_domain.com/" # Diganti dengan domain website-nya
 
 Di file ini, kita dapat mengganti beberapa hal berikut:
 
-```toml
+```toml title="languages.en.toml"
 title = "Blowfish" # Yang muncul di pojok kiri atas
 logo = "img/logo.png" # Menampilkan logo di sebelah title 
 
@@ -169,7 +169,7 @@ logo = "img/logo.png" # Menampilkan logo di sebelah title
 
 Konfigurasi menu yang akan muncul di sebelah kanan atas website:
 
-```toml
+```toml title="menus.en.toml"
 [[main]]
   name = "Blog"
   pageRef = "posts" # Case-sensitive, merujuk pada direktori-direktori di bawah `content/`
@@ -192,7 +192,7 @@ Konfigurasi menu yang akan muncul di sebelah kanan atas website:
 
 Ada banyak parameter yang dapat kita ganti di file ini:
 
-```toml
+```toml title="params.toml"
 # Silakan di-comment (#) bagian yang tidak ingin diaktifkan
 
 colorScheme = "blowfish" # Ada 14 colorscheme yang disediakan

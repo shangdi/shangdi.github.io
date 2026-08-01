@@ -91,7 +91,7 @@ Sederhananya, *virtual environment* dalam Python adalah lingkungan khusus (virtu
 
 Untuk membuat Python *virtual environment* untuk Cloudinary kita sekaligus mengaktifkannya, gunakan perintah:
 
-```python
+```shell
 python -m venv cloudinary # membuat virtual environment
 source cloudinary/bin/activate # mengaktifkan virtual environment
 ```
