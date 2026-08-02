@@ -799,9 +799,15 @@ Keempat perintah tersebut (`docker ps`, `docker logs`, `docker stats`, `docker i
 
 **Perhatikan** tombol keyboard yang muncul di bagian bawah video!
 
-<video width="100%" controls autoplay loop muted>
-  <source src="../images/docker/vid1.mkv" type="video/mp4">
-</video>
+<iframe
+  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=docker1_ohebam"
+  width="640"
+  height="360" 
+  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
+  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+  allowfullscreen
+  frameborder="0"
+></iframe>
 
 > **Notes:** Saya menggunakan `showmethekey` untuk melihat _keystrokes_ keyboard di Wayland. 
 
@@ -811,9 +817,15 @@ Lagi-lagi, keempat perintah tersebut (`docker run`, `docker start`, `docker rest
 
 **Perhatikan** tombol keyboard yang muncul di bagian bawah video!
 
-<video width="100%" controls autoplay loop muted>
-  <source src="../images/docker/vid2.mkv" type="video/mp4">
-</video>
+<iframe
+  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=docker2_xh4rhf"
+  width="640"
+  height="360" 
+  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
+  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+  allowfullscreen
+  frameborder="0"
+></iframe>
 
 Untuk bagian **Images**, **Volumes**, dan **Networks** tidak saya bahas di sini, selain karena tidak banyak yang dapat ditunjukkan selain menghapus-hapus Images/Volumes/Networks, juga karena membuat video demonstrasi ini memakan storage yang lumayan besar (1 video berkisar 1 menit bisa berukuran 3-4 MB!). Oleh karena itu, jika kalian sudah paham dasar-dasar pengoperasian `lazydocker`, kalian bisa mencoba mengeksplorasi bagian-bagian tersebut sendiri! 
 

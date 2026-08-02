@@ -210,9 +210,15 @@ atau dengan `nc`:
 nc -vv freechess.org 23
 ```
 
-<video width="100%" controls autoplay loop muted>
-  <source src="../images/cooltools/freechess.mp4" type="video/mp4">
-</video>
+<iframe
+  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=freechess_vw8csx"
+  width="640"
+  height="360" 
+  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
+  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+  allowfullscreen
+  frameborder="0"
+></iframe>
 
 :::note
  
@@ -230,9 +236,15 @@ Untuk mengaksesnya:
 telnet towel.blinkenlights.nl
 ```
 
-<video width="100%" controls autoplay loop muted>
-  <source src="../images/cooltools/starwars.mkv" type="video/mp4">
-</video>
+<iframe
+  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=starwars_ohryot"
+  width="640"
+  height="360" 
+  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
+  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+  allowfullscreen
+  frameborder="0"
+></iframe>
 
 ### 12. wttr
 
@@ -270,10 +282,15 @@ Kita bisa melihat ascii live apa saja yang disupport dengan perintah:
 curl ascii.live/list
 ```
 
-<video width="100%" controls autoplay loop muted>
-  <source src="../images/cooltools/asciilive.mkv" type="video/mp4">
-</video>
-
+<iframe
+  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=asciilive_pwoaun"
+  width="640"
+  height="360" 
+  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
+  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+  allowfullscreen
+  frameborder="0"
+></iframe>
 
 
 

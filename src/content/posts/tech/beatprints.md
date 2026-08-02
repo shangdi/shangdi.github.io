@@ -115,9 +115,15 @@ beatprints
 
 Kemudian, ikuti _flow_-nya dan silakan bereksplorasi sendiri!
 
-<video width="100%" controls autoplay loop muted>
-  <source src="../images/beatprints/vid1.webm" type="video/mkv">
-</video>
+<iframe
+  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=beatprints_h1fziz"
+  width="640"
+  height="360" 
+  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
+  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+  allowfullscreen
+  frameborder="0"
+></iframe>
 
 
 

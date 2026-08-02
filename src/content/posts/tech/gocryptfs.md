@@ -214,9 +214,15 @@ Direktori yang kita isi dengan file atau sub-direktori yang ingin dienkripsi ada
 
 Berikut demonstrasi menambahkan dan menghapus file dan direktori/folder.
 
-<video width="100%" controls autoplay loop muted>
-  <source src="../images/gocryptfs/vid1.mkv" type="video/mp4">
-</video>
+<iframe
+  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=vid1_ytdjig"
+  width="640"
+  height="360" 
+  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
+  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+  allowfullscreen
+  frameborder="0"
+></iframe>
 
 Perhatikan!  
 

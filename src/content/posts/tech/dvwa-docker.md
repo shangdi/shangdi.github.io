@@ -80,11 +80,15 @@ Silakan atur *difficulty level*-nya sesuai kebutuhan, bisa diatur mulai dari **l
 
 Saya akan atur ke **low**.
 
-<div style="display: flex; justify-content: center;">
-  <video width="80%" controls autoplay loop muted>
-    <source src="../images/dvwa-docker/vid1.mp4" type="video/mp4">
-  </video>
-</div>
+<iframe
+  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=dvwa-docker_cvltnv"
+  width="640"
+  height="360" 
+  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
+  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+  allowfullscreen
+  frameborder="0"
+></iframe>
 
 ### 7. Play and have fun!
 
