@@ -3,7 +3,7 @@ title: "Repairing Your Linux EFI Boot Entry with efibootmgr"
 published: 2026-07-09T20:13:43+07:00
 draft: false
 image: "../images/efibootmgr/featured.png"
-summary: "Your linux boot entry is broken? Don't get overly panicked and then recklessly reinstall your entire system as efibootmgr is completely capable of fixing it."
+description: "Your linux boot entry is broken? Don't get overly panicked and then recklessly reinstall your entire system as efibootmgr is completely capable of fixing it."
 tags: ["efibootmgr", "boot", "grub", "efi", "linux"]
 category: "efibootmgr"
 ---

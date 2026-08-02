@@ -3,7 +3,7 @@ title: "Tools for Comparing Text-Based Files."
 published: 2026-06-20T14:19:00+07:00
 draft: false
 image: "../images/diff/featured.png"
-summary: "These tools are my go-to tools when it comes to comparing files. For the sake of your own mental health, I am telling you that those are CLI-based ones. If you are allergic to those tools, please read this article with professional assistance or do not read it at all."
+description: "These tools are my go-to tools when it comes to comparing files. For the sake of your own mental health, I am telling you that those are CLI-based ones. If you are allergic to those tools, please read this article with professional assistance or do not read it at all."
 tags: ["diff", "vimdiff", "kitty", "kitten diff"]
 category: "diff"
 ---

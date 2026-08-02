@@ -2,7 +2,7 @@
 title: "Getting (free) e-books via Bot Telegram"
 published: 2023-10-11T16:32:22+07:00
 draft: false
-summary: "Get 'free' e-book(s) easily via Telegram bot."
+description: "Get 'free' e-book(s) easily via Telegram bot."
 image: "../images/zlib-tele/featured.png"
 tags: ["telegram", "tutorial", "z-library", "e-book"]
 category: "telegram"

@@ -4,9 +4,9 @@ published: 2026-07-06T12:00:52+07:00
 udpated: 2026-07-08
 draft: false
 image: "../images/fastfetch/featured.png"
-summary: "If you are a legendary linux nerd, you might have known neofetch. But, since neofetch is no longer maintained, fastfetch emerges as its exact replacement, unless it has way more convenince and beautiness."
+description: "If you are a legendary linux nerd, you might have known neofetch. But, since neofetch is no longer maintained, fastfetch emerges as its exact replacement, unless it has way more convenince and beautiness."
 tags: ["fastfetch", "neofetch", "c", "linux", "windows", "fetch"]
-categories: "fastfetch"
+category: "fastfetch"
 ---
 
 ## About `fastfetch`

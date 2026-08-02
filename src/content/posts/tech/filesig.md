@@ -4,7 +4,7 @@ published: 2026-03-30T17:48:54+07:00
 updated: 2026-04-24
 draft: false
 image: "../images/filesig/featured.png"
-summary: "File signature is one of the most common concepts when it comes to identifying types of files in your opeating system."
+description: "File signature is one of the most common concepts when it comes to identifying types of files in your opeating system."
 tags: ["file signature", "linux", "windows", "metadata"]
 category: "file signature"
 ---

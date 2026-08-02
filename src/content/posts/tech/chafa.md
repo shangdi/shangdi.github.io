@@ -2,7 +2,7 @@
 title: "Chafa: Character Art Facsimile Generator"
 published: 2024-08-28T09:39:26.000Z
 image: ../images/chafa/featured.png
-summary: Chafa is a command-line utility that converts image data, including animated GIFs, into graphics formats or ANSI/Unicode character art suitable for display in a terminal.
+description: Chafa is a command-line utility that converts image data, including animated GIFs, into graphics formats or ANSI/Unicode character art suitable for display in a terminal.
 tags: ["chafa", "linux"]
 category: "chafa"
 ---

@@ -3,7 +3,7 @@ title: "Exa-Eza as a Modern Replacement for ls"
 published: 2024-11-06T21:45:18+07:00
 draft: false
 image: "../images/exa/featured.png"
-summary: "Want to improve and modernize your ls appearance and functionality? This is the neo-ls.."
+description: "Want to improve and modernize your ls appearance and functionality? This is the neo-ls.."
 tags: [ "exa", "linux", "ls" ]
 category: "exa"
 ---

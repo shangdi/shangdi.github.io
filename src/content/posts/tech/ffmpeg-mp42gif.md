@@ -3,7 +3,7 @@ title: "FFmpeg - Convert MP4 to GIF"
 published: 2023-10-11T00:40:23+07:00
 draft: false
 image: "../images/ffmpeg-mp42gif/featured.png"
-summary: "My simple note in regards of converting video (MP4) to GIF."
+description: "My simple note in regards of converting video (MP4) to GIF."
 tags: ["MP4 to GIF", "tutorial", "ffmpeg", "Video Converter"]
 category: "ffmpeg"
 ---

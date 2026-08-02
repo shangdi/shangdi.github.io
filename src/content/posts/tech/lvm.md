@@ -3,7 +3,7 @@ title: "LVM: A Realistic Way to Manage Your Dynamic Storage"
 published: 2026-07-11T17:20:12+07:00
 draft: false
 image: ../images/lvm/featured.png
-summary: "Have you ever tought of extending or reducing your active linux partition size? If yes, LVM might be your best friend to accomplish that purpose as it offers convenient yet safe way to resize your linux partition size."
+description: "Have you ever tought of extending or reducing your active linux partition size? If yes, LVM might be your best friend to accomplish that purpose as it offers convenient yet safe way to resize your linux partition size."
 tags: ["lvm", "partition", "disk", "drive", "linux"]
 category: "lvm"
 ---

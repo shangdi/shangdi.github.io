@@ -3,7 +3,7 @@ title: "Cool Terminal Tools You Should Know"
 published: 2024-06-09T16:59:47+07:00
 updated: 2026-06-05
 draft: false
-summary: "Just a list of a couple of (funny) terminal tools"
+description: "Just a list of a couple of (funny) terminal tools"
 image: "../images/cooltools/cover.png"
 tags: ["tools", "cool", "terminal", "linux"]
 category: "tools"

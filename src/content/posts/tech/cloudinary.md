@@ -3,7 +3,7 @@ title: "Automatic Image & Video File(s) Hosting in Cloudinary through Python"
 published: 2025-05-30T18:47:46+07:00
 draft: false
 image: ../images/cloudinary/featured.png
-summary: "A brief tutorial on how to upload file(s) or video(s) to Cloudinary through Python script."
+description: "A brief tutorial on how to upload file(s) or video(s) to Cloudinary through Python script."
 tags: ["cloudinary", "python", "environment", "images", "videos", "api", "linux"]
 category: "cloudinary"
 ---

@@ -3,7 +3,7 @@ title: "Basic Excel (Spreadsheet) Functions - Part 2"
 published: 2025-01-28T03:33:42Z
 draft: false
 image: "../images/excel2/featured.png"
-summary: "6 basic excel (spreadsheet) functions / formulas: SUMIF, CONCATENATE, MATCH, (LEFT, MID, RIGHT), (HLOOKUP & VLOOKUP), TRANSPOSE"
+description: "6 basic excel (spreadsheet) functions / formulas: SUMIF, CONCATENATE, MATCH, (LEFT, MID, RIGHT), (HLOOKUP & VLOOKUP), TRANSPOSE"
 tags: ["excel", "spreadsheet", "data", "data analysis"]
 category: "excel"
 ---

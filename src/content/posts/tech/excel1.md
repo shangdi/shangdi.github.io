@@ -3,7 +3,7 @@ title: "Basic Excel (Spreadsheet) Functions - Part 1"
 published: 2025-01-24T13:24:27Z
 draft: false
 image: "../images/excel1/featured.png"
-summary: "6 basic excel (spreadsheet) functions / formulas: SUM, AVERAGE, MAX, MIN, COUNT, COUNTIF"
+description: "6 basic excel (spreadsheet) functions / formulas: SUM, AVERAGE, MAX, MIN, COUNT, COUNTIF"
 tags: ["excel", "spreadsheet", "data", "data analysis"]
 category: "excel"
 ---

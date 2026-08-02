@@ -3,7 +3,7 @@ title: "A Comparison of 5 Terminal File Managers"
 published: 2025-06-18T19:09:58+07:00
 draft: false
 image: "../images/fileterm/featured.png"
-summary: "A glimpse of terminal-based file managers and their uniquenesses."
+description: "A glimpse of terminal-based file managers and their uniquenesses."
 tags: ["file manager", "terminal", "cli", "open source", "cool", "linux"]
 category: "file manager"
 ---

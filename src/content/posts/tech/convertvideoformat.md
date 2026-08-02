@@ -2,7 +2,7 @@
 title: FFmpeg - Convert Any Video Format to MP4
 published: 2024-10-07T15:00:53.000Z
 image: ../images/convertvideoformat/featured.png
-summary: If you have ffmpeg installed on your Linux machine, then it actually could help you to convert any video format to MP4!
+description: If you have ffmpeg installed on your Linux machine, then it actually could help you to convert any video format to MP4!
 tags: ["ffmpeg", "tutorial", "video format"]
 category: ffmpeg
 ---

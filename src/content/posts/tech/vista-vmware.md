@@ -5,7 +5,7 @@ updated: 2026-07-12
 draft: false
 pinned: true
 image: ../images/vista-vmware/featured.png
-summary: "You can actually run Windows Vista (with Aero enabled) as a virtual machine within VMWare Workstation."
+description: "You can actually run Windows Vista (with Aero enabled) as a virtual machine within VMWare Workstation."
 tags: ["vista", "windows", "frutiger", "aero", "vmware", "broadcom", "solarpunk"]
 category: "vista"
 ---

@@ -2,7 +2,7 @@
 title: "Debian Linux Installation in Virtualbox"
 published: 2024-04-15T07:45:05+07:00
 draft: false		
-summary: "A baby guide to install Debian Linux distribution as virtual machine in Virtalbox."
+description: "A baby guide to install Debian Linux distribution as virtual machine in Virtalbox."
 image: "../images/debinstall/featured.png"
 tags: ["debian", "linux", "instal"]
 category: "debian"

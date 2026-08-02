@@ -2,7 +2,7 @@
 title: DVWA - Command Injection
 published: 2024-10-13T10:04:53.000Z
 image: ../images/commandinjection/featured.png
-summary: "Command injection is a simple yet still pretty common and relevant vulnerability in the real world even nowadays..."
+description: "Command injection is a simple yet still pretty common and relevant vulnerability in the real world even nowadays..."
 tags: ["DVWA", "web", "hacking", "command injection", "reverse shell"]
 category: "command injection"
 ---

@@ -3,7 +3,7 @@ title: "BeatPrints: Your Favorite Spotify Poster"
 published: 2025-05-04T13:35:14+07:00
 draft: false
 image: ../images/beatprints/featured.png
-summary: "A quick and stylish posters for your favorite tracks!🎷☕️ "
+description: "A quick and stylish posters for your favorite tracks!🎷☕️ "
 tags: ["beatprints", "spotify", "music", "poster", "linux", "windows"]
 category: "beatprints"
 ---

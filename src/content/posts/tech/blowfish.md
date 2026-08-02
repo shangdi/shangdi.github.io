@@ -4,7 +4,7 @@ published: 2025-06-07T18:09:46+07:00
 updated: 2026-07-06
 draft: false
 image: ../images/blowfish/featured.png
-summary: "This is just a brief explanation on installing and configuring blowfish as Hugos theme."
+description: "This is just a brief explanation on installing and configuring blowfish as Hugos theme."
 tags: ["hugo", "blowfish", "theme"]
 category: "hugo"
 ---

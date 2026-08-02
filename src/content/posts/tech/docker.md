@@ -4,7 +4,7 @@ published: 2026-04-13T13:36:10+07:00
 updated: 2026-04-24
 draft: false
 image: "../images/docker/featured.png"
-summary: "Deploying software often requires bunch of resources. However, the emergence of containerization platforms such as Docker has made it more convenient and docile, yet your software works flawlessly."
+description: "Deploying software often requires bunch of resources. However, the emergence of containerization platforms such as Docker has made it more convenient and docile, yet your software works flawlessly."
 tags: ["docker", "lazydocker", "container", "dockerhub", "docker-compose", "containerization", "yaml"]
 category: "docker"
 ---

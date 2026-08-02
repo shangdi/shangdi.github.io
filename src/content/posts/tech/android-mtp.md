@@ -4,7 +4,7 @@ published: 2026-04-04T13:49:59+07:00
 updated: 2026-04-13
 draft: false
 image: ../images/android-mtp/featured.png
-summary: "Are you wondering about how to connect your Android phone to Archlinux through a USB? Here, I will explain the easiest way (GUI & CLI) to do that."
+description: "Are you wondering about how to connect your Android phone to Archlinux through a USB? Here, I will explain the easiest way (GUI & CLI) to do that."
 tags: ["android", "mtp", "archlinux", "linux", "libmtp"]
 category: "android-mtp"
 ---

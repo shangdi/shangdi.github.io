@@ -2,8 +2,7 @@
 title: Step by Step DVWA Installation for Web App Hacking
 published: 2024-10-11T06:28:19.000Z
 image: "../images/dvwa-docker/featured.png"
-summary: DVWA (Damn Vulnerable Webb Apps) is a PHP/MySQL web application that is
-  damn vulnerable~
+description: DVWA (Damn Vulnerable Webb Apps) is a PHP/MySQL web application that is damn vulnerable~
 tags: ["docker", "dvwa", "web"]
 category: docker
 ---

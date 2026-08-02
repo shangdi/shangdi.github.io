@@ -4,7 +4,7 @@ published: 2025-02-23T22:57:04+07:00
 updated: 2025-12-08
 draft: false
 image: ../images/bluetoothctl/featured.png
-summary: "The easiest way to connect your bluetooth devices via terminal in Linux."
+description: "The easiest way to connect your bluetooth devices via terminal in Linux."
 tags: ["linux", "bluetooth", "bluetoothctl"]
 category: "bluetoothctl"
 ---
