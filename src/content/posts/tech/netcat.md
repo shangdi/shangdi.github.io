@@ -3,7 +3,7 @@ title: "netcat: The Simplest Way to Transfer File"
 published: 2024-09-29T02:06:27.000Z
 image: "../images/netcat/featured.png"
 description: Learn the best way to transfer file(s) through a network.
-tags: ["netcat", "file transfer", "linux", "windows"]
+tags: ["netcat", "file-transfer", "linux", "windows"]
 category: "netcat"
 ---
 

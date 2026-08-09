@@ -4,7 +4,7 @@ published: 2024-04-02T17:30:12+07:00
 draft: false		
 image: "../images/ngrok/featured.png"
 description: "ngrok is a globally distributed reverse proxy that secures, protects and accelerates your applications and network services, no matter where you run them."
-tags: ["cyber security", "ngrok", "tutorial"]
+tags: ["cyber-security", "ngrok", "tutorial"]
 category: "ngrok"
 ---
 

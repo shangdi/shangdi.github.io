@@ -4,7 +4,7 @@ published: 2025-12-21T06:38:10+07:00
 draft: false
 image: "../images/pip/featured.png"
 description: "A step-by-step guidance on how to install python packages using pip & pipx."
-tags: ["pip", "python", "windows", "linux", ""]
+tags: ["pip", "python", "windows", "linux"]
 category: "pip"
 ---
 

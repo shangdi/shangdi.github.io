@@ -5,7 +5,7 @@ updated: 2026-04-04
 draft: false
 image: "../images/pass/featured.png"
 description: "Password management should be simple and follow Unix philosophy. With pass, each password lives inside of a gpg encrypted file."
-tags: ["pass", "password manager", "password", "encryption", "gpg", "asymmetric", "public key", "private key"]
+tags: ["pass", "password-manager", "password", "encryption", "gpg", "asymmetric", "public key", "private-key"]
 category: "pass"
 ---
 

@@ -4,7 +4,7 @@ published: 2024-05-30T01:49:56Z
 draft: false
 image: "../images/openbox/featured.png"		
 description: "As the title said, Openbox is simple and easy window manager for beginners"
-tags: ["window manager", "openbox", "linux"]
+tags: ["window-manager", "openbox", "linux"]
 category: "openbox"
 ---
 
