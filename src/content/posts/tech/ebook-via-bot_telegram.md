@@ -1,6 +1,7 @@
 ---
 title: "Getting (free) e-books via Bot Telegram"
 published: 2023-10-11T16:32:22+07:00
+updated: 2026-08-10
 draft: false
 description: "Get 'free' e-book(s) easily via Telegram bot."
 image: "../images/zlib-tele/featured.png"
@@ -103,7 +104,16 @@ Jika semua rangkaian proses tadi sudah selesai dilakukan, maka sejatinya kita su
 Berikut akan saya demo-kan cara mendapatkan e-book dari z-library via bot telegram. 
 Misalnya, saya ingin mencari buku ensiklopedia teori komunikasi, maka saya hanya perlu mengetikkan keyword berikut:  
 <mark>encyclopedia of communication theory</mark>
-![](../images/zlib-tele/sr1.gif)
+
+<iframe
+  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=zlib-tele1_rtacue"
+  width="640"
+  height="360" 
+  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
+  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+  allowfullscreen
+  frameborder="0"
+></iframe>
 
 Oke, sekian dulu tutorial kali ini.
 
