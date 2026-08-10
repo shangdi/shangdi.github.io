@@ -207,7 +207,7 @@ export const LinkPresets: Record<string, NavBarLink> = {
 		pageKey: "anime",
 	},
 	Booknav: {
-		name: "书签导航",
+		name: "Booknav",
 		url: "/booknav/",
 		icon: "material-symbols:bookmarks",
 		pageKey: "booknav",
