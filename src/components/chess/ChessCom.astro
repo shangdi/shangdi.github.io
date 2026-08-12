@@ -1,0 +1,28 @@
+---
+interface Props {
+  id: string;
+  url: string;
+}
+const { id, url } = Astro.props;
+---
+
+<div style="text-align: center;">
+  <iframe
+    id={id}
+    allowtransparency="true"
+    frameborder="0"
+    style="width:100%;border:none;"
+    src={url}
+  ></iframe>
+</div>
+
+<script define:vars={{ id }}>
+  window.addEventListener("message", (e) => {
+    if (e.data && e.data.id === id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.style.height = `${e.data.frameHeight + 30}px`;
+      }
+    }
+  });
+</script>
