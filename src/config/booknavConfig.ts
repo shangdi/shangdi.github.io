@@ -163,6 +163,7 @@ export const booknavConfig: BooknavGroup[] = [
 			{
 				title: "Xiaye Site",
 				url: "https://blog.cuteleaf.cn",
+				icon: "https://weavatar.com/avatar/d252655d40d6874417a720bad0a6c5f77f8f6a1fd2f882f8f338402dc37e4190?s=640",
 				desc: "Firefly creator's blog",
 				weight: 10,
 			},
