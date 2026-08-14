@@ -39,6 +39,8 @@ jobs:
       
       - name: Build site
         run: pnpm run build
+        env:
+          PUBLIC_DISPLAY_SETTINGS: ${{ vars.PUBLIC_DISPLAY_SETTINGS }}
 
       - name: Create .nojekyll file
         run: touch dist/.nojekyll
