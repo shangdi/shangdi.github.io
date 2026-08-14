@@ -92,7 +92,7 @@ Tutorial ini hanya mendemonstrasikan instalasi FreeBSD di KVM dengan Virt-Manage
 
 Artikel ini tidak menjelaskan secara detail cara instalasi Virt-Manager. Untuk meng-_install_ Virt-Manager di Linux, kalian bisa baca artikel saya yang lain:
 
-{{< article link="/tech/virt-manager/" showSummary=true compactSummary=true >}}
+[[/tech/virt-manager/]]
 
 Untuk membuat VM dengan KVM dan QEMU:
 1. Hidupkan _service_ `libvirtd` dan aktifkan VM _network_.

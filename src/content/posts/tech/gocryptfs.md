@@ -16,7 +16,15 @@ Beberapa saat lalu, saya membayangkan untuk punya alat digital yang dapat mengen
 `gocryptfs` adalah tool enkripsi berbasis file yang ditulis dengan bahasa pemrograman [Go](https://go.dev/)[^1]. Berbeda dengan `cryptsetup` yang digunakan untuk mengenkripsi drive atau partisi, `gocryptfs` adalah _tool_ yang dapat digunakan untuk mengenkripsi filesystem biasa di userspace ([FUSE](https://www.kernel.org/doc/html/next/filesystems/fuse.html)) yang juga dapat di-_mount_ (_mountable_). Artinya, tool ini sangat cocok digunakan untuk mengenkripsi file-file yang ada di dalam folder manapun, baik di hardisk/SSD, di USB stick (_flashdrive_/_flashdisk_), bahkan remote filesystem seperti Dropbox.
 
 > Saya sempat menulis cara menggunakan `cryptsetup` untuk meng-enkripsi drive atau partisi:
-> {{< article link="/tech/luks/" showSummary=true compactSummary=true >}} 
+> [[/tech/luks/]] 
+
+:::info
+
+Saya sempat menulis cara menggunakan `cryptsetup` untuk meng-enkripsi drive atau partisi:
+
+[[/tech/luks/]] 
+
+:::
 
 Berikut adalah website resmi `gocryptfs` dan repository Github-nya:
 
@@ -147,9 +155,7 @@ gocryptfs -init encrypted
 
 ![Creating and initializing `gocryptfs` filesystem & encrypted dir](../images/gocryptfs/ss3.png)
 
-:::note
-
-**Reminder!**
+:::danger[Reminder!]
 
 Setelah selesai menginisialisasi direktori, kita akan diminta untuk meng-_input_-kan password. Setelah itu, `gocryptfs` juga akan men-_generate_ **master key** (seperti "private key" dalam konsep _asymmetric encryption_). Pastikan kita menyimpan **master key** tersebut, karena **master key** tersebut tidak akan dapat didapatkan lagi dan akan berguna untuk membuka file dan direktori terenkripsi kita, terutama jika kita lupa password.
 
@@ -204,9 +210,7 @@ Nanti kita akan diminta memasukkan password yang sudah kita buat sebelumnya, tin
 
 Sekarang, kita sudah bisa menambahkan file dan direktori di dalam direktori `open/`.
 
-:::note
-
-**Perhatikan!**
+:::note[Perhatikan!]
 
 Direktori yang kita isi dengan file atau sub-direktori yang ingin dienkripsi adalah direktori yang tidak kita inisialisasi ya. Intinya, direktori yang di dalamnya ada 2 file "spesial" tadi, tidak perlu kita apa-apakan. Jadi, yang diisi/dihapus/diubah adalah direktori yang bebas kedua file "spesial" tersebut (dalam hal ini adalah direktori `open/`).
 

@@ -221,8 +221,13 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-> Btw, saya juga pernah menulis sedikit tentang modifikasi GRUB di artikel berikut:
-> {{< article link="/tech/grub/" showSummary=true compactSummary=true >}}
+:::info
+
+Btw, saya juga pernah menulis sedikit tentang modifikasi GRUB di artikel berikut:
+
+[[/tech/grub/]]
+
+:::
 
 Baru kemudian kita memasang kembali entri bootloader tersebut ke NVRAM:
 

@@ -30,13 +30,13 @@ Jadi, berikut adalah persyaratan utama yang perlu dipenuhi:
 
 Hypervisor ini perlu kita _install_ terlebih dahulu, tentu saja. Saya sudah membuatkan artikel khusus yang membahas cara memasang WMWare Workstation Pro di Archlinux:
 
-{{< article link="/tech/vmware/" showSummary=true compactSummary=true >}}
+[[/tech/vmware/]]
 
 #### 2. Windows Vista ISO
 
 File ISO Windows Vista dapat di-_download_ di sumber-sumber berikut:
 
-{{< article link="/tech/windownload/" showSummary=true compactSummary=true >}}
+[[/tech/windownload/]]
 
 #### 3. VMWare Tools 10.x
 

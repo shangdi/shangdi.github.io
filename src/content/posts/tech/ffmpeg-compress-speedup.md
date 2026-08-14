@@ -15,7 +15,7 @@ Beberapa kali saya menggunaan `ffmpeg` untuk keperluan praktis saya: membuat vid
 
 Terkadang, saya juga perlu mengganti format videonya (misalnya dari .mkv ke .mp4) agar tetap relevan untuk di-upload di kolom review di marketplace. Tapi, untuk mengganti format video ini, saya sudah pernah bahas di artikel sebelumnya:
 
-{{< article link="/tech/convertvideoformat/" showSummary=true compactSummary=true >}}
+[[/tech/convertvideoformat/]]
 
 Nah, karena aktivitas ini (menggunakan `ffmpeg` untuk mengkompres dan mempercepat video) berulang, saya putuskan untuk membuat dokumentasi ini. Meskipun saya tahu banyak website dan AI (_artificial intelligence_) yang sudah saling terintegrasi untuk melakukan 2 aktivitas tersebut, saya tetap yakin memprosesnya di komputer lokal juga memiliki keunggulan tertentu, misalnya lebih hemat kuota internet. Sebab, satu file video yang hanya berdurasi tidak lebih dari 3 menit, bisa berukuran hingga 400-an MB! Lagipula, saya hampir 100% yakin, backend dari website-website dan AI pemrosesan video diluar sana juga pasti meggunakan _tool_ yang sama dengan yang saya pakai: `ffmpeg`, hehe.
 

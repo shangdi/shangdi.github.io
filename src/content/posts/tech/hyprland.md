@@ -62,7 +62,7 @@ https://wiki.hyprland.org/Getting-Started/Installation/#manual-manual-build
 
 Btw, saya pernah menulis tentang konfigurasi **`kitty`** juga di sini:
 
-{{< article link="/tech/kittyconfig/" >}}
+[[/tech/kittyconfig/]]
 
 ## Configuration
 

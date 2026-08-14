@@ -15,7 +15,7 @@ Artikel ini tidak sedang mengajari cara membuat website Hugo, tapi menggunakan s
 
 :::
 
-{{< article link="/tech/hugo-ing/" >}}
+[[/tech/hugo-ing/]]
 
 > References:
  Semua referensi pada artikel ini merujuk pada blog dan github resmi **blowfish**:  

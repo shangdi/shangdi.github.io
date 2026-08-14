@@ -16,11 +16,11 @@ Di beberapa artikel saya yang lain, terutama yang terkait dengan cara menghubung
 
 Tutorial menghubungkan android ke linux via MTP:
 
-{{< article link="/tech/android-mtp/" showSummary=false compactSummary=true >}}
+[[/tech/android-mtp/]]
 
 Tutorial menghubungkan android ke linux via `scrcpy`:
 
-{{< article link="/tech/scrcpy/" showSummary=false compactSummary=true >}}
+[[/tech/scrcpy/]]
 
 Nah, di artikel ini, saya akan berbagi cara menghubungkan android ke linux hanya dengan _wireless connection_ saja, sehingga kita tidak tergantung sama sekali dengan kabel USB.
 

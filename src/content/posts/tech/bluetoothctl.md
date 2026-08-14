@@ -21,7 +21,7 @@ Mengapa saya (dan mungkin teman-teman pengguna Linux serta para professional Lin
 
 Saya pernah menulis sedikit mengenai TTY, btw, berikut tautan artikelnya:
 
-{{< article link="/tech/tty/" >}}
+[[/tech/tty/]]
 
 ## Prerequisites:
 

@@ -13,7 +13,7 @@ category: "git"
 
 Sebagai _blogger_ yang meng-_hosting_ file dan tulisannya di Github, saya tentu saja sudah dipastikan menggunakan Git. Bahkan, artikel pertama saya pada blog ini jelas sekali langsung membahas tentang pembuatan blog dengan [Hugo](https://gohugo.io/) sebagai "_website generator_"-nya dan [Github](https://github.com/) sebagai "server _hosting_"-nya.
 
-{{< article link="/tech/hugo-ing/" showSummary=true compactSummary=true >}}
+[[/tech/hugo-ing/]]
 
 ### Git Definition
 
