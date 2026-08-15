@@ -124,7 +124,7 @@ Untuk demonstasi ini, saya mengunakan 3 file dari *room* **CC: Steganography** m
 
 |                  File1                     |                  File2                   |                  File3                   |
 |                 -----                      |                 -----                    |                 -----                    |
-|   [exam1.jpeg](../images/steganography/test/exam1.jpeg)     |   [exam2.wav](../images/steganography/test/exam2.wav)     |   [qrcode.png](../images/steganography/test/qrcode.png)   |
+|   [exam1.jpeg](../images/steganography/test/exam1.jpeg)     |   [exam2.wav](../images/steganography/test/exam2.wav)    |   [qrcode.png](../images/steganography/test/qrcode.png)   |
 
 ## Soal
 
