@@ -318,7 +318,13 @@ Ukuran *layout* file pdf yang tampil di website bisa disesuaikan pada bagian **w
 
 Hasilnya seperti ini:
 
-{{< pdf "../images/hugo-advanced/teachlikefinland.pdf" >}}
+{{< pdf "../images/hugo-advanced/teachlikefinland.pdf" >}}
+<iframe 
+  src="../../../../public/assets/pdf/hugo-advanced/teachlikefinland.pdf" 
+  width="100%" 
+  height="800px"
+  style="border: none;">
+</iframe>
 
 Jangan lupa, sebelum di-push ke github, kita perlu menghapus folder `.git` di direktori papermod sebagai tema website kita, supaya file **pdf.html** kita yang tadi bisa ikut terupload dalam folder tema papermod di github.
 

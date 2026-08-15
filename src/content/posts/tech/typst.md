@@ -253,7 +253,12 @@ $#rect(width: 1cm)$ $arrow.r.long$ $#rect(width: 1cm)$
 
 Berikut adalah file pdf-nya:
 
-{{< pdf "../images/typst/file.pdf" >}}
+<iframe 
+  src="../../../../public/assets/pdf/typst/file.pdf" 
+  width="100%" 
+  height="800px"
+  style="border: none;">
+</iframe>
 
 Atau, jika kalian ingin yang lebih praktis, typst juga menyediakan "***playground***" unttuk mencoba typst juga. 
 

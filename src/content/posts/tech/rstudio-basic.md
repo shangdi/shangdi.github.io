@@ -45,7 +45,13 @@ RStudio juga menjadi IDE favorit bagi para R data programmer karena[^9]:
 
 Berikut adalah *cheatsheet* Markdown Syntax untuk R & RStudio:  
 
-{{< pdf "../images/rstudio-basic/rmarkdowncheatsheet.pdf" >}}
+<iframe 
+  src="../../../../public/assets/pdf/rstudio-basic/rmarkdowncheatsheet.pdf" 
+  width="100%" 
+  height="600px"
+  style="border: none;">
+</iframe>
+
 sumber: https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
 
 ## 3. R & Rstudio Installation
