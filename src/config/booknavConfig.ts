@@ -217,7 +217,7 @@ export const booknavConfig: BooknavGroup[] = [
 			{
 				title: "Toml Converter",
 				url: "https://transform.tools/toml-to-yaml",
-				desc: "TOML to TAML converter",
+				desc: "TOML to YAML converter",
 				weight: 8,
 			},
 			{
@@ -236,6 +236,12 @@ export const booknavConfig: BooknavGroup[] = [
 				title: "IDWebHost",
 				url: "https://idwebhost.com/",
 				desc: "Web domain and hosting",
+				weight: 5,
+			},
+			{
+				title: "Canva",
+				url: "https://canva.com/",
+				desc: "Online graphic desainer",
 				weight: 5,
 			},
 		],
