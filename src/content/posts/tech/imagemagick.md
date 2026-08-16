@@ -1,9 +1,10 @@
 ---
 title: "The Power of Imagemagick: A Small Yet Functional Image Editor."
 published: 2026-08-15T17:08:45+07:00
+updated: 2026-08-15
 draft: false
 pinned: false
-image: ""
+image: "../images/imagemagick/featured.png"
 description: "Do you want to crop/resize/remove background of an image/images? Imagemagick is more than enough for you."
 tags: ["imagemagick", "image", "resolution", "edit"]
 category: "imagemagick"
@@ -90,6 +91,13 @@ nix-shell -p imagemagick
 ```
 
 :::
+
+`imagemagick` juga dapat dijumpai di website resminya: https://imagemagick.org/#gsc.tab=0
+
+Atau di repo Github official-nya:
+
+::github{repo="ImageMagick/ImageMagick/"}
+
 
 ### Image Manipulation
 
@@ -246,7 +254,9 @@ magick <input_file> -fuzz 15% -fill none -draw "color 0,0 floodfill" <output_fil
 
 ![background removal](../images/imagemagick/ss7.png)
 
+Ada banyak lagi fitur-fitur yang memungkinkan kita melakukan manipulasi gambar dengan `imagemagick`. Kalian dapat melihat daftar kemampuan `imagemagick` di sini:
 
+https://usage.imagemagick.org/
 
 
 
