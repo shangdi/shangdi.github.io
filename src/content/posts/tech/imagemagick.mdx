@@ -9,8 +9,9 @@ description: "Do you want to crop/resize/remove background of an image/images? I
 tags: ["imagemagick", "image", "resolution", "edit"]
 category: "imagemagick"
 ---
+import { TabGroup } from "@/components/firefly-mdx";
 
-## Opening
+## Opening 
 
 ### Introduction
 
@@ -107,7 +108,7 @@ Saya sarankan untuk menggunakan (meng-_install_) `imagemagick` versi terbaru (7.
 
 Berikut adalah perbandingan perintah utama `imagemagick` untuk manipulasi satu gambar dan banyak gambar:
 
-::: code-group labels=[Single, Batch]
+<TabGroup labels={["Single", "Batch"]} client:load>
 
 ```shell
 # versi baru (7.x)
@@ -121,7 +122,7 @@ convert
 mogrify
 ```
 
-:::
+</TabGroup>
 
 :::
 
