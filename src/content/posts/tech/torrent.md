@@ -342,8 +342,8 @@ Terima kasih.
 Artikel ini ditulis di Archlinux dengan kombinasi Wayfire + Waybar: (_click to enlarge_)
 
 [grid]
-![vista1](../images/torrent/archlinux1.png)
-![vista2](../images/torrent/archlinux2.png)
+![archlinux + wayfire](../images/torrent/archlinux1.png)
+![archlinux + wayfire](../images/torrent/archlinux2.png)
 [/grid]
 
 
