@@ -318,9 +318,8 @@ Ukuran *layout* file pdf yang tampil di website bisa disesuaikan pada bagian **w
 
 Hasilnya seperti ini:
 
-{{< pdf "../images/hugo-advanced/teachlikefinland.pdf" >}}
 <iframe 
-  src="/public/assets/pdf/hugo-advanced/teachlikefinland.pdf" 
+  src="/assets/pdf/hugo-advanced/teachlikefinland.pdf" 
   width="100%" 
   height="800px"
   style="border: none;">

@@ -254,7 +254,7 @@ $#rect(width: 1cm)$ $arrow.r.long$ $#rect(width: 1cm)$
 Berikut adalah file pdf-nya:
 
 <iframe 
-  src="/public/assets/pdf/typst/file.pdf" 
+  src="/assets/pdf/typst/file.pdf" 
   width="100%" 
   height="800px"
   style="border: none;">
