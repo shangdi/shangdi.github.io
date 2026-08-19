@@ -193,6 +193,19 @@ export const booknavConfig: BooknavGroup[] = [
 				icon: "fa7-brands:github",
 				weight: 6,
 			},
+			{
+				title: "Twikoo",
+				url: "https://twikoo.js.org/en/",
+				desc: "Comment system",
+				weight: 5,
+			},
+			{
+				title: "Icones",
+				url: "https://icones.js.org/",
+				icon: "fa7-regular:face-kiss-wink-heart",
+				desc: "Icon Sets",
+				weight: 4,
+			},
 		],
 	},
 	{
@@ -242,7 +255,7 @@ export const booknavConfig: BooknavGroup[] = [
 				title: "Canva",
 				url: "https://canva.com/",
 				desc: "Online graphic desainer",
-				weight: 5,
+				weight: 4,
 			},
 		],
 	},

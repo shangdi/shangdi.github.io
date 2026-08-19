@@ -9,7 +9,7 @@ export const sponsorConfig: SponsorConfig = {
 
 	// 打赏用途说明
 	usage:
-		"Your donation will be my motivation to keep this blog alive and make it more useful.",
+		"Your donation will be my motivation to keep this blog alive and make it more informative.",
 
 	// 是否显示打赏者列表
 	showSponsorsList: false,
@@ -28,6 +28,7 @@ export const sponsorConfig: SponsorConfig = {
 			// 收款码图片路径（需要放在 public 目录下）
 			qrCode: "/assets/images/sponsor/blog-mywallet.png",
 			link: "bitcoin:BC1QHTL2RTJ45J0XAW2LWRALCSXPHKU88SSJW6G0SX",
+			// link: "https://www.blockchain.com/explorer/addresses/btc/BC1QHTL2RTJ45J0XAW2LWRALCSXPHKU88SSJW6G0SX",
 			description: "My bitcoin address",
 			enabled: true,
 		},
