@@ -29,8 +29,26 @@ export const friendsConfig: FriendLink[] = [
 		desc: "飞萤之火自无梦的长夜亮起，绽放在终竟的明天。",
 		siteurl: "https://blog.cuteleaf.cn",
 		tags: ["Blog"],
-		weight: 10, // 权重，数字越大排序越靠前
+		weight: 20, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
+	},
+	{
+		title: "JerryLife",
+		imgurl: "https://img.jerry-nis.top/d8703c5c-4c4a-49cc-bd94-3363c9eda2d8.png",
+		desc: "Enjoy life",
+		siteurl: "https://jerrynis.com",
+		tags: ["Blog"],
+		weight: 19, 
+		enabled: true, 
+	},
+	{
+		title: "Hyde Blog",
+		imgurl: "https://seasir.top/assets/avatar.avif",
+		desc: "人心中的成见是一座大山",
+		siteurl: "https://seasir.top",
+		tags: ["Blog"],
+		weight: 18, 
+		enabled: true, 
 	},
 	{
 		title: "Firefly Docs",

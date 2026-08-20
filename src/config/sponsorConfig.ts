@@ -23,7 +23,7 @@ export const sponsorConfig: SponsorConfig = {
 	// 打赏方式列表
 	methods: [
 		{
-			name: "Bitcoin (BTC)",
+			name: "Bitcoin (BTC)",		
 			icon: "fa7-brands:bitcoin",
 			// 收款码图片路径（需要放在 public 目录下）
 			qrCode: "/assets/images/sponsor/blog-mywallet.png",

@@ -10,6 +10,8 @@ export type WidgetComponentType =
 	| "calendar"
 	| "music"
 	| "siteInfo"
+	| "timeGreeting"
+	| "quoteOfTheDay"
 	| "dynamic";
 
 export type WidgetComponentConfig = {
