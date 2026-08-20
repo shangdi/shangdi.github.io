@@ -81,7 +81,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 
 	// 关于及其子菜单
 	links.push({
-		name: "情報",
+		// name: "情報",
 		name: "About",
 		url: "#",
 		icon: "material-symbols:info",
