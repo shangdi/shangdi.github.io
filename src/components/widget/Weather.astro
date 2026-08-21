@@ -1,0 +1,577 @@
+---
+// src/components/widget/Weather.astro
+// Weather forecast widget, adapted from the Jerrynisblog structure
+// but using Open-Meteo (free, no API key) as the data source.
+import { Icon } from "astro-icon/components";
+import WidgetLayout from "@/components/common/WidgetLayout.astro";
+
+interface Props {
+	class?: string;
+	style?: string;
+	city?: string; // optional: if set, uses a fixed city name (skips geolocation)
+	latitude?: number; // optional: fixed coordinates if you don't want to use GPS/geolocation
+	longitude?: number;
+}
+
+const { class: className, style, city, latitude, longitude } = Astro.props;
+const COLLAPSED_HEIGHT = "8.5rem";
+---
+
+<WidgetLayout name="Weather Forecast" id="weather-widget" isCollapsed={true} collapsedHeight={COLLAPSED_HEIGHT} class={className} style={style}>
+	<div data-weather-init class="weather-root" data-city={city} data-lat={latitude} data-lon={longitude}>
+		<!-- Loading -->
+		<div class="w-loading" data-weather-loading>
+			<Icon is:inline name="material-symbols:cloud-outline-rounded" class="w-loading-icon" />
+			<span class="w-loading-text">Fetching weather data...</span>
+		</div>
+
+		<!-- Error -->
+		<div class="w-error hidden" data-weather-error>
+			<Icon is:inline name="material-symbols:cloud-off-outline-rounded" class="w-error-icon" />
+			<span class="w-error-text" data-error-message>Failed to load weather</span>
+			<button class="w-retry-btn" data-retry-btn>Retry</button>
+		</div>
+
+		<!-- Content -->
+		<div class="w-content hidden" data-weather-content>
+			<div class="w-current">
+				<div class="w-current-info">
+					<div class="w-location">
+						<Icon is:inline name="material-symbols:location-on-rounded" class="w-location-icon" />
+						<span class="w-location-text" data-city>--</span>
+					</div>
+					<div class="w-temp-row">
+						<span class="w-temp" data-temperature>--</span>
+						<span class="w-temp-unit">°C</span>
+					</div>
+					<span class="w-desc" data-weather-desc>--</span>
+				</div>
+				<div class="w-current-right">
+					<span class="w-weather-icon" data-weather-icon>☀</span>
+					<span class="w-feels">Feels like <span data-feels-like>--</span>°</span>
+				</div>
+			</div>
+
+			<div class="w-meta-row">
+				<div class="w-temp-range">
+					<span class="w-high">
+						<Icon is:inline name="material-symbols:arrow-upward-rounded" class="w-arrow-icon" />
+						<span data-temp-max>--</span>°
+					</span>
+					<span class="w-low">
+						<Icon is:inline name="material-symbols:arrow-downward-rounded" class="w-arrow-icon" />
+						<span data-temp-min>--</span>°
+					</span>
+				</div>
+				<span class="w-update-time" data-observed-time></span>
+			</div>
+
+			<div class="w-divider"></div>
+
+			<div class="w-section">
+				<div class="w-section-title">
+					<Icon is:inline name="material-symbols:schedule-outline-rounded" class="w-section-icon" />
+					<span>Hourly</span>
+				</div>
+				<div class="w-hourly-scroll" data-hourly-scroll></div>
+			</div>
+
+			<div class="w-section">
+				<div class="w-section-title">
+					<Icon is:inline name="material-symbols:calendar-month-outline-rounded" class="w-section-icon" />
+					<span>Upcoming Days</span>
+				</div>
+				<div class="w-daily-list" data-daily-list></div>
+			</div>
+
+			<div class="w-detail-grid">
+				<div class="w-detail-item">
+					<Icon is:inline name="material-symbols:humidity-percentage-outline-rounded" class="w-detail-icon" />
+					<span class="w-detail-label">Humidity</span>
+					<span class="w-detail-value" data-humidity>--%</span>
+				</div>
+				<div class="w-detail-item">
+					<Icon is:inline name="material-symbols:air-rounded" class="w-detail-icon" />
+					<span class="w-detail-label">Wind</span>
+					<span class="w-detail-value" data-wind>--</span>
+				</div>
+				<div class="w-detail-item">
+					<Icon is:inline name="material-symbols:visibility-outline-rounded" class="w-detail-icon" />
+					<span class="w-detail-label">Visibility</span>
+					<span class="w-detail-value" data-visibility>--</span>
+				</div>
+				<div class="w-detail-item">
+					<Icon is:inline name="material-symbols:wb-iridescent-rounded" class="w-detail-icon" />
+					<span class="w-detail-label">UV</span>
+					<span class="w-detail-value" data-uv>--</span>
+				</div>
+				<div class="w-detail-item">
+					<Icon is:inline name="material-symbols:compress-outline-rounded" class="w-detail-icon" />
+					<span class="w-detail-label">Pressure</span>
+					<span class="w-detail-value" data-pressure>--</span>
+				</div>
+				<div class="w-detail-item">
+					<Icon is:inline name="material-symbols:cloud-outline-rounded" class="w-detail-icon" />
+					<span class="w-detail-label">Clouds</span>
+					<span class="w-detail-value" data-cloud>--%</span>
+				</div>
+			</div>
+
+			<div class="w-sun-row">
+				<div class="w-sun-item">
+					<Icon is:inline name="material-symbols:wb-sunny-outline-rounded" class="w-sun-icon w-sunrise-icon" />
+					<div class="w-sun-info">
+						<span class="w-sun-label">Sunrise</span>
+						<span class="w-sun-time" data-sunrise>--:--</span>
+					</div>
+				</div>
+				<div class="w-sun-line"></div>
+				<div class="w-sun-item">
+					<div class="w-sun-info w-sun-info-right">
+						<span class="w-sun-label">Sunset</span>
+						<span class="w-sun-time" data-sunset>--:--</span>
+					</div>
+					<Icon is:inline name="material-symbols:nightlight-outline-rounded" class="w-sun-icon w-sunset-icon" />
+				</div>
+			</div>
+		</div>
+	</div>
+</WidgetLayout>
+
+<style is:global>
+	.weather-root { width: 100%; }
+	.weather-root .hidden { display: none !important; }
+
+	:root.dark .w-temp,
+	:root.dark .w-desc,
+	:root.dark .w-daily-day,
+	:root.dark .w-hourly-temp,
+	:root.dark .w-detail-value,
+	:root.dark .w-sun-time {
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	.w-loading { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 2rem 0; }
+	.w-loading-icon { font-size: 1.75rem; color: var(--primary); opacity: 0.6; animation: w-pulse 1.5s ease-in-out infinite; }
+	.w-loading-text { font-size: 0.75rem; color: var(--content-meta); }
+	@keyframes w-pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.8; } }
+
+	.w-error { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 1.5rem 0; }
+	.w-error-icon { font-size: 1.5rem; color: var(--content-meta); }
+	.w-error-text { font-size: 0.75rem; color: var(--content-meta); }
+	.w-retry-btn { font-size: 0.75rem; color: var(--primary); background: none; border: none; cursor: pointer; transition: opacity 0.2s ease; }
+	.w-retry-btn:hover { opacity: 0.7; text-decoration: underline; }
+
+	.w-content { display: flex; flex-direction: column; gap: 0.75rem; }
+	.w-current { display: flex; align-items: center; justify-content: space-between; }
+	.w-current-info { display: flex; flex-direction: column; gap: 0.125rem; }
+	.w-location { display: flex; align-items: center; gap: 0.25rem; color: var(--content-meta); }
+	.w-location-icon { font-size: 0.875rem; }
+	.w-location-text { font-size: 0.75rem; font-weight: 500; }
+	.w-temp-row { display: flex; align-items: baseline; gap: 0.25rem; }
+	.w-temp { font-size: 2.25rem; font-weight: 700; color: var(--deep-text); line-height: 1.1; }
+	.w-temp-unit { font-size: 1rem; color: var(--content-meta); }
+	.w-desc { font-size: 0.8rem; font-weight: 500; color: var(--deep-text); }
+	.w-current-right { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; }
+	.w-weather-icon { font-size: 2rem; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif; line-height: 1; }
+	.w-feels { font-size: 0.7rem; color: var(--content-meta); }
+
+	.w-meta-row { display: flex; align-items: center; justify-content: space-between; font-size: 0.7rem; }
+	.w-temp-range { display: flex; gap: 0.6rem; }
+	.w-high { display: flex; align-items: center; gap: 0.125rem; color: #ef4444; font-weight: 500; }
+	.w-low { display: flex; align-items: center; gap: 0.125rem; color: #3b82f6; font-weight: 500; }
+	.w-arrow-icon { font-size: 0.875rem; }
+	.w-update-time { color: var(--content-meta); }
+
+	.w-divider { height: 1px; background: var(--line-divider); }
+
+	.w-section { display: flex; flex-direction: column; gap: 0.4rem; }
+	.w-section-title { display: flex; align-items: center; gap: 0.25rem; color: var(--content-meta); font-size: 0.7rem; font-weight: 500; }
+	.w-section-icon { font-size: 0.875rem; }
+
+	.w-hourly-scroll { display: flex; gap: 0.25rem; overflow-x: auto; padding-bottom: 0.25rem; scroll-behavior: smooth; }
+	.w-hourly-scroll::-webkit-scrollbar { height: 3px; }
+	.w-hourly-scroll::-webkit-scrollbar-thumb { background: var(--line-divider); border-radius: 2px; }
+	.w-hourly-item { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 0.15rem; padding: 0.3rem 0.4rem; border-radius: 0.5rem; min-width: 2.5rem; transition: background 0.2s ease; }
+	.w-hourly-item:hover { background: var(--btn-plain-bg-hover); }
+	.w-hourly-item.active { background: color-mix(in oklch, var(--primary) 12%, transparent); }
+	.w-hourly-time { font-size: 0.65rem; color: var(--content-meta); }
+	.w-hourly-icon { font-size: 1.1rem; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif; line-height: 1; }
+	.w-hourly-temp { font-size: 0.7rem; font-weight: 600; color: var(--deep-text); }
+
+	.w-daily-list { display: flex; flex-direction: column; gap: 0.25rem; }
+	.w-daily-row { display: flex; align-items: center; gap: 0.5rem; padding: 0.3rem 0.4rem; border-radius: 0.5rem; transition: background 0.2s ease; }
+	.w-daily-row:hover { background: var(--btn-plain-bg-hover); }
+	.w-daily-day { font-size: 0.75rem; font-weight: 500; color: var(--deep-text); min-width: 2.5rem; }
+	.w-daily-icon { font-size: 1.1rem; font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif; line-height: 1; }
+	.w-daily-desc { font-size: 0.65rem; color: var(--content-meta); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+	.w-daily-high { font-size: 0.7rem; font-weight: 500; color: #ef4444; }
+	.w-daily-low { font-size: 0.7rem; font-weight: 500; color: #3b82f6; }
+
+	.w-detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; }
+	.w-detail-item { display: flex; flex-direction: column; align-items: center; gap: 0.15rem; padding: 0.5rem 0.25rem; border-radius: 0.5rem; background: var(--btn-plain-bg-hover); transition: background 0.2s ease; }
+	.w-detail-item:hover { background: var(--muted); }
+	.w-detail-icon { font-size: 1rem; color: var(--primary); }
+	.w-detail-label { font-size: 0.65rem; color: var(--content-meta); }
+	.w-detail-value { font-size: 0.7rem; font-weight: 600; color: var(--deep-text); }
+
+	.w-sun-row { display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 0.75rem; border-radius: 0.5rem; background: var(--btn-plain-bg-hover); }
+	.w-sun-item { display: flex; align-items: center; gap: 0.4rem; }
+	.w-sun-info { display: flex; flex-direction: column; }
+	.w-sun-info-right { align-items: flex-end; }
+	.w-sun-icon { font-size: 1rem; }
+	.w-sunrise-icon { color: #f59e0b; }
+	.w-sunset-icon { color: #6366f1; }
+	.w-sun-label { font-size: 0.65rem; color: var(--content-meta); }
+	.w-sun-time { font-size: 0.75rem; font-weight: 600; color: var(--deep-text); }
+	.w-sun-line { flex: 1; height: 1px; background: var(--line-divider); margin: 0 0.75rem; }
+</style>
+
+<script is:inline>
+	(function () {
+		// Open-Meteo: free, no API key, CORS enabled for client-side fetch.
+		const FORECAST_API = "https://api.open-meteo.com/v1/forecast";
+		const GEOCODE_API = "https://geocoding-api.open-meteo.com/v1/search";
+		// BigDataCloud: free reverse geocoding without a key, for city name from GPS coordinates.
+		const REVERSE_GEOCODE_API = "https://api.bigdatacloud.net/data/reverse-geocode-client";
+
+		const CACHE_KEY = "weather_cache_v1";
+		const CACHE_DURATION = 10 * 60 * 1000; // 10 minutes
+
+		function getWeatherSymbol(code) {
+			const symbols = {
+				0: "☀️", 1: "🌤️", 2: "⛅", 3: "☁️",
+				45: "🌫️", 48: "🌫️",
+				51: "🌦️", 53: "🌦️", 55: "🌧️",
+				56: "🌧️", 57: "🌧️",
+				61: "🌦️", 63: "🌧️", 65: "🌧️",
+				66: "🌧️", 67: "🌧️",
+				71: "🌨️", 73: "🌨️", 75: "❄️", 77: "🌨️",
+				80: "🌦️", 81: "🌧️", 82: "⛈️",
+				85: "🌨️", 86: "❄️",
+				95: "⛈️", 96: "⛈️", 99: "⛈️",
+			};
+			return symbols[code] || "🌤️";
+		}
+
+		function getWeatherDesc(code) {
+			const desc = {
+				0: "Clear Sky", 1: "Mainly Clear", 2: "Partly Cloudy", 3: "Overcast",
+				45: "Fog", 48: "Rime Fog",
+				51: "Light Drizzle", 53: "Drizzle", 55: "Dense Drizzle",
+				56: "Freezing Drizzle", 57: "Dense Freezing Drizzle",
+				61: "Light Rain", 63: "Rain", 65: "Heavy Rain",
+				66: "Freezing Rain", 67: "Heavy Freezing Rain",
+				71: "Light Snow", 73: "Snow", 75: "Heavy Snow", 77: "Snow Grains",
+				80: "Light Rain Showers", 81: "Rain Showers", 82: "Violent Rain Showers",
+				85: "Light Snow Showers", 86: "Heavy Snow Showers",
+				95: "Thunderstorm", 96: "Thunderstorm + Hail", 99: "Severe Thunderstorm",
+			};
+			return desc[code] || "--";
+		}
+
+		function formatTime(isoStr) {
+			if (!isoStr) return "--:--";
+			const d = new Date(isoStr);
+			return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
+		}
+
+		function formatHour(isoStr) {
+			if (!isoStr) return "";
+			const d = new Date(isoStr);
+			return `${String(d.getHours()).padStart(2, "0")}:00`;
+		}
+
+		function formatVisibility(meters) {
+			if (meters == null) return "--";
+			if (meters >= 1000) return `${(meters / 1000).toFixed(1)}km`;
+			return `${meters}m`;
+		}
+
+		function getUvLevel(uv) {
+			if (uv == null) return "--";
+			if (uv < 3) return `${uv.toFixed(1)} Low`;
+			if (uv < 6) return `${uv.toFixed(1)} Moderate`;
+			if (uv < 8) return `${uv.toFixed(1)} High`;
+			if (uv < 11) return `${uv.toFixed(1)} V.High`;
+			return `${uv.toFixed(1)} Extreme`;
+		}
+
+		function getDayName(dateStr, index) {
+			if (index === 0) return "Today";
+			if (index === 1) return "Tomorrow";
+			if (index === 2) return "Day 3";
+			if (!dateStr) return "--";
+			const d = new Date(dateStr);
+			const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+			return days[d.getDay()];
+		}
+
+		function getGeoCoords() {
+			return new Promise((resolve) => {
+				const permission = localStorage.getItem("geo-permission");
+				if (permission === "denied") {
+					resolve(null);
+					return;
+				}
+				if (!navigator.geolocation) {
+					resolve(null);
+					return;
+				}
+				navigator.geolocation.getCurrentPosition(
+					(pos) => {
+						try { localStorage.setItem("geo-permission", "granted"); } catch {}
+						resolve({ lat: pos.coords.latitude, lon: pos.coords.longitude });
+					},
+					() => {
+						try { localStorage.setItem("geo-permission", "denied"); } catch {}
+						resolve(null);
+					},
+					{ timeout: 8000, enableHighAccuracy: false, maximumAge: 600000 }
+				);
+			});
+		}
+
+		async function resolveCoords(container) {
+			// 1. If the widget was given a fixed lat/lon via prop
+			const fixedLat = container.dataset.lat;
+			const fixedLon = container.dataset.lon;
+			if (fixedLat && fixedLon && fixedLat !== "undefined" && fixedLon !== "undefined") {
+				return { lat: Number(fixedLat), lon: Number(fixedLon), label: null };
+			}
+
+			// 2. If the widget was given a fixed city name via prop
+			const cityName = container.dataset.city;
+			if (cityName && cityName !== "undefined") {
+				const url = `${GEOCODE_API}?name=${encodeURIComponent(cityName)}&count=1&language=en`;
+				const res = await fetch(url);
+				const data = await res.json();
+				const r = data.results && data.results[0];
+				if (!r) throw new Error("City not found");
+				return { lat: r.latitude, lon: r.longitude, label: r.name };
+			}
+
+			// 3. Try browser geolocation
+			const coords = await getGeoCoords();
+			if (coords) return { lat: coords.lat, lon: coords.lon, label: null };
+
+			// 4. Fallback: IP-based via BigDataCloud (no precise coordinates, but decent accuracy)
+			const ipRes = await fetch("https://api.bigdatacloud.net/data/client-ip");
+			const ipData = await ipRes.json();
+			if (!ipData.ipString) throw new Error("Could not determine location");
+			// BigDataCloud client-ip doesn't return coordinates, so this is the last resort
+			throw new Error("Location unavailable, please allow location access in your browser");
+		}
+
+		async function reverseGeocodeCity(lat, lon) {
+			try {
+				const url = `${REVERSE_GEOCODE_API}?latitude=${lat}&longitude=${lon}&localityLanguage=id`;
+				const res = await fetch(url);
+				if (!res.ok) return null;
+				const data = await res.json();
+				return data.city || data.locality || data.principalSubdivision || null;
+			} catch {
+				return null;
+			}
+		}
+
+		async function fetchWeather(container) {
+			const { lat, lon, label } = await resolveCoords(container);
+			const cacheKey = `${CACHE_KEY}_${lat.toFixed(2)}_${lon.toFixed(2)}`;
+
+			try {
+				const cached = localStorage.getItem(cacheKey);
+				if (cached) {
+					const parsed = JSON.parse(cached);
+					if (Date.now() - parsed.timestamp < CACHE_DURATION) {
+						return parsed.data;
+					}
+				}
+			} catch {}
+
+			const params = new URLSearchParams({
+				latitude: lat,
+				longitude: lon,
+				current: "temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,cloud_cover,surface_pressure,wind_speed_10m",
+				hourly: "temperature_2m,weather_code,uv_index,visibility",
+				daily: "weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset",
+				timezone: "auto",
+				forecast_days: "4",
+			});
+
+			const res = await fetch(`${FORECAST_API}?${params.toString()}`);
+			if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+			const raw = await res.json();
+
+			const cityName = label || (await reverseGeocodeCity(lat, lon)) || "Current Location";
+
+			// Find the current hour's index in the hourly array, to grab current uv_index & visibility
+			const nowIso = raw.current.time;
+			const hourIdx = raw.hourly.time.indexOf(nowIso);
+
+			const data = {
+				location: { city: cityName },
+				current: {
+					temperature: raw.current.temperature_2m,
+					apparentTemperature: raw.current.apparent_temperature,
+					humidity: raw.current.relative_humidity_2m,
+					weatherCode: raw.current.weather_code,
+					weatherDescription: getWeatherDesc(raw.current.weather_code),
+					windSpeed: raw.current.wind_speed_10m,
+					pressure: raw.current.surface_pressure,
+					cloudCover: raw.current.cloud_cover,
+					uvIndex: hourIdx >= 0 ? raw.hourly.uv_index[hourIdx] : null,
+					visibility: hourIdx >= 0 ? raw.hourly.visibility[hourIdx] : null,
+					observedAt: raw.current.time,
+				},
+				hourly: raw.hourly.time.map((t, i) => ({
+					time: t,
+					temperature: raw.hourly.temperature_2m[i],
+					weatherCode: raw.hourly.weather_code[i],
+				})),
+				daily: raw.daily.time.map((d, i) => ({
+					date: d,
+					tempMax: raw.daily.temperature_2m_max[i],
+					tempMin: raw.daily.temperature_2m_min[i],
+					weatherCode: raw.daily.weather_code[i],
+					weatherDescriptionId: getWeatherDesc(raw.daily.weather_code[i]),
+					sunrise: raw.daily.sunrise[i],
+					sunset: raw.daily.sunset[i],
+				})),
+			};
+
+			try {
+				localStorage.setItem(cacheKey, JSON.stringify({ data, timestamp: Date.now() }));
+			} catch {}
+
+			return data;
+		}
+
+		function updateUI(container, data) {
+			const loading = container.querySelector("[data-weather-loading]");
+			const errorEl = container.querySelector("[data-weather-error]");
+			const content = container.querySelector("[data-weather-content]");
+
+			loading.classList.add("hidden");
+			errorEl.classList.add("hidden");
+
+			const loc = data.location || {};
+			const cur = data.current || {};
+			const daily = data.daily || [];
+			const hourly = data.hourly || [];
+
+			container.querySelector("[data-city]").textContent = loc.city || "--";
+			container.querySelector("[data-temperature]").textContent =
+				cur.temperature != null ? Math.round(cur.temperature) : "--";
+			container.querySelector("[data-feels-like]").textContent =
+				cur.apparentTemperature != null ? Math.round(cur.apparentTemperature) : "--";
+			container.querySelector("[data-weather-desc]").textContent = cur.weatherDescription || "--";
+			container.querySelector("[data-weather-icon]").textContent = getWeatherSymbol(cur.weatherCode);
+
+			const observedEl = container.querySelector("[data-observed-time]");
+			if (cur.observedAt) {
+				observedEl.textContent = `Updated ${formatTime(cur.observedAt)}`;
+			}
+
+			if (daily.length > 0) {
+				container.querySelector("[data-temp-max]").textContent =
+					daily[0].tempMax != null ? Math.round(daily[0].tempMax) : "--";
+				container.querySelector("[data-temp-min]").textContent =
+					daily[0].tempMin != null ? Math.round(daily[0].tempMin) : "--";
+			}
+
+			const hourlyScroll = container.querySelector("[data-hourly-scroll]");
+			hourlyScroll.innerHTML = "";
+			const now = new Date();
+			const hourlyItems = hourly.filter((h) => new Date(h.time) >= now).slice(0, 12);
+			hourlyItems.forEach((h, i) => {
+				const el = document.createElement("div");
+				el.className = "w-hourly-item" + (i === 0 ? " active" : "");
+				el.innerHTML = `
+					<span class="w-hourly-time">${i === 0 ? "Now" : formatHour(h.time)}</span>
+					<span class="w-hourly-icon">${getWeatherSymbol(h.weatherCode)}</span>
+					<span class="w-hourly-temp">${Math.round(h.temperature)}°</span>
+				`;
+				hourlyScroll.appendChild(el);
+			});
+
+			const dailyList = container.querySelector("[data-daily-list]");
+			dailyList.innerHTML = "";
+			daily.slice(0, 3).forEach((d, i) => {
+				const el = document.createElement("div");
+				el.className = "w-daily-row";
+				el.innerHTML = `
+					<span class="w-daily-day">${getDayName(d.date, i)}</span>
+					<span class="w-daily-icon">${getWeatherSymbol(d.weatherCode)}</span>
+					<span class="w-daily-desc">${d.weatherDescriptionId || ""}</span>
+					<span class="w-daily-high">${Math.round(d.tempMax)}°</span>
+					<span class="w-daily-low">${Math.round(d.tempMin)}°</span>
+				`;
+				dailyList.appendChild(el);
+			});
+
+			container.querySelector("[data-humidity]").textContent =
+				cur.humidity != null ? `${cur.humidity}%` : "--%";
+			container.querySelector("[data-wind]").textContent =
+				cur.windSpeed != null ? `${cur.windSpeed}km/h` : "--";
+			container.querySelector("[data-visibility]").textContent = formatVisibility(cur.visibility);
+			container.querySelector("[data-uv]").textContent = getUvLevel(cur.uvIndex);
+			container.querySelector("[data-pressure]").textContent =
+				cur.pressure != null ? `${Math.round(cur.pressure)}` : "--";
+			container.querySelector("[data-cloud]").textContent =
+				cur.cloudCover != null ? `${cur.cloudCover}%` : "--%";
+
+			if (daily.length > 0) {
+				container.querySelector("[data-sunrise]").textContent = formatTime(daily[0].sunrise);
+				container.querySelector("[data-sunset]").textContent = formatTime(daily[0].sunset);
+			}
+
+			content.classList.remove("hidden");
+		}
+
+		function showError(container, msg) {
+			const loading = container.querySelector("[data-weather-loading]");
+			const errorEl = container.querySelector("[data-weather-error]");
+			const errorMsg = container.querySelector("[data-error-message]");
+			loading.classList.add("hidden");
+			errorEl.classList.remove("hidden");
+			if (errorMsg) errorMsg.textContent = msg || "Failed to load weather";
+		}
+
+		function initWidget(container) {
+			const retryBtn = container.querySelector("[data-retry-btn]");
+
+			async function load() {
+				const loading = container.querySelector("[data-weather-loading]");
+				const errorEl = container.querySelector("[data-weather-error]");
+				const content = container.querySelector("[data-weather-content]");
+				loading.classList.remove("hidden");
+				errorEl.classList.add("hidden");
+				content.classList.add("hidden");
+
+				try {
+					const data = await fetchWeather(container);
+					updateUI(container, data);
+				} catch (e) {
+					showError(container, e.message);
+				}
+			}
+
+			if (retryBtn) {
+				retryBtn.addEventListener("click", () => {
+					const keysToRemove = [];
+					for (let i = 0; i < localStorage.length; i++) {
+						const key = localStorage.key(i);
+						if (key && key.startsWith(CACHE_KEY)) keysToRemove.push(key);
+					}
+					keysToRemove.forEach((k) => localStorage.removeItem(k));
+					load();
+				});
+			}
+
+			load();
+		}
+
+		document.querySelectorAll("[data-weather-init]").forEach(initWidget);
+	})();
+</script>
