@@ -288,7 +288,7 @@ zellij ls
 
 Atau kalau ingin menggunakan session manager juga bisa dengan mengetikkan _keybind_ berikut di dalam sesi _zellij_:
 
-```shel
+```shell
 Ctrl+o w
 ```
 

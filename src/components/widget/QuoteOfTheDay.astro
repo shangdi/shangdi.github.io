@@ -2,9 +2,11 @@
 import { getCollection } from "astro:content";
 import WidgetLayout from "@/components/common/WidgetLayout.astro";
 
-// 从 content/ziyuan/quote.md 读取名言数据
+// 从 content/quote/quote.md 读取名言数据
 const ziyuanEntries = await getCollection("ziyuan");
+// const quoteEntries = await getCollection("quote");
 const quoteEntry = ziyuanEntries.find((e) => e.id === "quote");
+// const quoteEntry = quoteEntries.find((e) => e.id === "quote");
 const quoteData = quoteEntry?.data as any;
 const quotes = quoteData?.quotes || [];
 
@@ -22,10 +24,10 @@ const seed = dateStr
 	.split("")
 	.reduce((acc, char) => acc + char.charCodeAt(0), 0);
 const randomIndex = seed % quotes.length;
-const quote = quotes[randomIndex] || { text: "If buying is not owning, then pirating is not stealing.", author: "Unknown" };
+const quote = quotes[randomIndex] || { text: "暂无名言", author: "" };
 ---
 
-<WidgetLayout name="Quote of The Day" id="quote-of-the-day" class={className} style={style}>
+<WidgetLayout name="Quote of The Day ✨" id="quote-of-the-day" class={className} style={style}>
 	<div class="quote-content">
 		<blockquote class="quote-text">
 			<span class="quote-mark">"</span>

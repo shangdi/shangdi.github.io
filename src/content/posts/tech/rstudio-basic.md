@@ -128,11 +128,11 @@ Ketika kita ingin menampilkan dataframe, maka dataframe tersebut juga akan muncu
 
 Untuk kebutuhan demonstrasi, kita memerlukan dua library utama, yaitu tidyverse dan palmerpenguins.  
 Kita bisa melihat informasi atau deskripsi dari sebuah paket atau library dengan mengetikkan perintah berikut di console`packageDescription("nama_library")`. Misalnya, saya ingin melihat informasi tentang paket/library **`tidyverse`**:
-```R
+```r
 packageDescription("tidyverse")
 ```
 Outputnya:
-```R
+```r
 Package: tidyverse
 Title: Easily Install and Load the 'Tidyverse'
 Version: 2.0.0
@@ -172,11 +172,11 @@ Built: R 4.2.2; ; 2024-06-13 14:52:25 UTC; unix
 ```
 
 Saya juga ingin tahu tentang package/library **`palmerpenguins`**:
-```R
+```r
 packageDescription("palmerpenguins")
 ```
 Outputnya:
-```R
+```r
 Package: palmerpenguins
 Title: Palmer Archipelago (Antarctica) Penguin Data
 Version: 0.1.1
@@ -218,20 +218,20 @@ Library `tidyverse` menyediakan 8 *packages* untuk proses analisis data, terutam
 Sedangkan, salah satu *packages* dari *library* `palmerpenguins`, yaitu *package* **`penguins`** adalah dataset yang akan kita gunakan sebagai sumber olah datanya[^7].
 
 Adapun perintah untuk meng-*install* kedua paket tersebut yaitu sebagai berikut:
-```R
+```r
 install.packages("tidyverse")
 install.packages("palmerpenguins")
 ```
 
 Atau dalam satu baris, kita dapat memasang kedua *packages* atau *library* tersebut seperti berikut[^7]:
-```R
+```r
 install.packages(c("tidyverse", "palmerpenguins"))
 ```
 
 ## 6. Playing with Data
 
 Setelah ter-*install*, agar dapat digunakan, kita perlu memanggil kedua *packages* atau *libraries* tersebut dengan perintah:
-```R
+```r
 library("tidyverse")
 library("palmerpenguins")
 ```
@@ -239,7 +239,7 @@ library("palmerpenguins")
 ### Viewing Dataset
 
 Kemudian, kita bisa melihat dataset **penguins** menggunakan fungsi `View()`:
-```R
+```r
 View(penguins)
 ```
 > **Note:** R adalah bahasa yang *case-sensitive*. Artinya, akan berbeda hasilnya jika kita menggunakan fungsi `view()` dan fungsi `View()`. Jadi, perhatikan penulisannya!
@@ -249,7 +249,7 @@ View(penguins)
 Seperti terlihat pada tangkapan layar di atas, dataset **penguins** berhasil ditampilkan. Pada bagian pojok kiri bawah, kita juga dapat melihat informasi mengenai jumlah data yang terdapat dalam dataset tersebut (baris dan kolom). 
 
 Atau kalau kita ingin melihat informasi sebuah dataset tanpa harus menampilkan isinya, kita bisa menggunakan fungsi `glimpse()` di console:
-```R
+```r
 glimpse(penguins)
 ```
 ![](../images/rstudio-basic/ss4.png)
@@ -265,7 +265,7 @@ Kita bisa membuat grafik dari dataset **penguins** tersebut menggunakan `ggplot2
 **Scatter Plot** atau **Grafik Pencar** digunakan untuk menampilkan hubungan antara dua variabel numerik.  
 Misalnya: Hubungan antara panjang paruh dan panjang sirip penguin.
 
-```R
+```r
 ggplot(data = penguins, aes(x = bill_length_mm, y = flipper_length_mm, color=species)) +
   geom_point()
 ```
@@ -278,7 +278,7 @@ Hasilnya:
 **Histogram** digunakan untuk menampilkan distribusi frekuensi dari suatu variabel numerik.  
 Misalnya: Distribusi panjang paruh penguin.
 
-```R
+```r
 ggplot(data = penguins, aes(x = bill_length_mm)) +
   geom_histogram(binwidth = 2, fill = "skyblue", color = "black")
 ```
@@ -291,7 +291,7 @@ Hasilnya:
 **Bar Plot** digunakan untuk menampilkan perbandingan antara kategori atau faktor dengan nilai-nilai numerik.  
 Misalnya: Jumlah penguin berdasarkan spesiesnya.
 
-```R
+```r
 ggplot(data = penguins, aes(x = species, fill = species)) +
   geom_bar()
 ```
@@ -304,7 +304,7 @@ Hasilnya:
 **Box Plot** digunakan untuk menampilkan distribusi variabel numerik dalam beberapa kelompok kategori.  
 Misalnya: Distribusi panjang paruh penguin berdasarkan spesiesnya.
 
-```R
+```r
 ggplot(data = penguins, aes(x = species, y = bill_length_mm, fill = species)) +
   geom_boxplot()
 ```
@@ -317,7 +317,7 @@ Hasilnya:
 **Line Plot** digunakan untuk menampilkan tren atau perubahan nilai variabel numerik secara berurutan.  
 Misalnya: Perubahan berat badan penguin dari waktu ke waktu.
 
-```R
+```r
 # Hitung rata-rata berat badan per tahun untuk setiap spesies
 avg_weight <- penguins %>%
   group_by(year, species) %>%
@@ -339,7 +339,7 @@ Hasilnya:
 **Pie Chart** digunakan untuk menunjukkan atau membandingkan proporsi atau persentase dari beberapa kategori dalam suatu dataset[^11].  
 Misalnya: Perbandingan jumlah spesies penguin.
 
-```R
+```r
 # Menghitung jumlah observasi per spesies
 penguins_count <- penguins %>%
   count(species) %>%
