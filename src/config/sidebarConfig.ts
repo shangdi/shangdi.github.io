@@ -149,7 +149,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 是否在文章详情页显示
 			showOnPostPage: false,
 			customProps: {
-				city: "Tokyo",
+				city: "Jakarta",
 				},
 		},
 		{

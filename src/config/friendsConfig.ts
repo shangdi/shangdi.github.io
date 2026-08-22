@@ -51,6 +51,15 @@ export const friendsConfig: FriendLink[] = [
 		enabled: true, 
 	},
 	{
+		title: "团子和蛋糕",
+		imgurl: "https://blog.tsh520.cn/assets/ziyuan/tx.webp",
+		desc: "如果你喜欢那么欢迎来到我的世界！",
+		siteurl: "https://blog.tsh520.cn",
+		tags: ["Site"],
+		weight: 17, 
+		enabled: true, 
+	},
+	{
 		title: "Firefly Docs",
 		imgurl: "https://docs-firefly.cuteleaf.cn/logo.png",
 		desc: "Firefly主题模板文档",
