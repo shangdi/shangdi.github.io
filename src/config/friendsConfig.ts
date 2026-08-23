@@ -55,8 +55,17 @@ export const friendsConfig: FriendLink[] = [
 		imgurl: "https://blog.tsh520.cn/assets/ziyuan/tx.webp",
 		desc: "如果你喜欢那么欢迎来到我的世界！",
 		siteurl: "https://blog.tsh520.cn",
-		tags: ["Site"],
+		tags: ["Blog"],
 		weight: 17, 
+		enabled: true, 
+	},
+	{
+		title: "清羽飞扬",
+		imgurl: "https://blog.liushen.fun/info/avatar.ico",
+		desc: "柳影曳曳，清酒孤灯，扬笔撒墨，心境如霜",
+		siteurl: "https://blog.liushen.fun/",
+		tags: ["Blog"],
+		weight: 16, 
 		enabled: true, 
 	},
 	{
