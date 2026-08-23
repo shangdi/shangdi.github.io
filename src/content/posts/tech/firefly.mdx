@@ -70,7 +70,49 @@ Official Github _repository_-nya dapat dilihat di sini:
 
 [Firefly](https://firefly.cuteleaf.cn/) adalah tema atau _template_ _static site_ yang dibuat dengan fondasi dari Astro. Well, sebetulnya, tidak 100% begitu, sih. Sebab, Firefly adalah tema yang dikembangkan dari "_**fork**_" tema yang sebelumnya sudah ada, yaitu [Fuwari](https://fuwari.vercel.app/). Dibandingkan dengan Firefly, Fuwari terlihat lebih sederhana. Selain itu, saat artikel ini ditulis, pengembangannya juga sudah terlihat melambat. Mungkin itu juga alasan mengapa akhirnya Firefly muncul, sebagai "_refresher_" dari tema Fuwari ini.
 
-> Tema Firefly ini saya temukan ketika sedang scrolling tema di web Astro:  
+Berikut adalah struktur project "Firefly":[^5]
+
+```
+Firefly/
+├── src/
+│   ├── config/          # Configuration files
+│   ├── components/      # Components
+│   ├── content/         # Content (posts, pages)
+│   ├── layouts/         # Layout templates
+│   ├── pages/           # Page routes
+│   └── types/           # Type definitions
+├── public/              # Static assets
+└── astro.config.mjs     # Astro configuration
+```
+
+Semua file konfigurasi **Firefly** ada di `src/config`:[^6]
+
+| Config File | Description | Docs |
+|---|---|---|
+| `siteConfig.ts` | Site basic configuration | [Site Config](https://docs-firefly.cuteleaf.cn/en/guide/site.html) |
+| `dynamicConfig.ts` | Moments page configuration | [Moments](https://docs-firefly.cuteleaf.cn/en/guide/dynamic.html) |
+| `navBarConfig.ts` | Navbar configuration | [Navbar](https://docs-firefly.cuteleaf.cn/en/guide/navbar.html) |
+| `sidebarConfig.ts` | Sidebar layout configuration | [Sidebar](https://docs-firefly.cuteleaf.cn/en/guide/sidebar.html) |
+| `profileConfig.ts` | Profile configuration | [Profile](https://docs-firefly.cuteleaf.cn/en/guide/profile.html) |
+| `backgroundWallpaper.ts` | Background wallpaper configuration | [Wallpaper](https://docs-firefly.cuteleaf.cn/en/guide/wallpaper.html) |
+| `commentConfig.ts` | Comment system configuration | [Comment](https://docs-firefly.cuteleaf.cn/en/guide/comment.html) |
+| `musicConfig.ts` | Music player configuration | [Music Player](https://docs-firefly.cuteleaf.cn/en/guide/music.html) |
+| `fontConfig.ts` | Font configuration | [Font](https://docs-firefly.cuteleaf.cn/en/guide/font.html) |
+| `coverImageConfig.ts` | Cover image configuration | [Cover Image](https://docs-firefly.cuteleaf.cn/en/guide/cover-image.html) |
+| `expressiveCodeConfig.ts` | Code block configuration | [Code Block](https://docs-firefly.cuteleaf.cn/en/guide/code-block.html) |
+| `effectsConfig.ts` | Effects configuration | [Effects](https://docs-firefly.cuteleaf.cn/en/guide/effects.html) |
+| `announcementConfig.ts` | Announcement configuration | [Announcement](https://docs-firefly.cuteleaf.cn/en/guide/announcement.html) |
+| `footerConfig.ts` | Footer configuration | [Footer](https://docs-firefly.cuteleaf.cn/en/guide/footer.html) |
+| `licenseConfig.ts` | License configuration | [License](https://docs-firefly.cuteleaf.cn/en/guide/license.html) |
+| `friendsConfig.ts` | Friends links configuration | [Friends](https://docs-firefly.cuteleaf.cn/en/guide/friends.html) |
+| `sponsorConfig.ts` | Sponsor configuration | [Sponsor](https://docs-firefly.cuteleaf.cn/en/guide/sponsor.html) |
+| `analyticsConfig.ts` | Analytics configuration | [Site Config](https://docs-firefly.cuteleaf.cn/en/guide/site.html#analytics) |
+| `galleryConfig.ts` | Gallery configuration | [Gallery](https://docs-firefly.cuteleaf.cn/en/guide/gallery.html) |
+| `mermaidConfig.ts` | Mermaid diagram configuration | [Mermaid](https://docs-firefly.cuteleaf.cn/en/guide/mermaid.html) |
+| `plantumlConfig.ts` | PlantUML diagram configuration | [PlantUML](https://docs-firefly.cuteleaf.cn/en/guide/plantuml.html) |
+| `pioConfig.ts` | Live2D/Spine model configuration | [Live2D/Spine](https://docs-firefly.cuteleaf.cn/en/guide/pio.html) |
+
+> Tema Firefly ini saya temukan ketika sedang _scrolling_ tema di web Astro:  
 > https://astro.build/themes/
 
 Coba bandingkan sendiri _homepage_ dari kedua website ini:
@@ -201,7 +243,7 @@ Contohnya, berikut adalah artikel _**private**_ saya:
 
 Dan fitur ini mudah sekali digunakan, sesimpel menambahkan sebuah _frontmatter_ password di file markdown / MDX-nya. Misalnya,
 
-```md {10-11}
+```md {9-10}
 ---
 title: "Article Title"
 published: 2023-10-09T15:22:46+07:00
@@ -280,6 +322,16 @@ Sebagai orang yang mudah jenuh, saya sangat mengapresiasi adanya "**Website Sett
 
 ![Settings](../images/firefly/ss10.png)
 
+Berikut adalah 3 dari 4 mode background Wallpaper:
+
+[grid]
+![Banner](../images/firefly/ss11.png)
+![Overlay](../images/firefly/ss12.png)
+![Fullscreen](../images/firefly/ss13.png)
+[/grid]
+
+Mode ke-4 apa? Mode ke-4 adalah tanpa Wallpaper. Jadi, kalau kalian ingin tampilan blognya lebih sederhana, bisa pilih mode ke-4 tersebut.
+
 ## Dessert
 
 Beberapa fitur lain juga tentu ada. Tapi, tidak saya bahas karena saya pikir cukup standard (setidaknya berdasarkan pengamatan subjektif saya) di banyak blog. Misalnya seperti fitur "Light & Dark Mode" dan fitur "Komentar".
@@ -296,4 +348,5 @@ Sampai jumpa di artikel saya yang lain!
 [^2]: https://en.wikipedia.org/wiki/Markup_language
 [^3]: https://en.wikipedia.org/wiki/Markdown
 [^4]: https://medium.com/@urza.p/jsx-deep-dive-what-it-really-is-and-how-it-works-c1b32ef2e682
-
+[^5]: https://docs-firefly.cuteleaf.cn/en/guide/getting-started.html#project-structure
+[^6]: https://docs-firefly.cuteleaf.cn/en/guide/getting-started.html#configuration-overview
