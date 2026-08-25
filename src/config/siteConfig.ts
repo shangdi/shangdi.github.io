@@ -46,7 +46,7 @@ export const siteConfig: SiteConfig = {
 	subtitle: "Secret Blog",
 
 	// 站点 URL
-	site_url: "https://shangdi.github.io/",
+	site_url: "https://secretblog.my.id/",
 
 	// 站点描述
 	description:
@@ -58,9 +58,8 @@ export const siteConfig: SiteConfig = {
 		"Fuwari",
 		"Astro",
 		"ACGN",
-		"博客",
-		"技术博客",
-		"静态博客",
+		"Secret",
+		"Blog",
 	],
 
 	// 主题色
@@ -68,7 +67,7 @@ export const siteConfig: SiteConfig = {
 		// 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
 		hue: 165,
 		// 默认模式："light" 亮色，"dark" 暗色，"system" 跟随系统
-		defaultMode: "system",
+		defaultMode: "dark",
 	},
 
 	// 页面整体宽度（单位：rem）
@@ -156,7 +155,7 @@ export const siteConfig: SiteConfig = {
 	// ── 文章列表布局配置 ──────────────────────────────────
 	postListLayout: {
 		// 默认布局模式："list" 列表模式（单列布局），"grid" 网格模式（多列布局）
-		defaultMode: "list",
+		defaultMode: "grid",
 		// 移动端默认布局模式，不设置则跟随 defaultMode
 		mobileDefaultMode: "grid",
 		// 列表模式下封面图显示在哪一侧："right" 右侧，"left" 左侧
@@ -185,9 +184,9 @@ export const siteConfig: SiteConfig = {
 			// 标签数量，设为 0 则不限制
 			tagCount: 3,
 			// 是否显示字数
-			showWords: false,
+			showWords: true,
 			// 是否显示阅读时间
-			showReadingTime: false,
+			showReadingTime: true,
 		},
 		// 底部 PostStats 统计信息显示控制
 		// 如果tagsPosition设置为"bottom"，则stats将不显示

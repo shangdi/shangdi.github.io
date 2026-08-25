@@ -30,13 +30,13 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "GitHub",
 			icon: "fa7-brands:github",
-			url: "https://github.com/shangdi",
+			url: "https://github.com/",
 			showName: false,
 		},
 		{
 			name: "Email",
 			icon: "fa7-solid:envelope",
-			url: "mailto:wildanpastioke@gmail.com",
+			url: "mailto:wildan@secretblog.my.id",
 			showName: false,
 		},
 		{

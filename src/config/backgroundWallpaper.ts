@@ -108,13 +108,13 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 				{
 					name: "GitHub",
 					icon: "fa7-brands:github",
-					url: "https://github.com/shangdi/",
+					url: "https://github.com/",
 					showName: true,
 				},
 				{
 					name: "Email",
 					icon: "fa7-solid:envelope",
-					url: "mailto:wildanpastioke@gmail.com",
+					url: "mailto:wildan@secretblog.my.id",
 				},
 				{
 					name: "Sponsor",
