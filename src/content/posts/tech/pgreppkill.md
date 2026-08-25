@@ -50,15 +50,7 @@ pkill '(firefox|mpd|dolphin)'
 
 Berikut praktiknya:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=pgrepkill2_r615oz"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/josytv1tju.js" async type="module"></script><style>wistia-player[media-id='josytv1tju']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/josytv1tju/swatch'); display: block; filter: blur(5px); padding-top:56.04%; }</style> <wistia-player media-id="josytv1tju" seo="false" aspect="1.7843866171003717"></wistia-player>
 
 Sebagai tambahan informasi, proses-proses yang sedang berjalan sebetulnya dapat dipantau melalui beberapa _tools_ lain, diantaranya seperti htop, btop, dll yang pernah saya bahas juga di artikel berikut:
 

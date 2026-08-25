@@ -210,15 +210,7 @@ atau dengan `nc`:
 nc -vv freechess.org 23
 ```
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=freechess_vw8csx"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/kbzp6df4mg.js" async type="module"></script><style>wistia-player[media-id='kbzp6df4mg']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/kbzp6df4mg/swatch'); display: block; filter: blur(5px); padding-top:110.28%; }</style> <wistia-player media-id="kbzp6df4mg" seo="false" aspect="0.906801007556675"></wistia-player>
 
 :::note
  
@@ -236,15 +228,7 @@ Untuk mengaksesnya:
 telnet towel.blinkenlights.nl
 ```
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=starwars_ohryot"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/ogy4qv4ntn.js" async type="module"></script><style>wistia-player[media-id='ogy4qv4ntn']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ogy4qv4ntn/swatch'); display: block; filter: blur(5px); padding-top:62.71%; }</style> <wistia-player media-id="ogy4qv4ntn" seo="false" aspect="1.5946843853820598"></wistia-player>
 
 ### 12. wttr
 
@@ -282,15 +266,7 @@ Kita bisa melihat ascii live apa saja yang disupport dengan perintah:
 curl ascii.live/list
 ```
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=asciilive_pwoaun"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/9odion5dj3.js" async type="module"></script><style>wistia-player[media-id='9odion5dj3']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/9odion5dj3/swatch'); display: block; filter: blur(5px); padding-top:68.75%; }</style> <wistia-player media-id="9odion5dj3" seo="false" aspect="1.4545454545454546"></wistia-player>
 
 
 

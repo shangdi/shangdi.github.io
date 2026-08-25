@@ -256,15 +256,7 @@ Sekarang, saya akan demonstrasikan penggunaan `xnviewmp` sebagai _tools_ untuk m
 
 Setelah membuka _software_ `xnviewmp`, kita hanya perlu mengklik file yang ingin kita lihat metadatanya: 
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=metadata1_in3wes"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/rsg8udg9mc.js" async type="module"></script><style>wistia-player[media-id='rsg8udg9mc']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/rsg8udg9mc/swatch'); display: block; filter: blur(5px); padding-top:54.17%; }</style> <wistia-player media-id="rsg8udg9mc" seo="false" aspect="1.8461538461538463"></wistia-player>
 
 Seperti terlihat, dengan meng-klik file-nya saja, semua metadata yang tersedia di file tersebut akan ditampilkan di bagian bawah aplikasi `xnviewmp`. Bahkan, jika terdapat metadata terkait GPS (_Global Positioning System_), `xnviewmp` akan menampilkannya langsung dalam bentuk map. Canggih bukan?
 
@@ -400,15 +392,7 @@ Oleh karena itu, untuk simplifikasi, berikut saya demonstrasikan penggunaan `vlc
 
 1. **Melihat, mengubah, menambahkan, dan menghapus** metadata
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=metadata2_yv8wlc"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/ujxwmvdq68.js" async type="module"></script><style>wistia-player[media-id='ujxwmvdq68']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ujxwmvdq68/swatch'); display: block; filter: blur(5px); padding-top:59.17%; }</style> <wistia-player media-id="ujxwmvdq68" seo="false" aspect="1.6901408450704225"></wistia-player>
 
 Caranya:
 

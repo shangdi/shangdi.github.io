@@ -105,15 +105,7 @@ Berikut akan saya demo-kan cara mendapatkan e-book dari z-library via bot telegr
 Misalnya, saya ingin mencari buku ensiklopedia teori komunikasi, maka saya hanya perlu mengetikkan keyword berikut:  
 <mark>encyclopedia of communication theory</mark>
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=zlib-tele1_rtacue"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/b6bmnlnlpx.js" async type="module"></script><style>wistia-player[media-id='b6bmnlnlpx']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/b6bmnlnlpx/swatch'); display: block; filter: blur(5px); padding-top:56.04%; }</style> <wistia-player media-id="b6bmnlnlpx" seo="false" aspect="1.7843866171003717"></wistia-player>
 
 Oke, sekian dulu tutorial kali ini.
 

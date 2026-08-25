@@ -20,27 +20,11 @@ Masalahnya adalah, saya tidak dapat mengakses drive 2 (HDD) tersebut, baik via T
 
 **File Manager**: *Not authorized to perform operation.* 
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=filemanager_b7fz2t"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/vsmwelhvam.js" async type="module"></script><style>wistia-player[media-id='vsmwelhvam']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/vsmwelhvam/swatch'); display: block; filter: blur(5px); padding-top:68.44%; }</style> <wistia-player media-id="vsmwelhvam" seo="false" aspect="1.461187214611872"></wistia-player>
 
 **Terminal**: *unknown filesystem type 'ntfs'.*
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=terminal_h3qno7"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/puixjhn78r.js" async type="module"></script><style>wistia-player[media-id='puixjhn78r']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/puixjhn78r/swatch'); display: block; filter: blur(5px); padding-top:66.04%; }</style> <wistia-player media-id="puixjhn78r" seo="false" aspect="1.5141955835962144"></wistia-player>
 
 Tentu saja ini menjadi masalah (besar), karena sangat disayangkan, sudah memasang linux sekeren Archlinux, tapi tidak dapat mengakses drive yang berisi data-data penting. Di sinilah saya mulai mengeksplor solusinya...
 
@@ -94,15 +78,7 @@ Sekarang, mari kita coba untuk me-*mounting* kembali drive 2 (HDD)-nya, via Thun
 sudo mount -t ntfs-3g /dev/sda1 /data
 ```
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=mountfs1_lpsavu"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/g2zwfhopoq.js" async type="module"></script><style>wistia-player[media-id='g2zwfhopoq']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/g2zwfhopoq/swatch'); display: block; filter: blur(5px); padding-top:66.25%; }</style> <wistia-player media-id="g2zwfhopoq" seo="false" aspect="1.509433962264151"></wistia-player>
 
 BERHASIL!
 

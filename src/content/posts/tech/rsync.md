@@ -59,15 +59,7 @@ rsync -arzv ~/Templates/ ~/backup/
 
 Berikut demo-nya:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=l2l_tkrp1u"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/dyqc3qpwsu.js" async type="module"></script><style>wistia-player[media-id='dyqc3qpwsu']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/dyqc3qpwsu/swatch'); display: block; filter: blur(5px); padding-top:63.96%; }</style> <wistia-player media-id="dyqc3qpwsu" seo="false" aspect="1.5635179153094463"></wistia-player>
 
 > Tentang **`watch`**:  
 > Saya menggunakan perintah **watch** berikut untuk memantau aktivitas di dalam direktori ~/backup:  
@@ -98,15 +90,7 @@ Berikut demonya:
 
 Kiri adalah komputer lokal saya:Debian, kanan adalah komputer server:Ubuntu
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=l2s_ni8ru2"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/7oabpwycf1.js" async type="module"></script><style>wistia-player[media-id='7oabpwycf1']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/7oabpwycf1/swatch'); display: block; filter: blur(5px); padding-top:63.96%; }</style> <wistia-player media-id="7oabpwycf1" seo="false" aspect="1.5635179153094463"></wistia-player>
 
 > **Notes:**  
 > Ketika akan melakukan *backup* ke atau dari server, kita akan diminta untuk memasukkan password, karena memang **rsync** menggunakan SSH sebagai protokol komunikasinya.
@@ -115,15 +99,7 @@ Berikutnya, saya juga akan menunjukkan bagaimana **`rsync`** meng-*handle* hanya
 
 Perhatikan, saya akan melakukan *backup* data dari direktori **`~/Templates`** (di sebelah kiri) ke direktori **`~/backup`** (di sebelah kanan). Secara rinci, saya akan memindahkan / meng-*copy* 3 file baru, yaitu **baloon.jpg**, **ipaddr.sh**, dan **sample.pdf** dari **`~/Templates`** ke **`~/backup`** serta memperbarui / meng-*update* isi konten pada file **greetings.txt**.  
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=upd_qazqhq"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/p6bw0ihpof.js" async type="module"></script><style>wistia-player[media-id='p6bw0ihpof']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/p6bw0ihpof/swatch'); display: block; filter: blur(5px); padding-top:64.38%; }</style> <wistia-player media-id="p6bw0ihpof" seo="false" aspect="1.5533980582524272"></wistia-player>
 
 Untuk menampilkan progres, kita bisa gunakan perintah:
 

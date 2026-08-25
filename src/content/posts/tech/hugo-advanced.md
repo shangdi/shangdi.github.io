@@ -433,15 +433,7 @@ Karena Hugo per artikel ini ditulis belum support video *attachment*, jadi, saya
 
 Hasilnya, kira-kira seperti ini:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=l2l_dwslv4"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/fnvn4ercqr.js" async type="module"></script><style>wistia-player[media-id='fnvn4ercqr']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/fnvn4ercqr/swatch'); display: block; filter: blur(5px); padding-top:63.96%; }</style> <wistia-player media-id="fnvn4ercqr" seo="false" aspect="1.5635179153094463"></wistia-player>
 
 ### Tips 21: Menambahkan music
 

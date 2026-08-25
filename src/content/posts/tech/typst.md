@@ -15,15 +15,7 @@ Pernah dengar [**typst**](https://typst.app/)? Saya akan berbagi sedikit tentang
 
 ### What is it?
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=typst_jfq9zc"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/gv9xgltw55.js" async type="module"></script><style>wistia-player[media-id='gv9xgltw55']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/gv9xgltw55/swatch'); display: block; filter: blur(5px); padding-top:61.46%; }</style> <wistia-player media-id="gv9xgltw55" seo="false" aspect="1.6271186440677967"></wistia-player>
 
 Secara sederhana, [**typst**](https://typst.app/) adalah "_typesetting system_" yang berbasis "_markup_".[^1] _Typesetting_, yang kalau diterjemahkan bebas ke bahasa Indonesia artinya "penataan huruf", merupakan proses pengaturan huruf, angka, dan karakter dalam suatu naskah atau dokumen.[^2] _Markup_ (atau bahasa markup) sendiri merupakan "sistem anotasi" pada dokumen digital yang memungkinkan komputer memahami struktur dokumen tersebut.[^3]
 
@@ -189,15 +181,7 @@ sambil membuka file pdf-nya. Nanti, begitu kita menyimpan perubahan yang ada di 
 
 Berikut sebagai ilustrasi:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=typst_fdzhmu"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/7lax012pji.js" async type="module"></script><style>wistia-player[media-id='7lax012pji']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/7lax012pji/swatch'); display: block; filter: blur(5px); padding-top:57.08%; }</style> <wistia-player media-id="7lax012pji" seo="false" aspect="1.7518248175182483"></wistia-player>
 
 Sebagai pemula, cara paling mudah udah mempelajari hal baru adalah dengan melihat contoh yang sudah ada. Nah, sekarang, perhatikan konten file `file.typ` saya ini, dan lihat hasilnya di `file.pdf` yang akan saya lampirkan berikutnya. Dengan demikian, baris-baris _sytanx_ yang ada di file typst tersebut akan terlihat masuk akal dan mudah untuk dipahami.
 

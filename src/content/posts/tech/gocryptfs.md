@@ -218,15 +218,7 @@ Direktori yang kita isi dengan file atau sub-direktori yang ingin dienkripsi ada
 
 Berikut demonstrasi menambahkan dan menghapus file dan direktori/folder.
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=vid1_ytdjig"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/28ah26gtkm.js" async type="module"></script><style>wistia-player[media-id='28ah26gtkm']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/28ah26gtkm/swatch'); display: block; filter: blur(5px); padding-top:57.5%; }</style> <wistia-player media-id="28ah26gtkm" seo="false" aspect="1.7391304347826086"></wistia-player>
 
 Perhatikan!  
 

@@ -80,15 +80,7 @@ Silakan atur *difficulty level*-nya sesuai kebutuhan, bisa diatur mulai dari **l
 
 Saya akan atur ke **low**.
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=dvwa-docker_cvltnv"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/11c2d99c14.js" async type="module"></script><style>wistia-player[media-id='11c2d99c14']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/11c2d99c14/swatch'); display: block; filter: blur(5px); padding-top:98.33%; }</style> <wistia-player media-id="11c2d99c14" seo="false" aspect="1.0169491525423728"></wistia-player>
 
 ### 7. Play and have fun!
 

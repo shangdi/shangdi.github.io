@@ -32,15 +32,7 @@ Selain itu, kita juga bisa loncat ke bagian akhir `man` _page_ dengan tombol **"
 
 Contoh, saya ingin mencari _keyword_ **"file"** di `man` _page_ **`ls`**:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=man1_aojcfy"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/bdpff31fe8.js" async type="module"></script><style>wistia-player[media-id='bdpff31fe8']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/bdpff31fe8/swatch'); display: block; filter: blur(5px); padding-top:56.04%; }</style> <wistia-player media-id="bdpff31fe8" seo="false" aspect="1.7843866171003717"></wistia-player>
 
 Singkatnya, berikut adalah beberapa _keybinding_ `man` _page_:
 

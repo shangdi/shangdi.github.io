@@ -434,15 +434,7 @@ Langsung saja, karena operasi git di `lazygit` akan lebih banyak menggunakan _sh
 
 > **Perhatikan!** Case-sensitive!
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=git1_lotk6p"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/z3w7k1jpag.js" async type="module"></script><style>wistia-player[media-id='z3w7k1jpag']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/z3w7k1jpag/swatch'); display: block; filter: blur(5px); padding-top:60.63%; }</style> <wistia-player media-id="z3w7k1jpag" seo="false" aspect="1.6494845360824741"></wistia-player>
 
 Perhatikan bahwa ketika file masih di "working directory", status file-nya berwarna merah, begitu masuk "staging area", berubah jadi hijau, dan kalau sudah di-_commit_, maka statusnya akan hilang dari sub-tab ke-2, dan jika sudah berhasil di-_push_ ke "remote repository", maka status di sub-tab ke-3 juga akan kembali menjadi ceklis.
 
@@ -462,15 +454,7 @@ Untuk menarik atau mengambil perubahan yang terjadi di "remote server" dan mengg
 
 > **Perhatikan!** Case-sensitive!
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=git2_kfm0kp"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/242cu8bkw4.js" async type="module"></script><style>wistia-player[media-id='242cu8bkw4']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/242cu8bkw4/swatch'); display: block; filter: blur(5px); padding-top:60.0%; }</style> <wistia-player media-id="242cu8bkw4" seo="false" aspect="1.6666666666666667"></wistia-player>
 
 Perhatikan bahwa ketika sedang proses _pull_ dari "remote repository" ke "working directory", status di sub-tab ke-3 juga akan memberikan indikasi sedang melakukan _pull_.
 

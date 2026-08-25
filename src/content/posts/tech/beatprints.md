@@ -125,6 +125,8 @@ Kemudian, ikuti _flow_-nya dan silakan bereksplorasi sendiri!
   frameborder="0"
 ></iframe>
 
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/2tdzuyfo5j.js" async type="module"></script><style>wistia-player[media-id='2tdzuyfo5j']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/2tdzuyfo5j/swatch'); display: block; filter: blur(5px); padding-top:71.56%; }</style> <wistia-player media-id="2tdzuyfo5j" seo="false" aspect="1.3973799126637554"></wistia-player>
+
 
 
 

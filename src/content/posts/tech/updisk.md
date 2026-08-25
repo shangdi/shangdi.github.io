@@ -108,15 +108,7 @@ Sekarang adalah masa-masa yang paling krusial karena kita akan melakukan proses 
 
    Berikut video untuk menghapus & membuat partisi baru dengan **`cfdisk`**:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=updisk1_mub148"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/zhjb1xqtmv.js" async type="module"></script><style>wistia-player[media-id='zhjb1xqtmv']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/zhjb1xqtmv/swatch'); display: block; filter: blur(5px); padding-top:61.25%; }</style> <wistia-player media-id="zhjb1xqtmv" seo="false" aspect="1.6326530612244898"></wistia-player>
 
 **3. Memformat partisi baru**   
 
@@ -177,15 +169,7 @@ Caranya,
 
 Untuk memperjelas, berikut adalah video *extend disk size* di Windows:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=updisk2_mi6olo"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/0fw1h5s9kw.js" async type="module"></script><style>wistia-player[media-id='0fw1h5s9kw']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/0fw1h5s9kw/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id="0fw1h5s9kw" seo="false" aspect="1.7777777777777777"></wistia-player>
 
 Selesai!
 

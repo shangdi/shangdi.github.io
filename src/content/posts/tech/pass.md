@@ -86,15 +86,7 @@ gpg --full-generate-key
 
 Berikut adalah video tutorialnya:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=pass1_ta0g6f"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/iwnuvhfu57.js" async type="module"></script><style>wistia-player[media-id='iwnuvhfu57']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/iwnuvhfu57/swatch'); display: block; filter: blur(5px); padding-top:60.63%; }</style> <wistia-player media-id="iwnuvhfu57" seo="false" aspect="1.6494845360824741"></wistia-player>
 
 > Kita dapat membuat lebih dari satu master key. 
 

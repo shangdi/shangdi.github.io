@@ -799,15 +799,7 @@ Keempat perintah tersebut (`docker ps`, `docker logs`, `docker stats`, `docker i
 
 **Perhatikan** tombol keyboard yang muncul di bagian bawah video!
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=docker1_ohebam"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/qugqiovvid.js" async type="module"></script><style>wistia-player[media-id='qugqiovvid']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/qugqiovvid/swatch'); display: block; filter: blur(5px); padding-top:70.21%; }</style> <wistia-player media-id="qugqiovvid" seo="false" aspect="1.42433234421365"></wistia-player>
 
 > **Notes:** Saya menggunakan `showmethekey` untuk melihat _keystrokes_ keyboard di Wayland. 
 
@@ -817,15 +809,7 @@ Lagi-lagi, keempat perintah tersebut (`docker run`, `docker start`, `docker rest
 
 **Perhatikan** tombol keyboard yang muncul di bagian bawah video!
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=docker2_xh4rhf"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/83pi6srfjb.js" async type="module"></script><style>wistia-player[media-id='83pi6srfjb']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/83pi6srfjb/swatch'); display: block; filter: blur(5px); padding-top:69.79%; }</style> <wistia-player media-id="83pi6srfjb" seo="false" aspect="1.4328358208955223"></wistia-player>
 
 Untuk bagian **Images**, **Volumes**, dan **Networks** tidak saya bahas di sini, selain karena tidak banyak yang dapat ditunjukkan selain menghapus-hapus Images/Volumes/Networks, juga karena membuat video demonstrasi ini memakan storage yang lumayan besar (1 video berkisar 1 menit bisa berukuran 3-4 MB!). Oleh karena itu, jika kalian sudah paham dasar-dasar pengoperasian `lazydocker`, kalian bisa mencoba mengeksplorasi bagian-bagian tersebut sendiri! 
 

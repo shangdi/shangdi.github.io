@@ -138,15 +138,7 @@ _Keybinding_ adalah _shortcut_ yang dapat kita gunakan hanya melalui keyboard di
 
 Berikut contoh penggunaan `keybind`-nya:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=vid1_uzodkx"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/9g8p4zqt8i.js" async type="module"></script><style>wistia-player[media-id='9g8p4zqt8i']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/9g8p4zqt8i/swatch'); display: block; filter: blur(5px); padding-top:69.69%; }</style> <wistia-player media-id="9g8p4zqt8i" seo="false" aspect="1.4349775784753362"></wistia-player>
 
 > Untuk menampilkan keyboard keystroke, saya menggunakan `screenkey`.
 

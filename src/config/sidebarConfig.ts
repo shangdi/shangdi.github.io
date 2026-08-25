@@ -355,9 +355,9 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 组件类型：用户资料组件
 			type: "timeGreeting",
 			// 是否启用该组件
-			enable: true,
+			enable: false,
 			// 是否在文章详情页显示
-			showOnPostPage: true,
+			showOnPostPage: false,
 		},
 		{
 			// 组件类型：用户资料组件

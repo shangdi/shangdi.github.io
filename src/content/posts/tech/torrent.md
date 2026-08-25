@@ -181,15 +181,7 @@ Selain itu, di bagian bawah, aplikasi ini juga menampilkan _IP Address_ kalian (
 
 Menurut saya, fitur paling menarik dari `qbittorrent` versi desktop ini adalah fitur **"lock"**-nya. Melalui fitur tersebut, kita dapat mengunci aplikasi `qbittorrent` desktop ini. Nanti, window-nya akan ter-_minimize_ sehingga kalau kita ingin membukanya kembali, kita akan diminta _password_. Tentu saja, sebelum menggunakan fitur ini, kita perlu membuat password-nya terlebih dahulu. Berikut demonstrasi penggunaan fitur ini:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=torrent1_anhqnu"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/i2544ncu2k.js" async type="module"></script><style>wistia-player[media-id='i2544ncu2k']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/i2544ncu2k/swatch'); display: block; filter: blur(5px); padding-top:56.04%; }</style> <wistia-player media-id="i2544ncu2k" seo="false" aspect="1.7843866171003717"></wistia-player>
 
 ### `qbittorent-nox` UI
 
@@ -199,15 +191,7 @@ Berikut adalah penampakan `qbittorrent-nox`:
 
 `qbittorrent-nox` adalah versi `qbittorrent` yang diakses melalui Web. Oleh karena itu, seperti teman-teman lihat, saya membukanya melalui web browser ([Brave](https://brave.com/)). Secara default, `qbittorrent-nox` dapat diakses di port 8080, dengan _username_ & _password_ yang disediakan ketika kita menjalankannya melalui terminal. Berikut adalah demonstrasi penggunaan `qbittorrent-nox`:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=torrent2_spugwd"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/0ywqdxtqzk.js" async type="module"></script><style>wistia-player[media-id='0ywqdxtqzk']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/0ywqdxtqzk/swatch'); display: block; filter: blur(5px); padding-top:56.04%; }</style> <wistia-player media-id="0ywqdxtqzk" seo="false" aspect="1.7843866171003717"></wistia-player>
 
 Secara fungsi tidak ada bedanya dengan `qbittorrent` versi desktop. Hanya saja, terdapat fitur yang secara kasat mata bisa langsung kita identifikasi tidak ada di `qbittorrent-nox`, tapi ada di `qbittorrent` biasa, yaitu fitur **"lock"**-nya. Itulah mengapa tadi saya sempat katakan bahwa fitur tersebut adalah fitur yang menarik. Namun, keunggulan `bittorrent-nox` adalah, dia dapat diakses melalui web, artinya, kita bisa berbagi aplikasi ini kepada orang-orang yang kita inginkan di dalam jaringan, dan tetap aman, karena memerlukan akses ke kredensial (_username_ & _password_) ketika ingin membukanya.
 
@@ -245,15 +229,7 @@ Berikut langkah-langkahnya:
 
 Berikut demonstrasinya:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=torrent3_s1hqfc"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/x33i2chukg.js" async type="module"></script><style>wistia-player[media-id='x33i2chukg']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/x33i2chukg/swatch'); display: block; filter: blur(5px); padding-top:56.04%; }</style> <wistia-player media-id="x33i2chukg" seo="false" aspect="1.7843866171003717"></wistia-player>
 
 Perhatikan, ketika proses _download_ sedang berjalan, kita bisa melihat-lihat informasi dari menu-menu yang ada, terutama di bagian bawah:
 - **General:** Menampilkan informasi tentang file yang di-_hover_. 
@@ -297,15 +273,7 @@ Berikut langkah-langkahnya:
 
 Berikut demonstrasinya:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=torrent4_osmanj"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/d0bny47yta.js" async type="module"></script><style>wistia-player[media-id='d0bny47yta']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/d0bny47yta/swatch'); display: block; filter: blur(5px); padding-top:56.04%; }</style> <wistia-player media-id="d0bny47yta" seo="false" aspect="1.7843866171003717"></wistia-player>
 
 Selebihnya, tidak ada perbedaan yang signifikan. Perbedaan utama antara torrent file dan magnet link hanya ada cara mulai men-_download_-nya saja.
 

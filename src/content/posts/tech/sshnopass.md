@@ -59,15 +59,7 @@ cat ~/.ssh/id_rsa.pub | ssh username@remote_host "mkdir -p ~/.ssh && cat >> ~/.s
 
 Berikut adalah demonstrasinya, mulai dari pembuatan *key pair* hingga login ke server via SSH tanpa password:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=sshnopass_oiso0d"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/ufz1sb9g27.js" async type="module"></script><style>wistia-player[media-id='ufz1sb9g27']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ufz1sb9g27/swatch'); display: block; filter: blur(5px); padding-top:64.38%; }</style> <wistia-player media-id="ufz1sb9g27" seo="false" aspect="1.5533980582524272"></wistia-player>
 
 Tada! Kita sudah bisa login ke server via SSH tanpa memerlukan password!
 

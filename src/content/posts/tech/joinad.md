@@ -74,15 +74,7 @@ Berikut adalah langkah-langkah untuk login ke domain server:
 1. Logout.
 2. Login dengan akun yang sudah dibuat sebelumnya. Jangan lupa sertakan nama domain pada kolom user. Berikut adalah username yang saya gunakan: `dc.local\wildan`
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=joinad1_wsjp0f"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/vz140vd9de.js" async type="module"></script><style>wistia-player[media-id='vz140vd9de']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/vz140vd9de/swatch'); display: block; filter: blur(5px); padding-top:75.0%; }</style> <wistia-player media-id="vz140vd9de" seo="false" aspect="1.3333333333333333"></wistia-player>
 
 Kita berhasil bergabung ke Windows Domain dari Windows 10!
 

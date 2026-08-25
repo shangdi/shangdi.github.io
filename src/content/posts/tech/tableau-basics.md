@@ -100,15 +100,7 @@ Berikut adalah langkah-langkah membuat visualisasi **Healthy life expectancy**:
 
 Berikut video tutorialnya:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=tablue-basic1_lxhmct"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/133gspxj15.js" async type="module"></script><style>wistia-player[media-id='133gspxj15']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/133gspxj15/swatch'); display: block; filter: blur(5px); padding-top:63.13%; }</style> <wistia-player media-id="133gspxj15" seo="false" aspect="1.5841584158415842"></wistia-player>
 
 Selesai.
 
@@ -126,15 +118,7 @@ Berikut adalah langkah-langkah membuat visualisasi **GDP per Capita**:
 
 Berikut video tutorialnya:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=tablue-basic2_cjho9z"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/851hvfbi6r.js" async type="module"></script><style>wistia-player[media-id='851hvfbi6r']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/851hvfbi6r/swatch'); display: block; filter: blur(5px); padding-top:63.13%; }</style> <wistia-player media-id="851hvfbi6r" seo="false" aspect="1.5841584158415842"></wistia-player>
 
 Selesai.
 
@@ -151,15 +135,7 @@ Berikut adalah langkah-langkah membuat visualisasi **Generosity**:
 
 Berikut video tutorialnya:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=tablue-basic3_fuvqp3"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/86g54ucann.js" async type="module"></script><style>wistia-player[media-id='86g54ucann']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/86g54ucann/swatch'); display: block; filter: blur(5px); padding-top:63.13%; }</style> <wistia-player media-id="86g54ucann" seo="false" aspect="1.5841584158415842"></wistia-player>
 
 :::tip[[Opsional]: Menambahkan Filter 💡]
 
@@ -188,15 +164,7 @@ Berikut adalah langkah-langkah membuat dashboard **"World Happiness Report 2024"
 
 Berikut video tutorialnya:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=tablue-basic4_mhz9ej"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/f552532y2r.js" async type="module"></script><style>wistia-player[media-id='f552532y2r']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/f552532y2r/swatch'); display: block; filter: blur(5px); padding-top:63.13%; }</style> <wistia-player media-id="f552532y2r" seo="false" aspect="1.5841584158415842"></wistia-player>
 
 Selesai.
 
@@ -210,15 +178,8 @@ Berikut adalah langkah-langkah membuat filter *slicing*[^2]:
 
 Berikut video tutorialnya:
 
-<iframe
-  src="https://player.cloudinary.com/embed/?cloud_name=dpvtbnqf7&public_id=tablue-basic5_sjraqh"
-  width="640"
-  height="360" 
-  style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/svv886o8b0.js" async type="module"></script><style>wistia-player[media-id='svv886o8b0']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/svv886o8b0/swatch'); display: block; filter: blur(5px); padding-top:63.13%; }</style> <wistia-player media-id="svv886o8b0" seo="false" aspect="1.5841584158415842"></wistia-player>
+
 Selesai
 
 :::
