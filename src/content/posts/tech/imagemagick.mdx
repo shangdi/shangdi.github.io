@@ -1,7 +1,7 @@
 ---
 title: "The Power of Imagemagick: A Small Yet Functional Image Editor."
 published: 2026-08-15T17:08:45+07:00
-updated: 2026-08-15
+updated: 2026-08-26
 draft: false
 pinned: false
 image: "../images/imagemagick/featured.png"
@@ -255,6 +255,20 @@ magick <input_file> -fuzz 15% -fill none -draw "color 0,0 floodfill" <output_fil
 
 ![background removal](../images/imagemagick/ss7.png)
 
+#### 6. Trim
+
+Kalau kita ingin memotong bagian-bagian gambar yang "tidak penting" sehingga hanya bagian-bagian gambar yang penting saja yang muncul, kita bisa potong dengan perintah:[^5]
+
+```shell
+magick <input_file.png> -trim <output_file.png>
+```
+
+Berikut contohnya:
+
+![trimmed picture](../images/imagemagick/ss8.png)
+
+Perhatikan. Bagian "hitam" pada gambar akan hilang "otomatis" dengan **_trim_**.
+
 Ada banyak lagi fitur-fitur yang memungkinkan kita melakukan manipulasi gambar dengan `imagemagick`. Kalian dapat melihat daftar kemampuan `imagemagick` di sini:
 
 https://usage.imagemagick.org/
@@ -265,4 +279,5 @@ https://usage.imagemagick.org/
 [^2]: https://id.wikipedia.org/wiki/Gambar_bitmap
 [^3]: https://usage.imagemagick.org/basics/
 [^4]: https://contactsunny.medium.com/a-few-basic-but-powerful-imagemagick-commands-b5809b0a1076
+[^5]: https://varunbarad.com/blog/til-trim-image-background
 
