@@ -1,7 +1,7 @@
 ---
 title: "Astro + Firefly: The Best Combo for Personal Blog"
 published: 2026-08-22T11:00:07+07:00
-updated: 2026-08-23
+updated: 2026-08-27
 pinned: true
 draft: false
 image: "../images/firefly/featured.avif"
@@ -316,7 +316,21 @@ Kita juga bisa berjejaring dengan para blogger di seluruh dunia. Caranya sesimpe
 
 Sejauh ini, saya baru berteman dengan para blogger China. Mereka, harus saya akui, keren-keren blognya. 🤩 Mereka adalah teman-teman online saya di blog ini. Kalau kalian mengunjungi blog mereka, saya bisa pastikan, di daftar "Friends"-nya, pasti ada blog saya ini juga.
 
-### 7. Settings
+### 7. Line Markers
+
+Fitur yang juga saya suka dengan tema ini adalah semacam _highlight_ untuk baris dari sebuah _codeblock_. Contohnya seperti ini:[^7]
+
+```js title="line-markers.js" del={2} ins={3-4} {6}
+function demo() {
+  console.log('此行标记为已删除')
+  // 此行和下一行标记为已插入
+  console.log('这是第二个插入行')
+
+  return '此行使用中性默认标记类型'
+}
+```
+
+### 8. Settings
 
 Sebagai orang yang mudah jenuh, saya sangat mengapresiasi adanya "**Website Settings**" yang praktis seperti ini. Di sini, saya bisa mengganti aksen warna blog saya, mengatur background Wallpaper, bahkan hingga menambahkan _effect_ bunga sakura seperti pada gambar berikut:
 
@@ -336,6 +350,8 @@ Mode ke-4 apa? Mode ke-4 adalah tanpa Wallpaper. Jadi, kalau kalian ingin tampil
 
 Beberapa fitur lain juga tentu ada. Tapi, tidak saya bahas karena saya pikir cukup standard (setidaknya berdasarkan pengamatan subjektif saya) di banyak blog. Misalnya seperti fitur "Light & Dark Mode" dan fitur "Komentar".
 
+Terlepas dari itu semua, karena Firefly masih aktif di-_maintain_, saya yakin akan ada selalu _update-update_ fitur baru yang pastinya akan membuat _template_ ini menjadi makin menarik.
+
 Sampai sini, saya merasa sangat bersyukur sekali karena sudah bisa bertemu dengan "_template_ blog impian" yang saya cari-cari selama ini. Firefly selain bisa memenuhi semua ekspektasi saya pribadi, juga bisa memberikan tampilan yang estetik. Mari kita lihat 3 tahun ke depan, apakah saya betah dengan tema Firefly ini, atau mungkin saya akan berubah lagi dan berpindah haluan.
 
 Terima kasih sudah membaca.  
@@ -350,3 +366,4 @@ Sampai jumpa di artikel saya yang lain!
 [^4]: https://medium.com/@urza.p/jsx-deep-dive-what-it-really-is-and-how-it-works-c1b32ef2e682
 [^5]: https://docs-firefly.cuteleaf.cn/en/guide/getting-started.html#project-structure
 [^6]: https://docs-firefly.cuteleaf.cn/en/guide/getting-started.html#configuration-overview
+[^7]: https://firefly.cuteleaf.cn/posts/code-examples/
