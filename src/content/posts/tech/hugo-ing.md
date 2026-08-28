@@ -6,6 +6,8 @@ description: "Beginner step to start creating static-site via using Hugo."
 image: "../images/hugo-ing/featured.png"
 tags: ["hugo"]
 category: "hugo"
+series: "Hugo Tutorial"
+seriesOrder: 1
 ---
 
 # Membuat Website via Hugo

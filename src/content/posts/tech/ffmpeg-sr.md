@@ -6,6 +6,8 @@ image: "../images/ffmpeg-sr/featured.png"
 description: "My simple note in regards of screen recording using ffmpeg."
 tags: ["screen recorder", "tutorial", "ffmpeg"]
 category: "ffmpeg"
+series: "FFmpeg Tutorial"
+seriesOrder: 1
 ---
 
 Kali ini, saya akan memberi tahu cara merekam layar desktop laptop atau komputer kita dengan **FFmpeg**. Apa itu **FFmpeg**? Penjelasan detail-nya tentu saja bisa didapatkan langsung dari website resminya di sini[^1].

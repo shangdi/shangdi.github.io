@@ -7,8 +7,10 @@ description: "Hugo, but more advanced..."
 image: "../images/hugo-advanced/cover.png"
 tags: ["hugo", "website", "static-site"]
 category: "hugo"
-password: "3ildan"
+password: "3ildan123"
 passwordHint: "Who are you?"
+series: "Hugo Tutorial"
+seriesOrder: 3
 ---
 
 # Mengkonfigurasi Hugo (Advanced)

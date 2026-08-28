@@ -7,6 +7,8 @@ image: "../images/inteldriverinstall/featured.png"
 description: "Your windows brightness doesn't work properly? May be it's due to driver issue..."
 tags: ["intel", "driver", "windows", "powershell", "microsoft store"]
 category: "inteldriver"
+series: "Windows Installation"
+seriesOrder: 2
 ---
 
 > **Notes:** Artikel ini dibuat masih terkait dengan instalasi Windows. Series-nya bisa dilihat di "drop-down menu" di atas.

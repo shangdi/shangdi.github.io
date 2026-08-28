@@ -6,6 +6,8 @@ iamge: "../images/mas/featured.png"
 description: "A simple way to activate your Windows license using Microsoft Activation Script (MAS)."
 tags: ["mas", "windows", "script", "powershell", "seb"]
 category: "mas"
+series: "Windows Installation"
+seriesOrder: 3
 ---
 
 :::info

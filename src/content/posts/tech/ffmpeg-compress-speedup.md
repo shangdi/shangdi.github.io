@@ -7,6 +7,8 @@ image: "../images/ffmpeg-compress-speedup/featured.png"
 description: "My personal small note on how to resizing (compressing) and speeding up video file with only one small yet powerful open source tool: ffmpeg."
 tags: ["ffmpeg", "mp4", "tutorial", "linux"]
 category: "ffmpeg"
+series: "FFmpeg Tutorial"
+seriesOrder: 3
 ---
 
 ## Introduction

@@ -6,6 +6,8 @@ description: "A guide to publish and host your Hugo site to Github."
 image: "../images/hugo-to-github/featured.png"
 tags: ["hugo", "static-site"]
 category: "hugo"
+series: "Hugo Tutorial"
+seriesOrder: 2
 ---
 
 # Meng-Hosting di Github

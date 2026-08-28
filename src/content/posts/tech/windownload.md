@@ -7,6 +7,8 @@ image: "../images/windownload/featured.png"
 description: "Have you ever been struggling to find and download an official Windows ISO file? Let me tell you the way I did that flawlessly."
 tags: ["iso", "windows", "hash", "cia", "md5", "SHA1", "sha256", "cryptography", "checksum"]
 category: "iso"
+series: "Windows Installation"
+seriesOrder: 1
 ---
 
 ## Sekapur Sirih
