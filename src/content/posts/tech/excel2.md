@@ -6,6 +6,8 @@ image: "../images/excel2/featured.png"
 description: "6 basic excel (spreadsheet) functions / formulas: SUMIF, CONCATENATE, MATCH, (LEFT, MID, RIGHT), (HLOOKUP & VLOOKUP), TRANSPOSE"
 tags: ["excel", "spreadsheet", "data", "data analysis"]
 category: "excel"
+series: "Excel Tutorial"
+seriesOrder: 2
 ---
 
 

@@ -157,7 +157,7 @@ export const booknavConfig: BooknavGroup[] = [
 		id: "resources",
 		name: "Resources",
 		icon: "material-symbols:auto-stories-outline-rounded",
-		desc: "Technologies behind this blog.",
+		desc: "Technologies and references behind this blog.",
 		weight: 90,
 		items: [
 			{
@@ -200,9 +200,8 @@ export const booknavConfig: BooknavGroup[] = [
 				weight: 5,
 			},
 			{
-				title: "Icones",
-				url: "https://icones.js.org/",
-				icon: "fa7-regular:face-kiss-wink-heart",
+				title: "Iconify",
+				url: "https://icon-sets.iconify.design/",
 				desc: "Icon Sets",
 				weight: 4,
 			},
@@ -222,15 +221,48 @@ export const booknavConfig: BooknavGroup[] = [
 				weight: 10,
 			},
 			{
+				title: "Github Pages",
+				url: "https://docs.github.com/en/pages",
+				desc: "Free hosting site from Github",
+				weight: 9,
+			},
+			{
 				title: "Wistia",
 				url: "https://wistia.com/",
 				desc: "Video hosting",
-				weight: 9,
+				weight: 8,
 			},
 			{
 				title: "ImgBB",
 				url: "https://imgbb.com/",
-				desc: "Free Image Hosting",
+				desc: "Image Hosting",
+				weight: 7,
+			},
+		],
+	},
+	{
+		id: "benchmark",
+		name: "Benchmarking Sites",
+		icon: "material-symbols:data-thresholding-outline-rounded",
+		desc: "Sites for benchmarking",
+		weight: 70,
+		items: [
+			{
+				title: "DNS Checker",
+				url: "https://dnschecker.org",
+				desc: "DNS Lookup",
+				weight: 10,
+			},
+			{
+				title: "PageSpeed Insight",
+				url: "https://pagespeed.web.dev/",
+				desc: "PC and Mobile Website benchmark",
+				weight: 9,
+			},
+			{
+				title: "SpeedTest",
+				url: "https://www.speedtest.net/",
+				desc: "Internet Speed Test",
 				weight: 8,
 			},
 		],
@@ -240,7 +272,7 @@ export const booknavConfig: BooknavGroup[] = [
 		name: "Tools",
 		icon: "material-symbols:build-outline-rounded",
 		desc: "Useful tools",
-		weight: 70,
+		weight: 60,
 		items: [
 			{
 				title: "Virustotal",

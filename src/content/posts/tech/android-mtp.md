@@ -7,6 +7,8 @@ image: ../images/android-mtp/featured.png
 description: "Are you wondering about how to connect your Android phone to Archlinux through a USB? Here, I will explain the easiest way (GUI & CLI) to do that."
 tags: ["android", "mtp", "archlinux", "linux", "libmtp"]
 category: "android-mtp"
+series: "Connecting Android to PC/Laptop"
+seriesOrder: 2
 ---
 
 ## Preambul

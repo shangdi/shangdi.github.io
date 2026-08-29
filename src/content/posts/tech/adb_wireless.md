@@ -7,6 +7,8 @@ image: ../images/adb_wireless/featured.png
 description: "Connecting your Android device through a USB is pretty mainstream. I will show you that you are actually able to connect it directly through wireless connection here."
 tags: ["adb-wireless", "adb", "android", "wireless", "linux"]
 category: "adb-wirelss"
+series: "Connecting Android to PC/Laptop"
+seriesOrder: 3
 ---
 
 

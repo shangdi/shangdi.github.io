@@ -5,6 +5,8 @@ image: ../images/convertvideoformat/featured.png
 description: If you have ffmpeg installed on your Linux machine, then it actually could help you to convert any video format to MP4!
 tags: ["ffmpeg", "tutorial", "video format"]
 category: ffmpeg
+series: "FFmpeg Tutorial"
+seriesOrder: 2
 ---
 
 Sebetulnya, perintahnya sangat mudah, tapi supaya saya lebih mudah mengingatnya, maka saya akan abadikan dalam artikel ini[^1]:

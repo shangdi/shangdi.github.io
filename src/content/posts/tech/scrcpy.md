@@ -6,6 +6,8 @@ image: "../images/scrcpy/featured.png"
 description: "Mirroring your android devices can never be this easy with open source tool: Scrcpy"
 tags: ["scrcpy", "android", "wireless", "adb", "linux"]
 category: "scrcpy"
+series: "Connecting Android to PC/Laptop"
+seriesOrder: 1
 ---
 
 Pernahkah kalian melihat youtuber game online android di Youtube, tapi menggunakan kursor seperti sedang berada di komputer atau laptop? Misalnya, seperti salah satu game dari Moonton, ["Magic Chess Go Go (MCGG)"](https://play.mc-gogo.com/) yang dimainkan oleh salah satu youtuber, [Bass Klemens](https://www.youtube.com/@bassklemens)?

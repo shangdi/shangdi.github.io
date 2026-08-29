@@ -7,7 +7,7 @@ description: "My simple note in regards of converting video (MP4) to GIF."
 tags: ["MP4 to GIF", "tutorial", "ffmpeg", "Video Converter"]
 category: "ffmpeg"
 series: "FFmpeg Tutorial"
-seriesOrder: 2
+seriesOrder: 4
 ---
 
 Terkadang, GIF punya kelebihan dibandingkan dengan file video, terutama dalam hal ukuran file. Dengan kualitas gambar yang hampir sama dengan video, file GIF bisa berukuran lebih kecil dari file video. Contohnya, saya punya sebuah file video rekaman layar 720p berdurasi 25 detik, dan satu file GIF yang merupakan hasil konversi video sebelumnya:
