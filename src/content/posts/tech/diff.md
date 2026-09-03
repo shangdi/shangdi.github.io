@@ -1,6 +1,7 @@
 ---
 title: "Tools for Comparing Text-Based Files."
 published: 2026-06-20T14:19:00+07:00
+updated: 2026-09-01
 draft: false
 image: "../images/diff/featured.png"
 description: "These tools are my go-to tools when it comes to comparing files. For the sake of your own mental health, I am telling you that those are CLI-based ones. If you are allergic to those tools, please read this article with professional assistance or do not read it at all."
@@ -76,6 +77,7 @@ vimdiff file1 file2 file3 file4
 ```
 
 > **Notes:** `vimdiff` dapat membandingkan 2 hingga 4 file sekaligus.
+
 
 ### 2. `kitten diff`
 
@@ -198,3 +200,77 @@ diff file1 file2
 ```
 
 > **Notes:** `diff` hanya dapat membandingkan maksimal 2 file.
+
+`diff` juga dapat digunakan untuk membandingkan isi file dari dua direktori:
+
+```shell
+diff -qr direktori1 direktori2
+```
+
+### 4. `colordiff`
+
+![colordiff](../images/diff/ss4.png)
+
+#### Installation
+
+Sebelum dapat menggunakan `colordiff`, kita perlu meng-_install_ paket `colordiff`.
+
+Berikut adalah cara meng-_install_ `colordiff` di beberapa sistem operasi UNIX/Linux:
+
+::: code-group labels=[debian/ubuntu, archlinux, fedora, opensuse, freebsd]
+
+```shell
+sudo apt install -y colordiff
+```
+
+```shell
+sudo pacman -Sy colordiff
+```
+
+```shell
+sudo dnf install colordiff
+```
+
+```shell
+sudo zypper install colordiff
+```
+
+```shell
+sudo pkg install colordiff
+```
+
+:::
+
+:::note
+
+**NixOS:**  
+Masukkan baris berikut di file konfigurasi (`/etc/nixos/configuration.nix`):
+
+```nix title="nix"
+environment.systemPackages = [
+  pkgs.colordiff
+];
+```
+
+Atau jika menggunakan `nix-shell`:
+
+```shell
+nix-shell -p colordiff
+```
+
+:::
+
+#### Usage
+
+```shell
+colordiff file1 file2
+```
+
+Seperti `diff`, `colordiff` juga dapat digunakan untuk membandingkan isi file di dua folder berbeda:
+
+```shell
+colordiff direktori1 direktori2
+
+```
+
+

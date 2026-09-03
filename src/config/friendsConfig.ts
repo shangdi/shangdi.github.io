@@ -69,6 +69,15 @@ export const friendsConfig: FriendLink[] = [
 		enabled: true, 
 	},
 	{
+		title: "Jurnal SysAdmin",
+		imgurl: "https://jurnal.arch.or.id/images/logo_hu_6dff3f2baa66b4e7.png",
+		desc: "Catatan SysAdmin",
+		siteurl: "https://jurnal.arch.or.id/",
+		tags: ["Blog"],
+		weight: 15, 
+		enabled: true, 
+	},
+	{
 		title: "Firefly Docs",
 		imgurl: "https://docs-firefly.cuteleaf.cn/logo.png",
 		desc: "Firefly主题模板文档",
