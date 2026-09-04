@@ -1,7 +1,7 @@
 ---
 title: "Fastfetch: Neofetch Reborn"
 published: 2026-07-06T12:00:52+07:00
-udpated: 2026-07-08
+updated: 2026-09-04
 draft: false
 image: "../images/fastfetch/featured.png"
 description: "If you are a legendary linux nerd, you might have known neofetch. But, since neofetch is no longer maintained, fastfetch emerges as its exact replacement, unless it has way more convenince and beautiness."
@@ -13,7 +13,7 @@ category: "fastfetch"
 
 Salah satu CLI (_Command-Line Interface_) _tool_ yang paling sering digunakan, terutama di kalangan pengguna linux, adalah `neofetch`. `neofetch` adalah _software_ yang digunakan untuk menampilkan informasi sistem yang kita gunakan, mulai dari hardware hingga software.[^1] Akan tetapi, per 26 April 2024, _owner_ atau pemilik atau _developer_ `neofetch` menghentikan pengembangan software tersebut (saya sendiri tidak tahu alasannya kenapa). Akhirnya, banyak orang mencari alternatifnya. 
 
-{{< github repo="dylanaraps/neofetch" showThumbnail=true >}}
+::github{repo="dylanaraps/neofetch"}
 
 Akhirnya, muncullah `fastfetch`.
 
@@ -63,6 +63,12 @@ fastfetch
 ```
 
 ![fastfetch](../images/fastfetch/ss1.png)
+
+Atau tanpa logo:
+
+```shell
+fastfetch --logo none
+```
 
 ### With Template
 

@@ -73,22 +73,22 @@ const { class: className, style } = Astro.props;
     let period = '';
 
     if (hours >= 0 && hours < 6) {
-        greeting = 'Jangan lupa istirahat ya！';
+        greeting = "Don't forget to get some sleep.";
         period = 'night';
     } else if (hours >= 6 && hours < 9) {
-        greeting = 'Pagi！';
+        greeting = "Morning!";
         period = 'morning';
     } else if (hours >= 9 && hours < 12) {
-        greeting = 'Hari ini harus berjuang！';
+        greeting = "You got this!";
         period = 'noon';
     } else if (hours >= 12 && hours < 14) {
-        greeting = 'Siang, jangan lupa istirahat！';
+        greeting = "You may get some rest.";
         period = 'noon';
     } else if (hours >= 14 && hours < 18) {
-        greeting = 'Tetap semangat!';
+        greeting = "Keep it up!";
         period = 'noon';
     } else if (hours >= 18 && hours < 24) {
-        greeting = 'Waktunya santai sejenak！';
+        greeting = "It's time to relax~";
         period = 'evening';
     }
 

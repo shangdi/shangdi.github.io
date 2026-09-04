@@ -1,6 +1,7 @@
 ---
 title: "A Comparison of 5 Terminal File Managers"
 published: 2025-06-18T19:09:58+07:00
+updated: 2026-09-04
 draft: false
 image: "../images/fileterm/featured.png"
 description: "A glimpse of terminal-based file managers and their uniquenesses."
@@ -27,7 +28,7 @@ Kita mulai...
 
 Berikut adalah _repository_ Github-nya:
 
-{{< github repo="yorukot/superfile" showThumbnail=true >}}
+::github{repo="yorukot/superfile"}
 
 #### Installation
 
