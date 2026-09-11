@@ -2,7 +2,7 @@
 title: "5 Modern Linux Resource Monitoring Tools"
 published: 2025-02-20T15:43:50Z
 draft: false
-iamge: "../images/resmon/featured.png"
+image: "../images/resmon/featured.png"
 description: "This article would show several modern linux resource monitoring utilities that might help you identify your resource consumptions easily."
 tags: ["linux", "resource", "monitoring", "tools", "utility"]
 category: "monitoring"

@@ -59,6 +59,9 @@ atril
 chafa
 ristretto
 bat 
+exiftool
+python-mutagen (id3v2)
+id3lib
 ```
 
 
@@ -103,6 +106,9 @@ zoxide
 find  
 grep 
 fd
+reflector
+qbittorrent
+pass
 ```
 
 :::

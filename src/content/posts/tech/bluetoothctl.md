@@ -1,7 +1,7 @@
 ---
 title: "bluetoothctl: CLI Tool for Managing Bluetooth Devices"
 published: 2025-02-23T22:57:04+07:00
-updated: 2025-12-08
+updated: 2026-09-06
 draft: false
 image: ../images/bluetoothctl/featured.png
 description: "The easiest way to connect your bluetooth devices via terminal in Linux."
@@ -34,7 +34,7 @@ Pertama-tama, tentu saja kita perlu meng-_install_ paket `bluez` karena **`bluet
 |       Distro      |                  Command                      |
 |       ---         |                   ---                         |
 | **Debian/Ubuntu** | **`sudo apt install bluez`**                  |
-| **Arch Linux**    | **`sudo pacman -Sy bluez`**                   |
+| **Arch Linux**    | **`sudo pacman -Sy bluez bluez-utils`**                   |
 | **Opensuse**      | **`sudo zypper install bluez`**               |
 | **Fedora**        | **`sudo dnf install bluez`**                  |
 

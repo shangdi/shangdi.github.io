@@ -2,7 +2,7 @@
 title: "Windows License Activation with MAS"
 published: 2025-04-21T07:02:40+07:00
 draft: false
-iamge: "../images/mas/featured.png"
+image: "../images/mas/featured.png"
 description: "A simple way to activate your Windows license using Microsoft Activation Script (MAS)."
 tags: ["mas", "windows", "script", "powershell", "seb"]
 category: "mas"

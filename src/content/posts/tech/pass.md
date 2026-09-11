@@ -1,13 +1,19 @@
 ---
 title: "A Standard Unix Password Manager: Pass"
 published: 2025-06-22T16:55:16+07:00
-updated: 2026-04-04
+updated: 2026-09-07
 draft: false
 image: "../images/pass/featured.png"
 description: "Password management should be simple and follow Unix philosophy. With pass, each password lives inside of a gpg encrypted file."
 tags: ["pass", "password-manager", "password", "encryption", "gpg", "asymmetric", "public key", "private-key"]
 category: "pass"
 ---
+
+:::warning[AI Usage]
+
+This article uses AI agent (Anthropic Claude) to elaborate on some details, especially in the context of `gpg cache`
+
+:::
 
 ## Introduction
 
@@ -309,6 +315,23 @@ pass rm <dir-name>/<filename>
 
 ![removing password](../images/pass/ss15.png)
 
+#### 2.10 Changing File Name
+
+Untuk mengganti nama file `pass`:
+
+```shell
+# untuk pass file tanpa direktori
+pass mv gmailbaru gmail1
+
+# jika pass file di dalam direktori
+pass mv gmail/gmailbaru gmail/gmail1
+```
+
+:::tip
+
+Perintah di atas juga dapat digunakan untuk memindahkan satu file ke direktori lain.
+
+:::
 
 #### Notes
 
@@ -317,7 +340,34 @@ pass rm <dir-name>/<filename>
 
 ```shell
 default-cache-ttl 5
+max-cache-ttl 5
 ```
+
+Kemudian _reload_ agent-nya:
+
+```shell
+gpg-connect-agent reloadagent /bye
+```
+
+Kita bisa melihat _current value_ gpg agent kita:
+
+```shell
+gpgconf --list-options gpg-agent | grep cache-ttl:
+```
+
+outputnya kira-kira:
+
+```
+default-cache-ttl:24:0:expire cached PINs after N seconds:3:3:N:600::5
+max-cache-ttl:24:2:set maximum PIN cache lifetime to N seconds:3:3:N:7200::5
+```
+
+Keterangan:
+
+`nama:flags:level:deskripsi:tipe:alt-tipe:argname:default:argdef:VALUE`
+
+- Field ke-8 (`600` buat _default-cache-ttl_ & `7200` buat _max-cache-ttl_): default bawaan GnuPG kalau gak di-_override_.
+- Field ke-10 (`5` di paling belakang): nilai yang lagi aktif dari _config_. 
 
 ### 3. Pass x Git
 

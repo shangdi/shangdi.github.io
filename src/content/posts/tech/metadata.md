@@ -1,9 +1,9 @@
 ---
 title: "Metadata Manipulation 101"
 published: 2025-12-28T19:22:29+07:00
-updated: 2026-05-07
+updated: 2026-09-05
 draft: false
-iamge: "../images/metadata/featured.png"
+image: "../images/metadata/featured.png"
 description: "A brief (yet legal) tutorial on manipulating (adding, editing, deleting) file's metadata."
 tags: ["metadata", "exiftool", "xnviewmp"]
 category: "metadata"

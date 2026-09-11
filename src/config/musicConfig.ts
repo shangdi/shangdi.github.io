@@ -18,7 +18,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	playMode: "list",
 
 	// 是否显启用歌词
-	showLyrics: false,
+	showLyrics: true,
 
 	// Meting API 配置
 	meting: {
@@ -48,11 +48,18 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	local: {
 		playlist: [
 			{
+				name: "口笛で愛は歌えない",
+				artist: "Dazbee",
+				url: "/assets/music/dazbeekuchibudeaiwautaenai.mp3",
+				cover: "/assets/music/cover/dazbeekuchibudeaiwautaenai.webp",
+				lrc: "/assets/music/lrc/dazbeekuchibuedeaiwautaenai.lrc",
+			},
+      {
 				name: "Empty Heart (カラノココロ)",
 				artist: "Anly",
 				url: "/assets/music/anlykaranokokoro.mp3",
 				cover: "/assets/music/cover/anlykaranokokoro.webp",
-				lrc: "",
+				lrc: "/assets/music/lrc/anlykaranokokoro.lrc",
 			},
 		],
 	},
