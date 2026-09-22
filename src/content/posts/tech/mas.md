@@ -1,10 +1,11 @@
 ---
 title: "Windows License Activation with MAS"
 published: 2025-04-21T07:02:40+07:00
+updated: 2026-09-15
 draft: false
 image: "../images/mas/featured.png"
 description: "A simple way to activate your Windows license using Microsoft Activation Script (MAS)."
-tags: ["mas", "windows", "script", "powershell", "seb"]
+tags: ["mas", "windows", "microsoft", "script", "powershell", "seb"]
 category: "mas"
 series: "Windows Installation"
 seriesOrder: 3
@@ -121,7 +122,6 @@ Caranya beragam:
 - Tekan tombol "Windows" + "I" di keyboard secara bersamaan. Ketikkan "Activation Settings". Klik "Activation Settings".
 
 Jika sudah teraktivasi, akan muncul keterangan **Windows is activated with a digital license**, seperti terlihat pada tangkapan layar di bawah ini:
-
 ![Windows is activated with a digital license](../images/mas/ss4.png)
 
 Demikian. Semoga bermanfaat.

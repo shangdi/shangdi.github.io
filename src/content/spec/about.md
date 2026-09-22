@@ -20,7 +20,7 @@ Anyway, if you guys are curious about my current daily setup, you can have a loo
 
 My `fastfetch`:
 
-```shell {10-13}
+```shell {10-13} title="Archlinux"
 wildan@castle
 -------------
 OS: Arch Linux x86_64
@@ -62,6 +62,10 @@ bat
 exiftool
 python-mutagen (id3v2)
 id3lib
+mpv
+kew
+mpd
+rmpc
 ```
 
 
@@ -109,6 +113,8 @@ fd
 reflector
 qbittorrent
 pass
+aria2
+bluez (bluetoothctl)
 ```
 
 :::

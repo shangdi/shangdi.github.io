@@ -1,7 +1,7 @@
 ---
 title: "The Power of Imagemagick: A Small Yet Functional Image Editor"
 published: 2026-08-15T17:08:45+07:00
-updated: 2026-08-26
+updated: 2026-09-22
 draft: false
 pinned: false
 image: "../images/imagemagick/featured.png"
@@ -97,7 +97,7 @@ nix-shell -p imagemagick
 
 Atau di repo Github official-nya:
 
-::github{repo="ImageMagick/ImageMagick/"}
+::github{repo="ImageMagick/ImageMagick"}
 
 
 ### Image Manipulation
@@ -155,6 +155,20 @@ magick <input_file> <output_file>
 ```
 
 ![converting file format](../images/imagemagick/ss3.png)
+
+:::info
+
+Tidak hanya sekadar mengkonversi dari satu format gambar ke format gambar yang lain, tapi `imagemagick` juga memungkinkan kita melakukan konversi dari gambar ke dokumen lain (pdf, misalnya) dan sebaliknya.
+
+```shell
+# konversi gambar ke pdf 
+magick file.jpeg file.pdf
+
+# konversi pdf ke gambar
+magick file.pdf file.jpeg
+```
+
+:::
 
 #### 2. Resize
 
@@ -268,6 +282,18 @@ Berikut contohnya:
 ![trimmed picture](../images/imagemagick/ss8.png)
 
 Perhatikan. Bagian "hitam" pada gambar akan hilang "otomatis" dengan **_trim_**.
+
+#### 7. Merge
+
+Untuk menggabungkan (_merging_) beberapa file gambar ke dalam satu file:
+
+```shell
+# menggabungkan gambar secara horizontal
+magick <input1.jpeg> <input2.jpeg> +append <output_file.jpeg>
+
+# menggabungkan gambar secara vertikal
+magick <input1.jpeg> <input2.jpeg> -append <output_file.jpeg>
+```
 
 Ada banyak lagi fitur-fitur yang memungkinkan kita melakukan manipulasi gambar dengan `imagemagick`. Kalian dapat melihat daftar kemampuan `imagemagick` di sini:
 
