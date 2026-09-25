@@ -1,6 +1,6 @@
 # 🕵️ About Me
 
-My name is Wildan! I'm Indonesian 🇮🇩 who always keen on making friends online! Aside from blogging, I enjoy watching anime, reading manhwa, and tinkering with Linux. 
+My name is Wildan! I'm Indonesian 🇮🇩 who always keen on making friends online! Aside from blogging, I enjoy watching anime, reading manhwa, and tinkering with Linux.
 
 :::tip[I use Arch,btw]
 
@@ -115,6 +115,7 @@ qbittorrent
 pass
 aria2
 bluez (bluetoothctl)
+proton-vpn-cli
 ```
 
 :::

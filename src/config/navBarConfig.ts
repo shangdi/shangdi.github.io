@@ -79,6 +79,9 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 
 			// MyAnimeList
 			LinkPresets.MAL,
+
+      // Projects
+      LinkPresets.Projects,
 		],
 	});
 
@@ -249,6 +252,12 @@ export const LinkPresets: Record<string, NavBarLink> = {
 		url: "/booknav/",
 		icon: "material-symbols:bookmarks",
 		pageKey: "booknav",
+	},
+  Projects: {
+		name: "Projects",
+		url: "/projects/",
+		icon: "material-symbols:rocket-launch",
+		pageKey: "projects",
 	},
 };
 

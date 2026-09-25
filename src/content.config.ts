@@ -35,6 +35,25 @@ type DynamicData = {
 	location: string;
 };
 
+type ProjectLink = {
+	label: string;
+	icon: string;
+	value: string;
+};
+
+type ProjectData = {
+	title: string;
+	published: Date;
+	draft: boolean;
+	order?: number;
+	description: string;
+	image: string;
+	tags: string[];
+	link: ProjectLink[];
+	status: string;
+	lang: string;
+};
+
 type ContentCollection<T> = CollectionConfig<
 	ZodType<T>,
 	ReturnType<typeof glob>
@@ -86,47 +105,74 @@ const dynamicCollection: ContentCollection<DynamicData> = defineCollection({
 	}),
 });
 
-// ziyuan (Quote of the Day)
+const projectsCollection: ContentCollection<ProjectData> = defineCollection({
+	loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/projects" }),
+	schema: z.object({
+		title: z.string(),
+		published: z.date(),
+		draft: z.boolean().optional().default(false),
+		order: z.number().optional(),
+		description: z.string().optional().default(""),
+		image: z.string().optional().default(""),
+		tags: z.array(z.string()).optional().default([]),
+		link: z
+			.array(
+				z.object({
+					label: z.string(),
+					icon: z.string().optional().default(""),
+					value: z.string(),
+				}),
+			)
+			.optional()
+			.default([]),
+		status: z.string().optional().default(""),
+		lang: z.string().optional().default(""),
+	}),
+});
+
+// ziyuan (Quote of the Day) — custom collection, kept from the pre-6.16.8 config
 const ziyuanCollection = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/ziyuan" }),
-  schema: z.union([
-    z.object({
-      title: z.string(),
-      content: z.string(),
-      closable: z.boolean().optional().default(true),
-      link: z
-        .object({
-          enable: z.boolean().optional().default(true),
-          text: z.string(),
-          url: z.string(),
-          external: z.boolean().optional().default(false),
-        })
-        .optional(),
-      quotes: z.undefined().optional(),
-    }),
-    z.object({
-      title: z.string(),
-      quotes: z.array(
-        z.object({
-          text: z.string(),
-          author: z.string(),
-        })
-      ),
-      content: z.undefined().optional(),
-      closable: z.undefined().optional(),
-      link: z.undefined().optional(),
-    }),
-  ]),
+	loader: glob({ pattern: "**/*.md", base: "./src/content/ziyuan" }),
+	schema: z.union([
+		z.object({
+			title: z.string(),
+			content: z.string(),
+			closable: z.boolean().optional().default(true),
+			link: z
+				.object({
+					enable: z.boolean().optional().default(true),
+					text: z.string(),
+					url: z.string(),
+					external: z.boolean().optional().default(false),
+				})
+				.optional(),
+			quotes: z.undefined().optional(),
+		}),
+		z.object({
+			title: z.string(),
+			quotes: z.array(
+				z.object({
+					text: z.string(),
+					author: z.string(),
+				}),
+			),
+			content: z.undefined().optional(),
+			closable: z.undefined().optional(),
+			link: z.undefined().optional(),
+		}),
+	]),
 });
 
 export const collections: {
 	dynamic: typeof dynamicCollection;
 	posts: typeof postsCollection;
 	spec: typeof specCollection;
+	projects: typeof projectsCollection;
 	ziyuan: typeof ziyuanCollection;
 } = {
 	dynamic: dynamicCollection,
 	posts: postsCollection,
 	spec: specCollection,
+	projects: projectsCollection,
 	ziyuan: ziyuanCollection,
 };
