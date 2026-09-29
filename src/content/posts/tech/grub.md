@@ -1,12 +1,14 @@
 ---
 title: "GRUB: Theme, Timeout, OS-Prober, etc"
 published: 2026-03-19T17:20:34+07:00
-updated: 2026-06-02
+updated: 2026-09-29
 image: "../images/grub/featured.png"
 draft: false
 description: "A brief note regarding grub configuration."
 tags: ["grub", "theme", "timer", "os-prober", "boot"]
 category: "grub"
+series: "GRUB configuration"
+seriesOrder: 1
 ---
 
 
@@ -48,7 +50,7 @@ Tema default GRUB ArchLinux adalah seperti _screenshot_ yang saya bagikan sebelu
 Kemudian, jalankan perintah berikut untuk men-_generate_ ulang file konfigurasi GRUB-nya.
 
 ```shell
-sudo grub-mkconfig -o /boot../images/grub/grub.cfg
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 Berikut adalah tema GRUB yang berhasil saya pasang di VM (_Virtual Machine_) ArchLinux saya:
@@ -66,7 +68,7 @@ Selain mengganti tema, kita juga bisa mengkonfigurasi durasi ***timeout***-nya. 
 Kemudian, jalankan perintah berikut untuk men-_generate_ ulang file konfigurasi GRUB-nya.
 
 ```shell
-sudo grub-mkconfig -o /boot../images/grub/grub.cfg
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 Perhatikan di bagian bawah, timeout GRUB di ArchLinux saya sudah diganti ke 20 detik:
@@ -82,7 +84,7 @@ Perhatikan di bagian bawah, timeout GRUB di ArchLinux saya sudah diganti ke 20 d
 Kemudian, jalankan perintah berikut untuk men-_generate_ ulang file konfigurasi GRUB-nya.
 
 ```shell
-sudo grub-mkconfig -o /boot../images/grub/grub.cfg
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 Setelah me-_restart_ komputer, kita akan melihat sistem operasi lain tersebut di menu GRUB.
@@ -106,7 +108,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet" # untuk meng-hide semua boot message pada nor
 Kemudian, jalankan perintah berikut untuk men-_generate_ ulang file konfigurasi GRUB-nya.
 
 ```shell
-sudo grub-mkconfig -o /boot../images/grub/grub.cfg
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 Demikian.  
