@@ -66,6 +66,9 @@ mpv
 kew
 mpd
 rmpc
+
+unrar
+zip
 ```
 
 
@@ -116,6 +119,8 @@ pass
 aria2
 bluez (bluetoothctl)
 proton-vpn-cli
+tldr
+awww
 ```
 
 :::

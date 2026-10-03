@@ -1,7 +1,7 @@
 ---
 title: "The Power of Imagemagick: A Small Yet Functional Image Editor"
 published: 2026-08-15T17:08:45+07:00
-updated: 2026-09-22
+updated: 2026-10-01
 draft: false
 pinned: false
 image: "../images/imagemagick/featured.png"
@@ -294,6 +294,15 @@ magick <input1.jpeg> <input2.jpeg> +append <output_file.jpeg>
 # menggabungkan gambar secara vertikal
 magick <input1.jpeg> <input2.jpeg> -append <output_file.jpeg>
 ```
+
+#### 8. Blur
+
+Untuk membuat gambar terlihat samar (_blurred_):
+
+```shell
+magick <input_file.png> -blur 0x20 <output_file.png>
+```
+
 
 Ada banyak lagi fitur-fitur yang memungkinkan kita melakukan manipulasi gambar dengan `imagemagick`. Kalian dapat melihat daftar kemampuan `imagemagick` di sini:
 
