@@ -257,7 +257,7 @@ export IP_ADDR="192.168.34.99"
 
 Kemudian, di dalam _bash script_ tersebut, kita hanya perlu "memanggil" nama variabelnya saja alih-alih nomor-nomor IP tersebut:
 
-```shell title="port-scanner.sh"
+```shell {14} title="port-scanner.sh"
 #!/usr/bin/env bash
 # Port scanner TCP sederhana untuk percobaan di VM sendiri.
 # Gunakan hanya pada sistem yang Anda miliki atau punya izin untuk diuji.
@@ -323,7 +323,7 @@ echo
 echo "Selesai. $count port terbuka."
 ```
 
-:::warn[AI Usage]
+:::warning[AI Usage]
 
 Kode di atas di-generate oleh AI **[Antrophic Claude](https://claude.ai/)**
 

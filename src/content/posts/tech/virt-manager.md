@@ -1,7 +1,7 @@
 ---
 title: "Practical Guide to Virt-Manager"
 published: 2025-06-16T17:45:18+07:00
-updated: 2026-06-08
+updated: 2026-10-03
 draft: false
 image: "../images/virt-manager/featured.png"
 description: "A note explaining basic usage of virt-manager, especially when it comes to the commands."
@@ -30,7 +30,7 @@ Berikut adalah cara meng-install Virt-manager di beberapa distro Linux populer:
 Selain itu, terdapat beberapa paket tambahan yang juga perlu di-_install_, diantaranya adalah sebagai berikut:
 
 ```shell
-sudo pacman -Sy --needed virt-manager qemu-full libvirt dnsmasq ebtables
+sudo pacman -S virt-manager qemu-full libvirt edk2-ovmf dnsmasq swtpm virt-viewer openbsd-netcat dmidecode
 ```
 
 Kemudian, kita perlu mengaktifkan **libvirt daemon**-nya.
@@ -98,6 +98,16 @@ Silakan dipilih berdasarkan preferensi masing-masing. Pada tutorial ini, saya ak
 
 Selengkapnya:  
 https://blog.wikichoon.com/2016/01/qemusystem-vs-qemusession.html
+
+:::
+
+:::info[Adding user to `libvirt` group]
+
+Agar user kita bisa menggunakan `qemu:///system` (tanpa sudo) dengan baik, kita perlu menambahkan user kita ke grup `libvirt`:
+
+```shell
+sudo usermod -aG libvirt $USER
+```
 
 :::
 

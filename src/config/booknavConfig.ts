@@ -268,11 +268,32 @@ export const booknavConfig: BooknavGroup[] = [
 		],
 	},
 	{
-		id: "tools",
-		name: "Tools",
-		icon: "material-symbols:build-outline-rounded",
-		desc: "Useful tools",
+		id: "agent",
+		name: "AI Agent",
+		icon: "material-symbols:support-agent",
+		desc: "AI agents I'm using",
 		weight: 60,
+		items: [
+			{
+				title: "Claude",
+				url: "https://claude.ai",
+				desc: "Athropic Claude",
+				weight: 10,
+			},
+			{
+				title: "ChatGPT",
+				url: "https://chatgpt.com",
+				desc: "OpenAI ChatGPT",
+				weight: 9,
+			},
+		],
+	},
+	{
+		id: "misc",
+		name: "Misc",
+		icon: "material-symbols:build-outline-rounded",
+		desc: "Miscellaneous tools",
+		weight: 50,
 		items: [
 			{
 				title: "Virustotal",
