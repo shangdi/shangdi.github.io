@@ -14,6 +14,7 @@ import Tags from "@/components/widget/Tags.astro";
 import TimeGreeting from "@/components/widget/TimeGreeting.astro"; // custom Widget
 import QuoteOfTheDay from "@/components/widget/QuoteOfTheDay.astro"; // custom Widget
 import Weather from "@/components/widget/Weather.astro"; // custom Widget
+import Countdown from "@/components/widget/Countdown.astro"; // custom countdown
 import { sidebarLayoutConfig } from "@/config";
 import type {
 	MobileBottomComponentConfig,
@@ -60,7 +61,8 @@ const componentMap = {
 	dynamic: Dynamic,
 	timeGreeting: TimeGreeting,
 	quoteOfTheDay: QuoteOfTheDay,
-	weather: Weather,
+  weather: Weather,
+  countdown: Countdown,
 };
 
 // 获取侧边栏位置

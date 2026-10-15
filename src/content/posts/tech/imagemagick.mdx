@@ -1,7 +1,7 @@
 ---
 title: "The Power of Imagemagick: A Small Yet Functional Image Editor"
 published: 2026-08-15T17:08:45+07:00
-updated: 2026-10-01
+updated: 2026-10-15
 draft: false
 pinned: false
 image: "../images/imagemagick/featured.png"
@@ -297,12 +297,24 @@ magick <input1.jpeg> <input2.jpeg> -append <output_file.jpeg>
 
 #### 8. Blur
 
-Untuk membuat gambar terlihat samar (_blurred_):
+Untuk membuat satu gambar terlihat samar (_blurred_) total:
 
 ```shell
 magick <input_file.png> -blur 0x20 <output_file.png>
 ```
 
+Kalau hanya inginn mem-blur bagian tertentu di dalam gambar:
+
+```shell
+magick <input_file.jpg> -region WidthxHeight+X+Y -blur 0xSigma <output_file.jpg>
+```
+
+:::info
+
+- `WidthxHeight+X+Y`: ganti dengan area yang ingin di-blur (`WidthxHeight`) dimulai dari koordinat tertentu (`X+Y`)  
+- `0xSigma`: ganti dengan intensitas blurnya, semakin besar angkanya, semakin buram (`0x1`: buram sedikit, `0x100`: buram sekali`)
+
+:::
 
 Ada banyak lagi fitur-fitur yang memungkinkan kita melakukan manipulasi gambar dengan `imagemagick`. Kalian dapat melihat daftar kemampuan `imagemagick` di sini:
 

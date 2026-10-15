@@ -127,6 +127,12 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 					icon: "fa7-solid:rss",
 					url: "/rss/",
 				},
+		    {
+			    name: "Atom",
+			    icon: "fa7-solid:atom",
+			    url: "/atom/",
+			    showName: false,
+		    },
 			],
 		},
 		// 壁纸轮播配置，横幅壁纸和全屏壁纸共享，仅在配置多张图片时生效

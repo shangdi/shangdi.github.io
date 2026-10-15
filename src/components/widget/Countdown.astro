@@ -1,0 +1,284 @@
+---
+// Taruh di: src/components/widget/Countdown.astro
+import WidgetLayout from "@/components/common/WidgetLayout.astro";
+import { countdownConfig } from "@/config/countdownConfig";
+
+interface Props {
+	class?: string;
+	style?: string;
+}
+
+const className = Astro.props.class;
+const style = Astro.props.style;
+const c = countdownConfig;
+
+const rows = [
+	{ key: "year", label: c.labels.year },
+	{ key: "month", label: c.labels.month },
+	{ key: "week", label: c.labels.week },
+	{ key: "day", label: c.labels.day },
+] as const;
+
+// Dikirim ke script klien lewat atribut data-*
+const payload = JSON.stringify({
+	timezone: c.timezone,
+	locale: c.locale,
+	weekStartsOn: c.weekStartsOn,
+	labels: c.labels,
+	nextEvent: c.nextEvent,
+});
+---
+
+<WidgetLayout name={c.title} id="countdown" class={className} style={style}>
+	<countdown-widget data-config={payload}>
+		<div
+			data-role="date"
+			class="text-center text-sm font-medium text-neutral-700 dark:text-neutral-200 mb-4"
+		>
+			&nbsp;
+		</div>
+
+		<div class="flex flex-col gap-4">
+			{
+				rows.map((row) => (
+					<div class="flex items-center gap-3" data-row={row.key}>
+						<div
+							data-role="percent"
+							class="w-12 shrink-0 text-sm font-semibold tabular-nums"
+							style="color: var(--primary);"
+						>
+							--%
+						</div>
+						<div class="flex-1 min-w-0">
+							<div
+								data-role="text"
+								class="text-sm text-neutral-700 dark:text-neutral-200 mb-1.5 truncate"
+							>
+								{row.label.replace("{n}", "–")}
+							</div>
+							<div
+								class="h-2 w-full rounded-full overflow-hidden bg-black/10 dark:bg-white/15"
+								role="progressbar"
+								aria-valuemin="0"
+								aria-valuemax="100"
+							>
+								<div
+									data-role="bar"
+									class="cd-bar h-full rounded-full"
+									style="width: 0%; background: var(--primary);"
+								>
+								</div>
+							</div>
+						</div>
+					</div>
+				))
+			}
+		</div>
+
+		{
+			c.nextEvent.enable && c.nextEvent.events.length > 0 && (
+				<div
+					data-role="next"
+					class="hidden mt-4 pt-3 border-t border-dashed border-black/15 dark:border-white/20"
+				>
+					<div class="flex items-end justify-between gap-3">
+						<div class="min-w-0">
+							<div class="text-xs text-neutral-500 dark:text-neutral-400">
+								{c.nextEvent.label}
+							</div>
+							<div
+								data-role="next-name"
+								class="text-base font-semibold text-neutral-800 dark:text-neutral-100 truncate"
+							/>
+							<div
+								data-role="next-date"
+								class="text-xs text-neutral-500 dark:text-neutral-400 tabular-nums"
+							/>
+						</div>
+						<div class="shrink-0 flex items-baseline gap-1" style="color: var(--primary);">
+							<span data-role="next-num" class="text-3xl font-bold leading-none tabular-nums" />
+							<span data-role="next-unit" class="text-xs" />
+						</div>
+					</div>
+				</div>
+			)
+		}
+	</countdown-widget>
+</WidgetLayout>
+
+<style>
+	.cd-bar {
+		transition: width 0.6s ease;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.cd-bar {
+			transition: none;
+		}
+	}
+</style>
+
+<script>
+	type Cfg = {
+		timezone: string;
+		locale: string;
+		weekStartsOn: 0 | 1;
+		labels: Record<"year" | "month" | "week" | "day", string>;
+		nextEvent: {
+			enable: boolean;
+			today: string;
+			daysUnit: string;
+			events: { name: string; date: string }[];
+		};
+	};
+
+	const DAY = 86_400_000;
+
+	// Ambil "waktu dinding" (y/m/d/h/mi/s) di zona waktu tertentu
+	function wallClock(tz: string) {
+		const parts = new Intl.DateTimeFormat("en-CA", {
+			timeZone: tz,
+			hourCycle: "h23",
+			year: "numeric",
+			month: "2-digit",
+			day: "2-digit",
+			hour: "2-digit",
+			minute: "2-digit",
+			second: "2-digit",
+		}).formatToParts(new Date());
+		const get = (t: string) =>
+			Number(parts.find((p) => p.type === t)?.value ?? 0);
+		return {
+			y: get("year"),
+			m: get("month"),
+			d: get("day"),
+			h: get("hour"),
+			mi: get("minute"),
+			s: get("second"),
+		};
+	}
+
+	const pct = (v: number) => `${(Math.min(Math.max(v, 0), 1) * 100).toFixed(1)}%`;
+
+	class CountdownWidget extends HTMLElement {
+		private timer?: number;
+		private cfg?: Cfg;
+
+		connectedCallback() {
+			try {
+				this.cfg = JSON.parse(this.dataset.config || "{}") as Cfg;
+			} catch {
+				return;
+			}
+			this.update();
+			this.timer = window.setInterval(() => this.update(), 30_000);
+		}
+
+		disconnectedCallback() {
+			if (this.timer) window.clearInterval(this.timer);
+		}
+
+		private setRow(key: string, ratio: number, remaining: number) {
+			const row = this.querySelector(`[data-row="${key}"]`);
+			if (!row || !this.cfg) return;
+			const label = this.cfg.labels[key as keyof Cfg["labels"]];
+			const text = row.querySelector<HTMLElement>('[data-role="text"]');
+			const percent = row.querySelector<HTMLElement>('[data-role="percent"]');
+			const bar = row.querySelector<HTMLElement>('[data-role="bar"]');
+			if (text) text.textContent = label.replace("{n}", String(remaining));
+			if (percent) percent.textContent = pct(ratio);
+			if (bar) {
+				bar.style.width = pct(ratio);
+				bar.parentElement?.setAttribute(
+					"aria-valuenow",
+					String(Math.round(ratio * 100)),
+				);
+			}
+		}
+
+		private update() {
+			const cfg = this.cfg;
+			if (!cfg) return;
+			const { y, m, d, h, mi, s } = wallClock(cfg.timezone);
+			const todayUtc = Date.UTC(y, m - 1, d);
+
+			// Header tanggal
+			const dateEl = this.querySelector<HTMLElement>('[data-role="date"]');
+			if (dateEl) {
+				dateEl.textContent = new Intl.DateTimeFormat(cfg.locale, {
+					timeZone: "UTC",
+					weekday: "long",
+					day: "numeric",
+					month: "long",
+					year: "numeric",
+				}).format(new Date(todayUtc));
+			}
+
+			// Tahun
+			const daysInYear = (Date.UTC(y + 1, 0, 1) - Date.UTC(y, 0, 1)) / DAY;
+			const dayOfYear = (todayUtc - Date.UTC(y, 0, 1)) / DAY + 1;
+			this.setRow("year", dayOfYear / daysInYear, daysInYear - dayOfYear);
+
+			// Bulan
+			const daysInMonth = new Date(Date.UTC(y, m, 0)).getUTCDate();
+			this.setRow("month", d / daysInMonth, daysInMonth - d);
+
+			// Minggu
+			const dow = new Date(todayUtc).getUTCDay(); // 0 = Minggu
+			const weekPos = ((dow - cfg.weekStartsOn + 7) % 7) + 1; // 1..7
+			this.setRow("week", weekPos / 7, 7 - weekPos);
+
+			// Hari (proporsi waktu sebenarnya, sisa dibulatkan ke atas)
+			const secs = h * 3600 + mi * 60 + s;
+			this.setRow("day", secs / 86400, Math.ceil((86400 - secs) / 3600));
+
+			this.updateNext(cfg, y, todayUtc);
+		}
+
+		private updateNext(cfg: Cfg, year: number, todayUtc: number) {
+			const box = this.querySelector<HTMLElement>('[data-role="next"]');
+			if (!box || !cfg.nextEvent?.enable) return;
+
+			let best: { name: string; at: number } | null = null;
+			for (const ev of cfg.nextEvent.events) {
+				let at: number;
+				if (/^\d{2}-\d{2}$/.test(ev.date)) {
+					const [mm, dd] = ev.date.split("-").map(Number);
+					at = Date.UTC(year, mm - 1, dd);
+					if (at < todayUtc) at = Date.UTC(year + 1, mm - 1, dd);
+				} else {
+					const [yy, mm, dd] = ev.date.split("-").map(Number);
+					at = Date.UTC(yy, mm - 1, dd);
+					if (Number.isNaN(at) || at < todayUtc) continue;
+				}
+				if (!best || at < best.at) best = { name: ev.name, at };
+			}
+			if (!best) {
+				box.classList.add("hidden");
+				return;
+			}
+
+			const diff = Math.round((best.at - todayUtc) / DAY);
+			const set = (role: string, v: string) => {
+				const el = box.querySelector<HTMLElement>(`[data-role="${role}"]`);
+				if (el) el.textContent = v;
+			};
+			set("next-name", best.name);
+			set(
+				"next-date",
+				new Intl.DateTimeFormat(cfg.locale, {
+					timeZone: "UTC",
+					day: "numeric",
+					month: "short",
+					year: "numeric",
+				}).format(new Date(best.at)),
+			);
+			set("next-num", diff === 0 ? cfg.nextEvent.today : String(diff));
+			set("next-unit", diff === 0 ? "" : cfg.nextEvent.daysUnit);
+			box.classList.remove("hidden");
+		}
+	}
+
+	if (!customElements.get("countdown-widget")) {
+		customElements.define("countdown-widget", CountdownWidget);
+	}
+</script>
