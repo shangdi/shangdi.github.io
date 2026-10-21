@@ -1,7 +1,7 @@
 ---
 title: "A Small yet Extremely Powerful CLI Tool: curl"
 published: 2026-10-16T20:59:11+07:00
-image: "../images/env/featured.avif"
+image: "../images/curl/featured.avif"
 draft: false
 description: "A simple yet practical guide to curl: a swiss-army tool for transferring data with URLs"
 tags: ["curl", "libcurl", "linux", "cli", "url", "windows"]
