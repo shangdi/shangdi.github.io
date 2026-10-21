@@ -205,6 +205,12 @@ export const booknavConfig: BooknavGroup[] = [
 				desc: "Icon Sets",
 				weight: 4,
 			},
+			{
+				title: "Getemoji",
+				url: "https://getemoji.com/",
+				desc: "Free emoji picker",
+				weight: 3,
+			},
 		],
 	},
 	{
@@ -285,6 +291,12 @@ export const booknavConfig: BooknavGroup[] = [
 				url: "https://chatgpt.com",
 				desc: "OpenAI ChatGPT",
 				weight: 9,
+			},
+			{
+				title: "Opencode",
+				url: "https://opencode.ai",
+				desc: "The open source AI coding agent",
+				weight: 10,
 			},
 		],
 	},

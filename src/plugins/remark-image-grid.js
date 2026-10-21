@@ -30,6 +30,7 @@ const BLOCK_CONTAINER_TYPES = new Set([
 	"containerDirective",
 	"list",
 	"listItem",
+  "mdxJsxFlowElement",
 ]);
 
 /** Resolve the responsive column class for a grid with the given image count. */

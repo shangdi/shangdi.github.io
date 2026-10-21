@@ -25,7 +25,7 @@ Before having the current blog, this is my first project I've ever built. At tha
 
 :::info
 
-I apologize for not being able to give you guys the link to the blog.
+I apologize for not being able to give you guys the link to the blog as the repo has been privated.
 
 :::
 

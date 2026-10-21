@@ -82,6 +82,9 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 
       // Projects
       LinkPresets.Projects,
+
+      // Journey
+      LinkPresets.Journey,
 		],
 	});
 
@@ -259,6 +262,13 @@ export const LinkPresets: Record<string, NavBarLink> = {
 		icon: "material-symbols:rocket-launch",
 		pageKey: "projects",
 	},
+  Journey: {
+		name: "Journey",
+		url: "/linux-journey/",
+		icon: "material-symbols:laptop-mac-outline",
+		pageKey: "journey",
+	},
+
 };
 
 export const navBarConfig: NavBarConfig = getDynamicNavBarConfig();

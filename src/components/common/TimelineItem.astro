@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components"; // custom import biar bisa make logo linux dari simple-icons set
 import { ICONS, type IconName } from "./mdx-icons";
 
 // MDX 时间线条目组件（配合 Timeline 使用）
@@ -20,15 +21,50 @@ interface Props {
 	date?: string;
 	title?: string;
 	type?: "default" | "tip" | "note" | "important" | "warning" | "caution";
-	icon?: IconName;
+  // icon?: IconName;
+  icon?: IconName | `${string}:${string}`;
+	color?: string; // override manual, mis. "#1793D1"
 }
 
-const { date, title, type = "default", icon } = Astro.props;
-const iconHtml = icon ? ICONS[icon] : undefined;
+// bg = warna brand, fg = warna logo (default putih)
+const BRAND: Record<string, { bg: string; fg?: string }> = {
+	"simple-icons:archlinux": { bg: "#1793D1" },
+	"simple-icons:debian": { bg: "#A81D33" },
+	"simple-icons:ubuntu": { bg: "#E95420" },
+	"simple-icons:fedora": { bg: "#51A2DA" },
+	"simple-icons:linuxmint": { bg: "#87CF3E", fg: "#1a1a1a" },
+	"simple-icons:gentoo": { bg: "#54487A" },
+	"simple-icons:nixos": { bg: "#5277C3" },
+	"simple-icons:opensuse": { bg: "#73BA25" },
+	"simple-icons:redhat": { bg: "#EE0000" },
+	"simple-icons:manjaro": { bg: "#35BF5C" },
+	"simple-icons:kalilinux": { bg: "#557C94" },
+  "simple-icons:alpinelinux": { bg: "#0D597F" },
+  "simple-icons:freebsd": { bg: "#B5010F" },
+	"simple-icons:linux": { bg: "#FCC624", fg: "#1a1a1a" },
+};
+
+const { date, title, type = "default", icon, color } = Astro.props; // custom nambahin "color" biar bisa ganti warna icon logo linux
+// kalau ada ":" berarti nama Iconify (mis. simple-icons:archlinux)
+const isIconify = typeof icon === "string" && icon.includes(":"); // custom biar bisa make icon dari iconify di timeline
+const iconHtml = icon && !isIconify ? ICONS[icon as IconName] : undefined; // custom biar bisa make icon dari iconify di timeline
+
+// warna brand cuma dipakai kalau type masih default, kecuali `color` diisi manual
+const brand = isIconify ? BRAND[icon as string] : undefined;
+const nodeBg = color ?? (type === "default" ? brand?.bg : undefined);
+const nodeFg = color ? undefined : type === "default" ? brand?.fg : undefined;
+const itemStyle = nodeBg
+	? `--node-bg:${nodeBg};--node-ring:color-mix(in srgb, ${nodeBg} 22%, transparent);${nodeFg ? `--node-fg:${nodeFg};` : ""}`
+	: undefined;
 ---
 
-<li class="timeline-item" data-type={type}>
-	<div class="timeline-marker" aria-hidden="true">
+<li class="timeline-item" data-type={type} style={itemStyle}> <!-- custom, nambain "style={itemStyle}" -->
+  <div class="timeline-marker" aria-hidden="true"> 
+    {isIconify && ( // baris 34-38 custom biar bisa make icon dari iconify di timeline
+		<span class="timeline-marker-icon">
+			<Icon name={icon as string} />
+		</span>
+	  )}
 		{iconHtml && <span class="timeline-marker-icon" set:html={iconHtml}></span>}
 	</div>
 	<div class="timeline-content">
@@ -82,7 +118,7 @@ const iconHtml = icon ? ICONS[icon] : undefined;
 	.timeline-marker {
 		position: relative;
 		flex-shrink: 0;
-		width: var(--timeline-marker-size, 1rem);
+    width: var(--timeline-marker-size, 1.75rem); /* default: 1rem, diubah lebih gede ke 1.75rem*/
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;
@@ -110,18 +146,19 @@ const iconHtml = icon ? ICONS[icon] : undefined;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 1.25rem;
-		height: 1.25rem;
+		width: 2rem; /* default: 1.25rem, diubah lebih gede ke 2rem*/
+		height: 2rem; /* default: 1.25rem, diubah lebih gede ke 2rem*/
 		margin-top: var(--spacing-xs);
 		border-radius: var(--radius-full);
 		background: var(--node-bg);
-		box-shadow: 0 0 0 3px var(--node-ring);
-		color: #fff;
+    box-shadow: 0 0 0 3px var(--node-ring);
+    color: var(--node-fg, #fff);
+    /* color: #fff; ini default, diganti ke baris yang di atas*/ 
 	}
 
 	.timeline-marker-icon :global(svg) {
-		width: 0.7rem;
-		height: 0.7rem;
+		width: 1.25rem; /* default: 1rem, diubah lebih kecil ke 1.25rem*/
+		height: 1.25rem; /* default: 1rem, diubah lebih kecil ke 1.25rem*/
 	}
 
 	.timeline-content {

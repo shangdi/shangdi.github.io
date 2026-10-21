@@ -55,8 +55,8 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			showOnPostPage: true,
 		},
 		{
-			// custom countdown
-			type: "countdown",
+			// custom postgraph
+			type: "postgraph",
 			// 是否启用该组件
 			enable: true,
 			// 组件位置
@@ -71,6 +71,16 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			enable: true,
 			// 组件位置
 			position: "sticky",
+			// 是否在文章详情页显示
+			showOnPostPage: true,
+		},
+		{
+			// custom countdown
+			type: "countdown",
+			// 是否启用该组件
+			enable: true,
+			// 组件位置
+			position: "top",
 			// 是否在文章详情页显示
 			showOnPostPage: true,
 		},
