@@ -177,6 +177,15 @@ export const friendsConfig: FriendLink[] = [
 		enabled: true, 
 	},
 	{
+		title: "栖童の小站",
+		imgurl: "https://blog.linux-qitong.top/img/avatar.webp",
+		desc: "越努力,越幸运",
+		siteurl: "https://blog.linux-qitong.top",
+    tags: ["Blog"],
+		weight: 33, 
+		enabled: true, 
+	},
+	{
 		title: "Firefly Docs",
 		imgurl: "https://docs-firefly.cuteleaf.cn/logo.png",
 		desc: "Firefly主题模板文档",

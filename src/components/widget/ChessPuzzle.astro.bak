@@ -1,0 +1,481 @@
+---
+/**
+ * Sidebar widget: Daily chess puzzle (Lichess)
+ * Place at: src/components/widget/ChessPuzzle.astro
+ *
+ * Dependencies: pnpm add chess.js chessground
+ * Data: GET https://lichess.org/api/puzzle/daily (public, no token needed)
+ */
+import "chessground/assets/chessground.base.css";
+import "chessground/assets/chessground.brown.css";
+import "chessground/assets/chessground.cburnett.css";
+
+interface Props {
+	class?: string;
+	style?: string;
+}
+
+const { class: className = "", style } = Astro.props;
+
+// UI text. Strings only: this object is serialized to JSON for the client script,
+// so functions would be lost. Use {color} as a placeholder.
+const T = {
+	title: "Daily chess puzzle",
+	loading: "Loading puzzle…",
+	yourMove: "{color} to move. Find the best move.",
+	white: "White",
+	black: "Black",
+	wrong: "Not that one. Try again.",
+	good: "Correct. Keep going.",
+	solved: "Solved! Today's puzzle is complete.",
+	solvedBefore: "You've already solved this one today.",
+	failed: "Couldn't load the puzzle. Try again later.",
+	hint: "Hint",
+	solution: "Solution",
+	retry: "Retry",
+	open: "Open on Lichess",
+	rating: "Rating",
+};
+---
+
+<div
+	data-chess-puzzle
+	data-t={JSON.stringify(T)}
+	class:list={["card-base pb-4", className]}
+	style={style}
+>
+	<div
+		class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100 relative ml-8 mt-4 mb-3
+		before:w-1 before:h-4 before:rounded-md before:bg-[var(--primary)]
+		before:absolute before:top-[5.5px] before:-left-[18px]"
+	>
+		{T.title}
+	</div>
+
+	<div class="px-4">
+		<div class="cp-board" data-cp-board></div>
+
+		<p class="cp-status" data-cp-status aria-live="polite">{T.loading}</p>
+		<p class="cp-meta" data-cp-meta hidden></p>
+
+		<div class="cp-actions">
+			<button type="button" class="cp-btn" data-cp-hint disabled>{T.hint}</button>
+			<button type="button" class="cp-btn" data-cp-solution disabled>{T.solution}</button>
+			<button type="button" class="cp-btn" data-cp-retry disabled>{T.retry}</button>
+		</div>
+
+		<a
+			class="cp-link"
+			data-cp-link
+			href="https://lichess.org/training/daily"
+			target="_blank"
+			rel="noopener noreferrer">{T.open}</a
+		>
+	</div>
+</div>
+
+<style is:global>
+	.cp-board {
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		border-radius: 0.5rem;
+		overflow: hidden;
+	}
+	.cp-status {
+		margin: 0.75rem 0 0;
+		font-size: 0.875rem;
+		line-height: 1.4;
+		color: rgb(0 0 0 / 0.75);
+	}
+	.dark .cp-status {
+		color: rgb(255 255 255 / 0.75);
+	}
+	.cp-status[data-tone="bad"] {
+		color: #c2410c;
+	}
+	.dark .cp-status[data-tone="bad"] {
+		color: #fb923c;
+	}
+	.cp-status[data-tone="good"] {
+		color: #15803d;
+	}
+	.dark .cp-status[data-tone="good"] {
+		color: #4ade80;
+	}
+	.cp-meta {
+		margin: 0.25rem 0 0;
+		font-size: 0.75rem;
+		color: rgb(0 0 0 / 0.5);
+	}
+	.dark .cp-meta {
+		color: rgb(255 255 255 / 0.5);
+	}
+	.cp-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.375rem;
+		margin-top: 0.75rem;
+	}
+	.cp-btn {
+		height: 2rem;
+		padding: 0 0.75rem;
+		border: 0;
+		border-radius: 0.5rem;
+		font-size: 0.8125rem;
+		cursor: pointer;
+		color: var(--primary, #3b82f6);
+		background: color-mix(in oklab, var(--primary, #3b82f6) 14%, transparent);
+		transition: background 0.15s;
+	}
+	.cp-btn:hover:not(:disabled) {
+		background: color-mix(in oklab, var(--primary, #3b82f6) 24%, transparent);
+	}
+	.cp-btn:focus-visible {
+		outline: 2px solid var(--primary, #3b82f6);
+		outline-offset: 2px;
+	}
+	.cp-btn:disabled {
+		opacity: 0.4;
+		cursor: default;
+	}
+	.cp-link {
+		display: inline-block;
+		margin-top: 0.75rem;
+		font-size: 0.75rem;
+		color: rgb(0 0 0 / 0.5);
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+	.dark .cp-link {
+		color: rgb(255 255 255 / 0.5);
+	}
+	.cp-link:hover {
+		color: var(--primary, #3b82f6);
+	}
+</style>
+
+<script>
+	import { Chess } from "chess.js";
+	import { Chessground } from "chessground";
+	import type { Api } from "chessground/api";
+	import type { Key } from "chessground/types";
+
+	type Color = "white" | "black";
+	type Daily = {
+		game: { pgn: string };
+		puzzle: {
+			id: string;
+			rating: number;
+			solution: string[];
+			themes: string[];
+			initialPly: number;
+		};
+	};
+
+	const API = "https://lichess.org/api/puzzle/daily";
+	const CACHE_PREFIX = "chess-daily:";
+	const SOLVED_PREFIX = "chess-daily-solved:";
+
+	const today = () => new Date().toISOString().slice(0, 10); // UTC date
+
+	async function loadDaily(): Promise<Daily> {
+		const key = CACHE_PREFIX + today();
+		try {
+			const cached = localStorage.getItem(key);
+			if (cached) return JSON.parse(cached) as Daily;
+		} catch {
+			/* storage unavailable, fall through to fetch */
+		}
+
+		const res = await fetch(API, { headers: { Accept: "application/json" } });
+		if (!res.ok) throw new Error(`HTTP ${res.status}`);
+		const data = (await res.json()) as Daily;
+
+		try {
+			// drop cached puzzles from previous days
+			for (let i = localStorage.length - 1; i >= 0; i--) {
+				const k = localStorage.key(i);
+				if (k && k.startsWith(CACHE_PREFIX) && k !== key) localStorage.removeItem(k);
+			}
+			localStorage.setItem(key, JSON.stringify(data));
+		} catch {
+			/* ignore */
+		}
+		return data;
+	}
+
+	const uciFrom = (u: string) => u.slice(0, 2) as Key;
+	const uciTo = (u: string) => u.slice(2, 4) as Key;
+
+	function isLegalUci(c: Chess, u: string): boolean {
+		return c
+			.moves({ verbose: true })
+			.some((m) => m.from === uciFrom(u) && m.to === uciTo(u));
+	}
+
+	/**
+	 * Puzzle start position = PGN played up to initialPly.
+	 * The off-by-one depends on how plies are counted, so both candidates are
+	 * tried and the one where the first solution move is legal wins.
+	 */
+	function buildPosition(d: Daily): Chess {
+		const full = new Chess();
+		full.loadPgn(d.game.pgn);
+		const san = full.history();
+		const first = d.puzzle.solution[0];
+
+		for (const n of [d.puzzle.initialPly + 1, d.puzzle.initialPly]) {
+			const c = new Chess();
+			let ok = true;
+			for (let i = 0; i < n && i < san.length; i++) {
+				try {
+					c.move(san[i]);
+				} catch {
+					ok = false;
+					break;
+				}
+			}
+			if (ok && isLegalUci(c, first)) return c;
+		}
+		throw new Error("Puzzle position does not match its solution");
+	}
+
+	function destsOf(c: Chess): Map<Key, Key[]> {
+		const m = new Map<Key, Key[]>();
+		for (const mv of c.moves({ verbose: true })) {
+			const list = m.get(mv.from as Key) ?? [];
+			list.push(mv.to as Key);
+			m.set(mv.from as Key, list);
+		}
+		return m;
+	}
+
+	const turnOf = (c: Chess): Color => (c.turn() === "w" ? "white" : "black");
+
+	const prettyTheme = (t: string) =>
+		t.replace(/([A-Z]|\d+)/g, " $1").trim().toLowerCase();
+
+	async function init(root: HTMLElement) {
+		root.dataset.ready = "1";
+
+		const T = JSON.parse(root.dataset.t ?? "{}") as Record<string, string>;
+		const boardEl = root.querySelector<HTMLElement>("[data-cp-board]")!;
+		const statusEl = root.querySelector<HTMLElement>("[data-cp-status]")!;
+		const metaEl = root.querySelector<HTMLElement>("[data-cp-meta]")!;
+		const linkEl = root.querySelector<HTMLAnchorElement>("[data-cp-link]")!;
+		const btnHint = root.querySelector<HTMLButtonElement>("[data-cp-hint]")!;
+		const btnSol = root.querySelector<HTMLButtonElement>("[data-cp-solution]")!;
+		const btnRetry = root.querySelector<HTMLButtonElement>("[data-cp-retry]")!;
+
+		const say = (text: string, tone: "" | "good" | "bad" = "") => {
+			statusEl.textContent = text;
+			if (tone) statusEl.dataset.tone = tone;
+			else delete statusEl.dataset.tone;
+		};
+
+		let data: Daily;
+		try {
+			data = await loadDaily();
+			buildPosition(data); // validate early
+		} catch (e) {
+			console.error("[ChessPuzzle]", e);
+			say(T.failed, "bad");
+			return;
+		}
+
+		const sol = data.puzzle.solution;
+		const solvedKey = SOLVED_PREFIX + data.puzzle.id;
+		linkEl.href = `https://lichess.org/training/${data.puzzle.id}`;
+		metaEl.textContent = `${T.rating} ${data.puzzle.rating}`;
+		metaEl.hidden = false;
+
+		let game!: Chess;
+		let color: Color = "white";
+		let idx = 0;
+		let finished = false;
+		let busy = false;
+		let cg: Api | undefined;
+
+		const turnMessage = () =>
+			T.yourMove.replace("{color}", color === "white" ? T.white : T.black);
+
+		const sync = (lastMove?: [Key, Key]) => {
+			if (!cg) return;
+			const interactive = !finished && !busy;
+			cg.set({
+				fen: game.fen(),
+				turnColor: turnOf(game),
+				check: game.isCheck(),
+				lastMove,
+				movable: {
+					color: interactive ? color : undefined,
+					dests: interactive ? destsOf(game) : new Map(),
+				},
+			});
+		};
+
+		const finish = (lastMove?: [Key, Key]) => {
+			finished = true;
+			sync(lastMove);
+			cg?.setShapes([]);
+			try {
+				localStorage.setItem(solvedKey, "1");
+			} catch {
+				/* ignore */
+			}
+			say(T.solved, "good");
+			metaEl.textContent = `${T.rating} ${data.puzzle.rating} · ${data.puzzle.themes
+				.map(prettyTheme)
+				.join(", ")}`;
+			btnHint.disabled = true;
+			btnSol.disabled = true;
+		};
+
+		const applyUci = (u: string) =>
+			game.move({
+				from: uciFrom(u),
+				to: uciTo(u),
+				promotion: u.length > 4 ? u[4] : undefined,
+			});
+
+		const onUserMove = (from: Key, to: Key) => {
+			cg?.setShapes([]);
+			const expected = sol[idx];
+
+			// Move matches the solution
+			if (uciFrom(expected) === from && uciTo(expected) === to) {
+				applyUci(expected);
+				idx++;
+				if (idx >= sol.length) return finish([from, to]);
+
+				busy = true;
+				say(T.good, "good");
+				sync([from, to]);
+				window.setTimeout(() => {
+					const reply = sol[idx];
+					applyUci(reply);
+					idx++;
+					busy = false;
+					if (idx >= sol.length) return finish([uciFrom(reply), uciTo(reply)]);
+					sync([uciFrom(reply), uciTo(reply)]);
+					say(turnMessage());
+				}, 450);
+				return;
+			}
+
+			// An alternative checkmate also counts as correct
+			try {
+				const probe = new Chess(game.fen());
+				probe.move({ from, to, promotion: "q" });
+				if (probe.isCheckmate()) {
+					game = probe;
+					return finish([from, to]);
+				}
+			} catch {
+				/* illegal move, ignore */
+			}
+
+			// Wrong move: put the board back
+			busy = true;
+			say(T.wrong, "bad");
+			window.setTimeout(() => {
+				busy = false;
+				sync();
+			}, 500);
+		};
+
+		const start = () => {
+			game = buildPosition(data);
+			color = turnOf(game);
+			idx = 0;
+			finished = false;
+			busy = false;
+
+			// Enable the controls first so a later hiccup can never leave them dead
+			btnHint.disabled = false;
+			btnSol.disabled = false;
+			btnRetry.disabled = false;
+
+			cg?.destroy();
+			cg = Chessground(boardEl, {
+				fen: game.fen(),
+				orientation: color,
+				turnColor: color,
+				coordinates: true,
+				animation: { duration: 200 },
+				highlight: { lastMove: true, check: true },
+				premovable: { enabled: false },
+				draggable: { showGhost: true },
+				movable: {
+					free: false,
+					color,
+					dests: destsOf(game),
+					showDests: true,
+					events: { after: onUserMove },
+				},
+			});
+
+			let solvedBefore = false;
+			try {
+				solvedBefore = localStorage.getItem(solvedKey) === "1";
+			} catch {
+				/* ignore */
+			}
+			say(turnMessage() + (solvedBefore ? ` ${T.solvedBefore}` : ""));
+		};
+
+		btnHint.addEventListener("click", () => {
+			if (finished || busy || !cg) return;
+			cg.setShapes([{ orig: uciFrom(sol[idx]), brush: "green" }]);
+		});
+
+		btnSol.addEventListener("click", () => {
+			if (finished || busy || !cg) return;
+			const probe = new Chess(game.fen());
+			const sans: string[] = [];
+			for (const u of sol.slice(idx)) {
+				try {
+					sans.push(
+						probe.move({
+							from: uciFrom(u),
+							to: uciTo(u),
+							promotion: u.length > 4 ? u[4] : undefined,
+						}).san,
+					);
+				} catch {
+					break;
+				}
+			}
+			cg.setShapes([
+				{ orig: uciFrom(sol[idx]), dest: uciTo(sol[idx]), brush: "green" },
+			]);
+			say(`${T.solution}: ${sans.join(" ")}`);
+		});
+
+		btnRetry.addEventListener("click", () => {
+			cg?.setShapes([]);
+			start();
+		});
+
+		start();
+	}
+
+	// Safe with page transitions (Swup/Astro): idempotent init + lightweight observer
+	const boot = () => {
+		document
+			.querySelectorAll<HTMLElement>("[data-chess-puzzle]:not([data-ready])")
+			.forEach((el) => void init(el));
+	};
+
+	const w = window as unknown as { __chessPuzzleBoot?: boolean };
+	if (!w.__chessPuzzleBoot) {
+		w.__chessPuzzleBoot = true;
+		boot();
+		document.addEventListener("astro:page-load", boot);
+		let raf = 0;
+		new MutationObserver(() => {
+			cancelAnimationFrame(raf);
+			raf = requestAnimationFrame(boot);
+		}).observe(document.body, { childList: true, subtree: true });
+	}
+</script>

@@ -1,7 +1,7 @@
 ---
 title: "Practical Guide to Virt-Manager"
 published: 2025-06-16T17:45:18+07:00
-updated: 2026-10-03
+updated: 2026-10-29
 draft: false
 image: "../images/virt-manager/featured.png"
 description: "A note explaining basic usage of virt-manager, especially when it comes to the commands."
@@ -146,6 +146,22 @@ Jika menjalankan Virt-manager sebagai ***system*** (`qemu:///system`), maka file
 ```
 
 :::
+
+Atau dengan _one-line command_:
+
+```shell
+virt-install --name vm1 --memory 4096 --vcpus 2 --disk size=30 --cdrom ~/Downloads/os.iso --os-variant detect=on,require=off --network default --graphics spice
+```
+
+**Keterangan:**
+- `--name`: nama VM  
+- `--memory`: RAM dalam MB  
+- `--vcpus`: jumlah core CPU  
+- `--disk size=30`: buat disk 30GB (default di `/var/lib/libvirt/images/`)  
+- `--cdrom`: path ISO installer  
+- `--os-variant`: tipe OS, biar setting optimal. Cek daftar dengan `osinfo-query os`  
+- `--network default`: pakai NAT bawaan libvirt  
+- `--graphics spice`: biar bisa dibuka lewat `virt-manager`/`virt-viewer`
 
 VM berhasil dibuat.
 
@@ -307,9 +323,16 @@ Kemudian, kita juga perlu menghapus _file storage_-nya juga secara manual:
 
 ```shell
 sudo rm -r /var/lib/libvirt/images/<vm_name>.qcow2
+sudo rm -r ~/.local/share/libvirt/images/<vm_name>.qcow2 # kalau di-install dengan qemu://session
 ```
 
 ![Deleting VM](../images/virt-manager/ss10.png)
+
+Atau dengan _one-line command_:
+
+```shell
+virsh undefine <vm_name> --remove-all-storage --nvram
+```
 
 Sekian.  
 Semoga bermanfaat.

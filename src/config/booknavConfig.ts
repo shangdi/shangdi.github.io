@@ -293,10 +293,16 @@ export const booknavConfig: BooknavGroup[] = [
 				weight: 9,
 			},
 			{
+				title: "Gemini AI",
+				url: "https://gemini.google.com",
+				desc: "Google Gemini",
+				weight: 8,
+			},
+			{
 				title: "Opencode",
 				url: "https://opencode.ai",
 				desc: "The open source AI coding agent",
-				weight: 10,
+				weight: 7,
 			},
 		],
 	},

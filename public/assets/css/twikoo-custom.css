@@ -265,6 +265,15 @@ body.wallpaper-transparent .twikoo {
   --tk-muted: color-mix(in oklch, var(--card-bg) 40%, #c0c4cc 60%);
 }
 
+/* custom bikin gambar di dalam kolom komentar */ 
+.tk-input .el-textarea__inner {
+  background-color: transparent;
+  background-image: url("/assets/images/hinata.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 60px auto; 
+} 
+
 /* 全屏透明模式面板：开启毛玻璃效果 */
 body.wallpaper-transparent .twikoo .el-input__inner,
 body.wallpaper-transparent .twikoo .el-textarea__inner,

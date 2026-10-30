@@ -1,6 +1,7 @@
 ---
 title: "A Small yet Extremely Powerful CLI Tool: curl"
 published: 2026-10-16T20:59:11+07:00
+updated: 2026-10-22
 image: "../images/curl/featured.avif"
 draft: false
 description: "A simple yet practical guide to curl: a swiss-army tool for transferring data with URLs"
@@ -22,6 +23,53 @@ Repository resmi Github:
 ### What is `curl` used for?
 
 `curl` digunakan di _command line_ atau di dalam _script_ untuk melakukan transfer data. `curl` bisa dibilang juga merupakan `libcurl` di saat yang sama. Oleh karena itu, ia bisa digunakan di mobil, TV, router, printer, peralatan audio, _mobile phone_, tablet, perangkat medis, STB, game komputer, media player, dan semua aplikasi (_software_) yang terkait dengan transfer data di internet. `curl` juga mendukung banyak protokol, seperti HTTP/HTTPS, FTP/SFTP, SMB, SCP, LDAP, IMAP/IMAPS, POP3, TELNET, dan masih banyak lagi.[^2]  
+
+### Installation
+
+Berikut adalah cara instalasi `curl` di beberapa sistem operasi linux dan unix:
+
+::: code-group labels=[debian/ubuntu, archlinux, fedora, opensuse, freebsd]
+
+```shell
+sudo apt install -y curl
+```
+
+```shell
+sudo pacman -Sy curl
+```
+
+```shell
+sudo dnf install curl
+```
+
+```shell
+sudo zypper install curl
+```
+
+```shell
+sudo pkg install bind-curl
+```
+
+:::
+
+:::note
+
+**NixOS:**  
+Masukkan baris berikut di file konfigurasi (`/etc/nixos/configuration.nix`):
+
+```nix title="nix"
+environment.systemPackages = [
+  pkgs.curl
+];
+```
+
+Atau jika menggunakan `nix-shell`:
+
+```shell
+nix-shell -p curl
+```
+
+:::
 
 ### Usage
 

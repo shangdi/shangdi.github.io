@@ -61,6 +61,13 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				cover: "/assets/music/cover/anlykaranokokoro.webp",
 				lrc: "/assets/music/lrc/anlykaranokokoro.lrc",
 			},
+			{
+				name: "Hope is The Thing with Feathers",
+				artist: "Chevy",
+				url: "/assets/music/chevyhopeisthethingwithfeathers.mp3",
+			  cover: "/assets/music/cover/chevyhopeisthethingwithfeathers.webp",
+				lrc: "/assets/music/lrc/chevyhopeisthethingwithfeathers.lrc",
+			},
 		],
 	},
 };

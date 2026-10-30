@@ -15,6 +15,7 @@ export type WidgetComponentType =
 	| "weather"
 	| "countdown"
   | "postgraph"
+  | "chessPuzzle"
 	| "dynamic";
 
 export type WidgetComponentConfig = {

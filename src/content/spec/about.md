@@ -121,6 +121,7 @@ bluez (bluetoothctl)
 proton-vpn-cli
 tldr
 awww
+vnstat
 ```
 
 :::

@@ -75,6 +75,16 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			showOnPostPage: true,
 		},
 		{
+			// Chess Puzzle
+			type: "chessPuzzle",
+			// Chess Puzzle
+			enable: true,
+			// Chess Puzzle
+			position: "top",
+			// 是否在文章详情页显示
+			showOnPostPage: false,
+		},
+		{
 			// custom countdown
 			type: "countdown",
 			// 是否启用该组件
