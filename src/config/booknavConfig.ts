@@ -256,7 +256,7 @@ export const booknavConfig: BooknavGroup[] = [
 			{
 				title: "DNS Checker",
 				url: "https://dnschecker.org",
-				desc: "DNS Lookup",
+				desc: "DNS & IP (ipv4/ipv6) Look Up",
 				weight: 10,
 			},
 			{

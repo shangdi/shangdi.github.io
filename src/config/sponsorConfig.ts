@@ -12,7 +12,7 @@ export const sponsorConfig: SponsorConfig = {
 		"Your donation will be my motivation to keep this blog alive and make it more informative.",
 
 	// 是否显示打赏者列表
-	showSponsorsList: false,
+	showSponsorsList: true,
 
 	// 是否显示评论区，需要先在commentConfig.ts启用评论系统
 	showComment: true,
@@ -26,10 +26,19 @@ export const sponsorConfig: SponsorConfig = {
 			name: "Bitcoin (BTC)",		
 			icon: "fa7-brands:bitcoin",
 			// 收款码图片路径（需要放在 public 目录下）
-			qrCode: "/assets/images/sponsor/blog-mywallet.png",
-			link: "bitcoin:BC1QHTL2RTJ45J0XAW2LWRALCSXPHKU88SSJW6G0SX",
+			qrCode: "/assets/images/sponsor/blog-bitcoin.png",
+			// link: "bitcoin:BC1QHTL2RTJ45J0XAW2LWRALCSXPHKU88SSJW6G0SX",
 			// link: "https://www.blockchain.com/explorer/addresses/btc/BC1QHTL2RTJ45J0XAW2LWRALCSXPHKU88SSJW6G0SX",
 			description: "My bitcoin address",
+			enabled: true,
+		},
+		{
+			name: "QRIS",		
+			icon: "fa7-solid:qrcode",
+			// 收款码图片路径（需要放在 public 目录下）
+			qrCode: "/assets/images/sponsor/blog-qris.png",
+			link: "",
+			description: "My QRIS",
 			enabled: true,
 		},
 		{
