@@ -109,6 +109,7 @@ satty
 wf-recorder + slurp
 btop
 htop
+dux-gop
 zoxide
 find  
 grep 
@@ -122,6 +123,7 @@ proton-vpn-cli
 tldr
 awww
 vnstat
+wireguard
 ```
 
 :::

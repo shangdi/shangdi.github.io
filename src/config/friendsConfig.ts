@@ -186,6 +186,15 @@ export const friendsConfig: FriendLink[] = [
 		enabled: true, 
 	},
 	{
+		title: "Reynaldi Siregar",
+		imgurl: "https://www.reynaldisiregar.me/img/profile.webp",
+		desc: "Building Tactile & Modern Web Experiences",
+		siteurl: "https://www.reynaldisiregar.me/",
+    tags: ["Blog"],
+		weight: 32, 
+		enabled: true, 
+	},
+	{
 		title: "Firefly Docs",
 		imgurl: "https://docs-firefly.cuteleaf.cn/logo.png",
 		desc: "Firefly主题模板文档",

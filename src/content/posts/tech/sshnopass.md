@@ -1,11 +1,14 @@
 ---
 title: SSH without Password?
 published: 2024-10-08T10:00:47.000Z
+updated: 2026-11-03
 image: "../images/sshnopass/featured.png"
 description: Too lazy to input your SSH password while doing routine task? Here is the solution...
 tags: ["ssh", "password"]
 category: "ssh"
 ---
+
+## SSH with no password
 
 Hola!
 
@@ -62,6 +65,41 @@ Berikut adalah demonstrasinya, mulai dari pembuatan *key pair* hingga login ke s
 <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/ufz1sb9g27.js" async type="module"></script><style>wistia-player[media-id='ufz1sb9g27']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ufz1sb9g27/swatch'); display: block; filter: blur(5px); padding-top:64.38%; }</style> <wistia-player media-id="ufz1sb9g27" seo="false" aspect="1.5533980582524272"></wistia-player>
 
 Tada! Kita sudah bisa login ke server via SSH tanpa memerlukan password!
+
+## SSH with no IP
+
+Selain tidak perlu meng-_input_kan password, kita juga bisa mengatur agar kita tidak perlu meng-_input_kan *ip address* server.
+
+Caranya mudah, kita hanya perlu meng-_input_kan konfigurasi berikut di `~/.ssh/config`:
+
+```shell
+Host castle
+    HostName IP_VPS
+    Port PORT
+    User root
+    IdentityFile ~/.ssh/id_ed25519
+```
+
+:::info[Keterangan]
+
+- `IP_VPS`: diganti dengan *ip address*/domain VPS.  
+- `PORT`: diganti dengan nomor port SSH VPS (default-nya 22, tapi bisa disesuaikan kalau beda).  
+- `root`: diganti dengan username yang akan digunakan untuk login (`root` default).  
+- `~/.ssh/id_rsa`: diganti dengan private key yang sudah dibuat sebelumnya.  
+
+:::
+
+Sebagai perbandingan, berikut adalah isi file `~/.ssh/config` dalam kenyataannya:
+
+```shell
+Host castle
+    HostName 172.217.194.138
+    Port 22
+    User root
+    IdentityFile ~/.ssh/id_ed25519
+```
+
+![ssh with no ip](../images/sshnopass/ss3.png)
 
 Btw, artikel ini selain diinspirasi oleh rasa malas saya mengetikkan password berulang-ulang tiap login ke server via SSH, juga diinspirasikan oleh sebuah video Youtube dari channel [Tony Teach Tech](https://www.youtube.com/@TonyTeachesTech) berikut ini:
 
