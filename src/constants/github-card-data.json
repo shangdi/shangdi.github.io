@@ -1,8 +1,266 @@
 {
+	"9001/copyparty": {
+		"description": "Portable file server with accelerated resumable uploads, dedup, WebDAV, SFTP, FTP, TFTP, zeroconf, media indexer, thumbnails++ all in one file",
+		"language": "Python",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/241032?v=4",
+		"license": "MIT"
+	},
+	"abishekvashok/cmatrix": {
+		"description": "Terminal based \"The Matrix\" like implementation",
+		"language": "C",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/8947010?v=4",
+		"license": "GPL-3.0"
+	},
+	"angristan/openvpn-install": {
+		"description": "Set up your own OpenVPN server on Debian, Ubuntu, Fedora, CentOS, Arch Linux and more",
+		"language": "Shell",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/11699655?v=4",
+		"license": "MIT"
+	},
+	"aristocratos/btop": {
+		"description": "A monitor of resources",
+		"language": "C++",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/59659483?v=4",
+		"license": "Apache-2.0"
+	},
+	"busyloop/lolcat": {
+		"description": "Rainbows and unicorns!",
+		"language": "Ruby",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/969557?v=4",
+		"license": "BSD-3-Clause"
+	},
+	"cjbassi/gotop": {
+		"description": "A terminal based graphical activity monitor inspired by gtop and vtop",
+		"language": "Go",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/23287621?v=4",
+		"license": "AGPL-3.0"
+	},
+	"cmatsuoka/asciiquarium": {
+		"description": "Enjoy the mysteries of the sea from the safety of your own terminal!",
+		"language": "Perl",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/317355?v=4",
+		"license": null
+	},
+	"cmatsuoka/figlet": {
+		"description": "Claudio's FIGlet tree",
+		"language": "C",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/317355?v=4",
+		"license": "BSD-3-Clause"
+	},
+	"curl/curl": {
+		"description": "A command line tool and library for transferring data with URL syntax, supporting DICT, FILE, FTP, FTPS, GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, MQTTS, POP3, POP3S, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET, TFTP, WS and WSS. libcurl offers a myriad of powerful features",
+		"language": "C",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/16928085?v=4",
+		"license": "NOASSERTION"
+	},
 	"cuteleaf/firefly": {
 		"description": "🍀Firefly, fresh and aesthetic Astro blog theme template. ",
 		"language": "Astro",
 		"avatarUrl": "https://avatars.githubusercontent.com/u/43440669?v=4",
+		"license": "MIT"
+	},
+	"darktable-org/darktable": {
+		"description": "darktable is an open source photography workflow application and raw developer",
+		"language": "C",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/1561544?v=4",
+		"license": "GPL-3.0"
+	},
+	"deluge-torrent/deluge": {
+		"description": "Deluge BitTorrent client - Git mirror, PRs only",
+		"language": "Python",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/6733935?v=4",
+		"license": "NOASSERTION"
+	},
+	"docker/compose": {
+		"description": "Define and run multi-container applications with Docker",
+		"language": "Go",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/5429470?v=4",
+		"license": "Apache-2.0"
+	},
+	"dylanaraps/neofetch": {
+		"description": "🖼️  A command-line system information tool written in bash 3.2+",
+		"language": "Shell",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/6799467?v=4",
+		"license": "MIT"
+	},
+	"fastfetch-cli/fastfetch": {
+		"description": "A maintained, feature-rich and performance oriented, neofetch like system information tool.",
+		"language": "C",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/136235211?v=4",
+		"license": "MIT"
+	},
+	"ffmpeg/ffmpeg": {
+		"description": "Mirror of https://git.ffmpeg.org/ffmpeg.git",
+		"language": "C",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/729418?v=4",
+		"license": "NOASSERTION"
+	},
+	"genymobile/scrcpy": {
+		"description": "Display and control your Android device",
+		"language": "C",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/3427627?v=4",
+		"license": "Apache-2.0"
+	},
+	"gohugoio/hugo": {
+		"description": "The world’s fastest framework for building websites.",
+		"language": "Go",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/29385237?v=4",
+		"license": "Apache-2.0"
+	},
+	"htop-dev/htop": {
+		"description": "htop - an interactive process viewer",
+		"language": "C",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/69567116?v=4",
+		"license": "GPL-2.0"
+	},
+	"imagemagick/imagemagick": {
+		"description": "ImageMagick is a free, open-source software suite for creating, editing, converting, and displaying images. It supports 200+ formats and offers powerful command-line tools and APIs for automation, scripting, and integration across platforms.",
+		"language": "C",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/12486768?v=4",
+		"license": "NOASSERTION"
+	},
+	"jarun/nnn": {
+		"description": "n³ The unorthodox terminal file manager",
+		"language": "C",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/5959286?v=4",
+		"license": "BSD-2-Clause"
+	},
+	"jesseduffield/lazydocker": {
+		"description": "The lazier way to manage everything docker",
+		"language": "Go",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/8456633?v=4",
+		"license": "MIT"
+	},
+	"jesseduffield/lazygit": {
+		"description": "simple terminal UI for git commands",
+		"language": "Go",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/8456633?v=4",
+		"license": "MIT"
+	},
+	"karlstav/cava": {
+		"description": "Cross-platform Audio Visualizer",
+		"language": "C",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/6968928?v=4",
+		"license": "MIT"
+	},
+	"kovidgoyal/kitty": {
+		"description": "If you live in the terminal, kitty is made for you! Cross-platform, fast, feature-rich, GPU based.",
+		"language": "Python",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/1308621?v=4",
+		"license": "GPL-3.0"
+	},
+	"lazyvim/lazyvim": {
+		"description": "Neovim config for the lazy",
+		"language": "Lua",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/122150220?v=4",
+		"license": "Apache-2.0"
+	},
+	"leo-arch/clifm": {
+		"description": "💾 The shell-like, command-line terminal file manager",
+		"language": "C",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/21303106?v=4",
+		"license": "NOASSERTION"
+	},
+	"massgravel/microsoft-activation-scripts": {
+		"description": "Open-source Windows and Office activator featuring HWID, Ohook, TSforge, and Online KMS activation methods, along with advanced troubleshooting.",
+		"language": "Batchfile",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/59795046?v=4",
+		"license": "GPL-3.0"
+	},
+	"mhzawadi/homebrew-cbonsai": {
+		"description": "cbonsai is a bonsai tree generator, written in C using ncurses",
+		"language": "Ruby",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/11944327?v=4",
+		"license": "GPL-3.0"
+	},
+	"midnightcommander/mc": {
+		"description": "Midnight Commander's repository",
+		"language": "C",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/1191610?v=4",
+		"license": "NOASSERTION"
+	},
+	"mnjm/kayal": {
+		"description": "Minimal and lightweight Hugo theme with markdown-ish aesthetics",
+		"language": "JavaScript",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/23740867?v=4",
+		"license": "MIT"
+	},
+	"mpv-player/mpv": {
+		"description": "🎥 Command line media player",
+		"language": "C",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/2550273?v=4",
+		"license": "NOASSERTION"
+	},
+	"nicolargo/glances": {
+		"description": "Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, macOS and Windows operating systems.",
+		"language": "Python",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/776747?v=4",
+		"license": "NOASSERTION"
+	},
+	"nunocoracao/blowfish": {
+		"description": "Personal Website & Blog Theme for Hugo",
+		"language": "HTML",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/3803196?v=4",
+		"license": "MIT"
+	},
+	"pipeseroni/pipes.sh": {
+		"description": "Animated pipes terminal screensaver",
+		"language": "Shell",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/12193468?v=4",
+		"license": "MIT"
+	},
+	"piuccio/cowsay": {
+		"description": "cowsay is a configurable talking cow",
+		"language": "JavaScript",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/680284?v=4",
+		"license": "NOASSERTION"
+	},
+	"polybar/polybar": {
+		"description": "A fast and easy-to-use status bar",
+		"language": "C++",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/39440079?v=4",
+		"license": "MIT"
+	},
+	"protonvpn/proton-vpn-cli": {
+		"description": "Official ProtonVPN CLI Linux app",
+		"language": "Python",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/25028530?v=4",
+		"license": "GPL-3.0"
+	},
+	"pypa/pip": {
+		"description": "The Python package installer",
+		"language": "Python",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/647025?v=4",
+		"license": "MIT"
+	},
+	"pypa/pipx": {
+		"description": "Install and Run Python Applications in Isolated Environments",
+		"language": "Python",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/647025?v=4",
+		"license": "MIT"
+	},
+	"qbittorrent/qbittorrent": {
+		"description": "qBittorrent BitTorrent client",
+		"language": "C++",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/2131270?v=4",
+		"license": "NOASSERTION"
+	},
+	"rawtherapee/rawtherapee": {
+		"description": "A powerful cross-platform raw photo processing program",
+		"language": "C++",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/196224878?v=4",
+		"license": "GPL-3.0"
+	},
+	"rclone/rclone": {
+		"description": "\"rsync for cloud storage\" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files",
+		"language": "Go",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/24937341?v=4",
+		"license": "MIT"
+	},
+	"rfjakob/gocryptfs": {
+		"description": "Encrypted overlay filesystem written in Go",
+		"language": "Go",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/286847?v=4",
 		"license": "MIT"
 	},
 	"saicaca/fuwari": {
@@ -10,5 +268,89 @@
 		"language": "Astro",
 		"avatarUrl": "https://avatars.githubusercontent.com/u/25200299?v=4",
 		"license": "MIT"
+	},
+	"sc0tfree/updog": {
+		"description": "Updog is a replacement for Python's SimpleHTTPServer. It allows uploading and downloading via HTTP/S, can set ad hoc SSL certificates and use http basic auth.",
+		"language": "Python",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/25855134?v=4",
+		"license": "MIT"
+	},
+	"starship/starship": {
+		"description": "☄🌌️  The minimal, blazing-fast, and infinitely customizable prompt for any shell!",
+		"language": "Rust",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/49654870?v=4",
+		"license": "ISC"
+	},
+	"strukturag/libheif": {
+		"description": "libheif is an HEIF and AVIF file format decoder and encoder.",
+		"language": "C++",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/5314589?v=4",
+		"license": "NOASSERTION"
+	},
+	"sxyazi/yazi": {
+		"description": "💥 Blazing fast terminal file manager written in Rust, based on async I/O.",
+		"language": "Rust",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/17523360?v=4",
+		"license": "MIT"
+	},
+	"tmux/tmux": {
+		"description": "tmux source code",
+		"language": "C",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/12054114?v=4",
+		"license": "ISC"
+	},
+	"transmission/transmission": {
+		"description": "Official Transmission BitTorrent client repository",
+		"language": "C++",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/223312?v=4",
+		"license": "NOASSERTION"
+	},
+	"typst/typst": {
+		"description": "A markup-based typesetting system that is powerful and easy to learn.",
+		"language": "Rust",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/67595261?v=4",
+		"license": "Apache-2.0"
+	},
+	"weechat/weechat": {
+		"description": "The extensible chat client.",
+		"language": "C",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/6746046?v=4",
+		"license": "GPL-3.0"
+	},
+	"withastro/astro": {
+		"description": "The web framework for content-driven websites.",
+		"language": "TypeScript",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/44914786?v=4",
+		"license": "NOASSERTION"
+	},
+	"woioeow/hyprland-dotfiles": {
+		"description": "个人arch+hyprland配置",
+		"language": "CSS",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/198789005?v=4",
+		"license": null
+	},
+	"yorukot/superfile": {
+		"description": "Pretty fancy and modern terminal file manager",
+		"language": "Go",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/107802416?v=4",
+		"license": "MIT"
+	},
+	"yt-dlp/yt-dlp": {
+		"description": "A feature-rich command-line audio/video downloader",
+		"language": "Python",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/79589310?v=4",
+		"license": "Unlicense"
+	},
+	"zellij-org/zellij": {
+		"description": "A terminal workspace with batteries included",
+		"language": "Rust",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/73778475?v=4",
+		"license": "MIT"
+	},
+	"zx2c4/password-store": {
+		"description": "Read-only mirror of https://git.zx2c4.com/password-store - https://www.passwordstore.org/ . Pull requests and issues on GitHub cannot be accepted and will be automatically closed. The proper way to submit changes is via the mailing list; see https://lists.zx2c4.com/mailman/listinfo/password-store .",
+		"language": "Shell",
+		"avatarUrl": "https://avatars.githubusercontent.com/u/10643?v=4",
+		"license": "NOASSERTION"
 	}
 }

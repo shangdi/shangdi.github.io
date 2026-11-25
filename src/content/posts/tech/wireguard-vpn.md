@@ -1,7 +1,7 @@
 ---
 title: "Creating WireGuard VPN Server"
 published: 2026-11-03T11:09:05+07:00
-updated: 2026-11-10
+updated: 2026-11-25
 draft: false
 image: "../images/wireguard-vpn/featured.png"
 description: "A step-by-step WireGuard VPN server installation"
@@ -266,6 +266,56 @@ The result is the same as the manual setup above, just faster.
 - WireGuard is silent by default: a closed port looks like no service at all. That is normal, not a bug.
 
 :::
+
+## Network Automation
+
+In my previous case (Archlinux), I used to use this workflow to connect to Wireguard network:
+1. `sudo resolvconf -u`: Update the DNS in `/etc/resolv.conf`
+2. `sudo wg-quick up wg0`: Connect to a Wireguard network
+3. `sudo wg-quick down wg0`: Disconnect from the Wireguard network
+4. `sudo cp /etc/resolv.conf.bak /etc/resolv.conf`: To return my `resolv.conf` as it used to be.
+
+It's kind of inconvenient as I always have to change the DNS config by myself everytime I've finished using Wireguard.
+
+So, it's better to let other DNS (or Network) management tools to handle it, `NetworkManager` is one of them.  
+This is how you may want to configure it:
+
+```shell
+# Import your Wireguard configuration file to `nmcli`
+sudo nmcli connection import type wireguard file /etc/wireguard/wg0.conf
+
+# Set the DNS priority so that your `/etc/resolv.conf` will be completely changed everytime you use or have used Wireguard 
+nmcli connection modify wg0 ipv4.dns-priority -1500 ipv6.dns-priority -1500
+
+nmcli connection down wg0
+nmcli connection up wg0
+```
+
+:::info[Wireguard Config]
+
+`wg0.conf` is just a configuration file name in `/etc/wireguard/`. You may have different file config name (it may be `wireguard.conf`, `vpn.conf`, `vs0.conf`, etc) depending on how you created it in the first place. So, please adjust the config name based on yours. If it's `vpn.conf` for instance, the commands will look like this:
+
+```shell
+sudo nmcli connection import type wireguard file /etc/wireguard/vpn.conf
+
+nmcli connection modify vpn0 ipv4.dns-priority -1500 ipv6.dns-priority -1500
+
+nmcli connection down vpn
+nmcli connection up vpn
+```
+
+:::
+
+### Auto-connect
+
+It's also possible to make the Wireguard network automatically connect as soon as your boot is done:
+
+```shell
+nmcli connection modify wg0 connection.autoconnect yes
+```
+
+It's optional though. In my own case, I don't use it yet.
+
 
 [^1]: https://www.wireguard.com/
 [^2]: https://wiki.archlinux.org/title/WireGuard
